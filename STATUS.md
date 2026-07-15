@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Milestone 1: Evidence and reference audit.
+Milestone 1 complete. Ready for Milestone 2: Framer design foundation.
 
 ## Completed Work
 
@@ -26,14 +26,15 @@ Milestone 1: Evidence and reference audit.
 - Lead consolidation completed `content-audit/PROJECT_AUDIT.md`.
 - Lead consolidation completed `content-audit/CLAIMS_LEDGER.md`.
 - Lead consolidation completed `content-audit/MEDIA_NEEDED.md`.
+- Created checkpoint commit `88ffac4` (`Create portfolio audit baseline`).
 
 ## Work In Progress
 
-- Milestone 1 artifact verification and checkpoint commit preparation.
+- Waiting to begin Milestone 2 Framer design foundation.
 
 ## Next Action
 
-- Verify audit file presence and git state, then create the first checkpoint commit if possible.
+- Connect to the intended Framer project, read the generated Framer task map, and create the hidden design-system page described in `framer-planning/DESIGN_SYSTEM_BRIEF.md`.
 
 ## Blockers
 
@@ -53,3 +54,4 @@ Milestone 1: Evidence and reference audit.
 - No implementation tests have run yet.
 - No Framer production pages have been edited.
 - Milestone 1 audits were produced from public evidence. Authenticated GitHub search could not be run because `gh` is unavailable.
+- Latest git checkpoint before Framer work: `88ffac4`.
