@@ -292,3 +292,16 @@ Decision: Use Prototype C for the identity behavior and Prototype B for the cent
 Reason: C best matches the reference's type-led confidence; B keeps the spectacle anchored to Affan's real Vantage work. Prototype A is coherent but reads more like a technical visualization and therefore risks returning to the rejected report aesthetic.
 
 Boundary: The implementation borrows proportion, pacing, layered hierarchy, edge metadata, limited palette mechanics, and scroll expansion. It does not reuse Filippo's model, shaders, images, text, project list, source code, or exact branded object.
+
+## 2026-07-16: Integrate Lenis And Selected React Bits Patterns Into The Desktop Motion Island
+
+Decision: Use Lenis for qualifying desktop scroll interpolation, GSAP SplitText and ScrollTrigger for coordinated type/scroll choreography, and adapted React Bits Magnet and ScrollFloat patterns at the project-entry and closing-statement moments.
+
+Reason: Affan explicitly requested all three sources. The selected integrations strengthen the approved Filippo-led sequence without turning the interface into an effects catalog: Lenis improves continuity, SplitText makes the name entrance genuinely typographic, Magnet makes the project opener tactile, and ScrollFloat gives the final project argument a controlled reveal.
+
+Boundaries:
+
+- Do not import React Bits wholesale or add effects without a narrative or interaction purpose.
+- Keep the GSAP/Lenis runtime inside the existing lazy desktop-only island so mobile and reduced-motion users retain native scrolling and avoid the bundle.
+- Stop Lenis while the modal project stage is open, preserve native nested scrolling, and clean up ticker, observer, SplitText, and Lenis state on unmount.
+- Preserve semantic text independently from split-character presentation and keep all information available without JavaScript.

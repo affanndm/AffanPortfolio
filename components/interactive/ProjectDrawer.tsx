@@ -1,6 +1,7 @@
 import { ArrowUpRight, X } from "lucide-react";
 import type { Project } from "@/lib/content";
 import { ProjectMedia } from "@/components/ProjectMedia";
+import { Magnet } from "@/components/react-bits/Magnet";
 import { externalLinkProps } from "@/lib/utils";
 
 const projectDrawerRuntime = String.raw`
@@ -45,22 +46,24 @@ export function ProjectDrawer({ project }: { project: Project }) {
 
   return (
     <>
-      <button
-        className="project-drawer-trigger"
-        type="button"
-        aria-haspopup="dialog"
-        aria-controls={dialogId}
-      >
-        <span>Open project</span>
-        <ArrowUpRight aria-hidden="true" size={18} />
-      </button>
+      <Magnet wrapperClassName="project-magnet" innerClassName="project-magnet-inner">
+        <button
+          className="project-drawer-trigger"
+          type="button"
+          aria-haspopup="dialog"
+          aria-controls={dialogId}
+        >
+          <span>Open project</span>
+          <ArrowUpRight aria-hidden="true" size={18} />
+        </button>
+      </Magnet>
       <dialog
         id={dialogId}
         className="project-drawer"
         aria-labelledby={`${project.slug}-drawer-title`}
         data-project-drawer
       >
-        <div className={`project-drawer-panel project-drawer-panel-${project.accent}`}>
+        <div className={`project-drawer-panel project-drawer-panel-${project.accent}`} data-lenis-prevent>
           <header className="drawer-header">
             <span>{project.year} / {project.role}</span>
             <button type="button" data-drawer-close aria-label={`Close ${project.title} preview`}>

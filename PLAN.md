@@ -423,3 +423,15 @@ Objective: Prove one exceptional sequence before rebuilding the remaining homepa
 - [x] Capture desktop, mobile, and transition review images.
 - [x] Complete full regression, accessibility, and performance comparison.
 - [x] Commit and push the review branch; do not deploy production.
+
+### Milestone 12: Purposeful Motion-Library Integration
+
+Objective: Use Lenis, GSAP, and React Bits together where they materially improve the approved first sequence without degrading accessibility, responsive behavior, or mobile performance.
+
+- [x] Synchronize Lenis with GSAP ScrollTrigger on qualifying desktop viewports.
+- [x] Add SplitText character choreography to the identity entrance.
+- [x] Adapt React Bits Magnet for project entry and ScrollFloat for the closing statement.
+- [x] Keep native scrolling and static compositions on mobile and under reduced motion.
+- [x] Pause Lenis while the native project dialog is open and protect nested dialog scrolling.
+- [x] Complete visual, accessibility, regression, production-build, and Lighthouse validation.
+- [ ] Obtain Affan's visual approval before any production deployment.

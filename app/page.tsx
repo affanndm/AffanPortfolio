@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { PortfolioMotion } from "@/components/interactive/PortfolioMotion";
 import { ProjectDrawer } from "@/components/interactive/ProjectDrawer";
+import { ScrollFloatText } from "@/components/react-bits/ScrollFloatText";
 import { flagshipProjects, publicEmail } from "@/lib/content";
 import { externalLinkProps } from "@/lib/utils";
 
@@ -99,9 +100,7 @@ export default function HomePage() {
 
       <section className="fn-vantage-end" aria-label="Vantage project entry">
         <div className="fn-end-index"><span>(01)</span><span>PROJECT ENTRY</span></div>
-        <p>
-          Helping local discovery feel less like a noisy list and more like a trusted path to relevant businesses.
-        </p>
+        <ScrollFloatText text="Helping local discovery feel less like a noisy list and more like a trusted path to relevant businesses." />
         <div className="fn-end-links">
           <Link href="/projects/vantage">Read the case study <ArrowUpRight size={18} aria-hidden="true" /></Link>
           <a href={vantage.liveUrl} {...externalLinkProps("Open the Vantage live site")}>Live site <ArrowUpRight size={18} aria-hidden="true" /></a>

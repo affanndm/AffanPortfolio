@@ -3,18 +3,63 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+import Lenis from "lenis";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 export function PortfolioMotionDesktop() {
   useGSAP(() => {
+    const lenis = new Lenis({
+      anchors: { offset: 0 },
+      duration: 1.05,
+      smoothWheel: true,
+      syncTouch: false,
+      stopInertiaOnNavigate: true,
+      prevent: (node) => Boolean(node.closest("[data-lenis-prevent]")),
+    });
+    const updateScrollTrigger = () => ScrollTrigger.update();
+    const tickLenis = (time: number) => lenis.raf(time * 1000);
+    lenis.on("scroll", updateScrollTrigger);
+    gsap.ticker.add(tickLenis);
+    gsap.ticker.lagSmoothing(0);
+
+    const syncDrawerState = () => {
+      if (document.documentElement.dataset.drawerOpen === "true") lenis.stop();
+      else lenis.start();
+    };
+    const drawerState = new MutationObserver(syncDrawerState);
+    drawerState.observe(document.documentElement, { attributes: true, attributeFilter: ["data-drawer-open"] });
+    syncDrawerState();
+
+    const nameSplits = gsap.utils.toArray<HTMLElement>("[data-name-line]").map(
+      (line) => new SplitText(line, { type: "chars", charsClass: "fn-name-char" }),
+    );
+    const nameCharacters = nameSplits.flatMap((split) => split.chars);
+    const floatText = document.querySelector<HTMLElement>("[data-scroll-float]");
+
+    if (floatText) {
+      gsap.fromTo(
+        floatText.querySelectorAll<HTMLElement>("[data-float-char]"),
+        { opacity: 0.18, yPercent: 90, scaleY: 1.35, transformOrigin: "50% 0%" },
+        {
+          opacity: 1,
+          yPercent: 0,
+          scaleY: 1,
+          stagger: 0.012,
+          ease: "power3.out",
+          scrollTrigger: { trigger: floatText, start: "top 88%", end: "center 58%", scrub: 0.7 },
+        },
+      );
+    }
+
     const intro = gsap.timeline({ defaults: { ease: "power4.out" } });
     intro
       .fromTo(".fn-year span", { yPercent: 118 }, { yPercent: 0, duration: 1.15, stagger: 0.07 })
       .fromTo(
-        "[data-name-line]",
-        { yPercent: 120, clipPath: "inset(0 0 100% 0)" },
-        { yPercent: 0, clipPath: "inset(0 0 0% 0)", duration: 1.05, stagger: 0.08 },
+        nameCharacters,
+        { yPercent: 120, rotate: 5, opacity: 0 },
+        { yPercent: 0, rotate: 0, opacity: 1, duration: 1.05, stagger: 0.045 },
         "<0.12",
       )
       .fromTo(
@@ -32,7 +77,15 @@ export function PortfolioMotionDesktop() {
 
     const artifact = document.querySelector<HTMLElement>("[data-artifact]");
     const hero = document.querySelector<HTMLElement>("[data-hero]");
-    if (!artifact || !hero) return;
+    if (!artifact || !hero) {
+      return () => {
+        drawerState.disconnect();
+        gsap.ticker.remove(tickLenis);
+        gsap.ticker.lagSmoothing(500, 33);
+        lenis.destroy();
+        nameSplits.forEach((split) => split.revert());
+      };
+    }
 
     const rotateX = gsap.quickTo(artifact, "rotationX", { duration: 0.8, ease: "power3.out" });
     const rotateY = gsap.quickTo(artifact, "rotationY", { duration: 0.8, ease: "power3.out" });
@@ -102,7 +155,14 @@ export function PortfolioMotionDesktop() {
       );
     }
 
-    return () => hero.removeEventListener("pointermove", follow);
+    return () => {
+      hero.removeEventListener("pointermove", follow);
+      drawerState.disconnect();
+      gsap.ticker.remove(tickLenis);
+      gsap.ticker.lagSmoothing(500, 33);
+      lenis.destroy();
+      nameSplits.forEach((split) => split.revert());
+    };
   }, []);
 
   return null;

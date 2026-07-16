@@ -2,12 +2,15 @@
 
 ## Current Milestone
 
-Milestone 10: Filippo-led full visual redesign and local regression review.
+Milestone 12: purposeful Lenis, GSAP, and React Bits motion integration.
 
-Affan rejected both the first production art direction and the initial identity-first correction as too static and unlike the approved references. A second, materially new homepage is implemented locally with Filippo as the dominant motion/composition reference. It has not been deployed. The currently public site at `https://www.affannadeem.me` remains the earlier production version until Affan explicitly approves another production deployment.
+The approved first-sequence branch now combines desktop Lenis interpolation, GSAP SplitText/ScrollTrigger choreography, and two adapted React Bits interactions. The stack is intentionally limited to moments that clarify identity, project entry, and scroll continuity. It is committed only after regression and performance validation; production remains unchanged until Affan explicitly approves deployment.
 
 ## Completed Work
 
+- Integrated Lenis with the existing lazy desktop GSAP island, including ScrollTrigger synchronization, anchor handling, drawer pause/resume, protected drawer scrolling, cleanup, and native mobile/reduced-motion fallbacks.
+- Added GSAP SplitText choreography to the `AFFAN NADEEM` entrance without changing the semantic heading or static no-JavaScript composition.
+- Adapted React Bits Magnet for the project opener and ScrollFloat for the Vantage closing statement; preserved whole-word wrapping and real screen-reader text.
 - Verified Filippo's publicly delivered custom runtime in detail: Three.js GLTF loading, front/back render targets for refraction, 32×32 pointer-distortion texture, continuously rotating hero geometry, Lenis easing, scroll-tracked 3D positioning, and hover/tap project video texture swapping.
 - Captured and inspected current desktop states for Filippo Ruffini, Tigran Azatyan, and Abhijit Rout, including their opening objects, color systems, project entry patterns, and long-page composition.
 - Rebuilt the hero around a two-line `AFFAN NADEEM` field and an Affan-specific DOM/CSS signal sculpture with coral/acid geometry, real Vantage texture, GSAP load choreography, scroll depth, and fine-pointer response.
@@ -41,7 +44,7 @@ Affan rejected both the first production art direction and the initial identity-
 
 ## Work In Progress
 
-- Await Affan's visual review of the new local direction before any deployment decision.
+- Await Affan's visual review of the enhanced first sequence before any deployment decision.
 
 ## Next Action
 
@@ -64,6 +67,16 @@ Affan rejected both the first production art direction and the initial identity-
 - Any rollback/removal of the unintended Vercel production aliases requires explicit approval.
 
 ## Test Results
+
+Lenis / GSAP / React Bits integration on 2026-07-16:
+
+- `npm run typecheck`: pass.
+- `npm run lint`: pass.
+- `npm run build`: pass using Next.js 16.2.10 with Webpack.
+- `npm test`: 72/72 pass in Chromium.
+- Live runtime checks: desktop SplitText and Lenis active with no console errors; mobile and reduced-motion profiles load neither runtime; project dialog opens, closes, and restores scroll state.
+- Mobile Lighthouse: Performance 96, Accessibility 100, Best Practices 100, SEO 100, LCP 2.5s, TBT 120ms, CLS 0, Speed Index 2.4s.
+- Final visual review confirms the ScrollFloat statement wraps only between words.
 
 Filippo-led full-redesign candidate on 2026-07-16:
 

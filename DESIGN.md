@@ -202,8 +202,11 @@ The system is flat by default. It uses scene changes, real media, border contras
 
 ### Scroll Motion
 
-- GSAP, `@gsap/react`, and ScrollTrigger orchestrate the hero load/depth response, hero scroll exit, pinned work statement, stacked project chapters, Lab rail, About clarification, portrait rings, and contact signature on qualifying desktop viewports.
-- The desktop motion chunk is loaded lazily after the viewport qualifies; mobile and reduced-motion users never download it.
+- Lenis owns wheel-scroll interpolation on qualifying desktop viewports and is synchronized to GSAP's ticker and ScrollTrigger. Native scrolling remains intact on mobile, coarse layouts, and reduced-motion profiles.
+- GSAP, `@gsap/react`, ScrollTrigger, and SplitText orchestrate the character-led identity entrance, pointer-responsive artifact, hero exit, project portal expansion, and closing statement reveal.
+- The desktop motion chunk is loaded lazily after the viewport qualifies; mobile and reduced-motion users never download GSAP, SplitText, or Lenis.
+- React Bits patterns are adapted selectively: Magnet adds bounded attraction to the project opener, while ScrollFloat gives the Vantage closing statement a character reveal without allowing mid-word line breaks.
+- Opening a project side-stage stops Lenis and marks the dialog as a protected native-scroll region; closing it restores page interpolation.
 - Initial word contrast remains WCAG-compliant; the reveal moves from muted-readable to fully clear rather than hidden to visible.
 - All remaining hover, press, media, and navigation feedback stays in CSS for responsiveness and lower runtime cost.
 

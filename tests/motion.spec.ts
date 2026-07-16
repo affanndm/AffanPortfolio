@@ -16,6 +16,14 @@ test("reduced motion keeps the hero artifact and project media resolved", async 
 
   await expect(page.locator(".fn-artifact")).toBeVisible();
   await expect(page.locator(".fn-project-portal")).toHaveCSS("transform", "none");
+  await expect(page.locator("html")).not.toHaveClass(/\blenis\b/);
+});
+
+test("mobile keeps native scrolling without loading the desktop motion runtime", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  await expect(page.locator("html")).not.toHaveClass(/\blenis\b/);
+  await expect(page.locator(".fn-name-char")).toHaveCount(0);
 });
 
 test("fine-pointer movement changes the interface artifact depth", async ({ page }) => {
@@ -41,7 +49,9 @@ test("project preview opens as a side-stage dialog and closes with Escape", asyn
   const dialog = page.getByRole("dialog");
   await expect(dialog).toBeVisible();
   await expect(dialog.getByRole("heading", { name: "Vantage", exact: true })).toBeVisible();
+  await expect(page.locator("html")).toHaveClass(/lenis-stopped/);
 
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).toBeHidden();
+  await expect(page.locator("html")).not.toHaveClass(/lenis-stopped/);
 });
