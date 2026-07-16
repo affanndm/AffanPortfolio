@@ -1,56 +1,33 @@
 import { expect, test } from "@playwright/test";
 
-test("ticker can be paused and resumed from the keyboard", async ({ page }) => {
+test("hero navigation reaches the Vantage sequence", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/");
-
-  const control = page.getByRole("button", { name: "Pause technical domains ticker" });
-  await control.focus();
-  await page.keyboard.press("Enter");
-  await expect(page.getByRole("button", { name: "Resume technical domains ticker" })).toHaveAttribute(
-    "aria-pressed",
-    "true",
-  );
-  await expect(page.locator(".ticker-section")).toHaveAttribute("data-paused", "");
-
-  await page.keyboard.press("Enter");
-  await expect(page.getByRole("button", { name: "Pause technical domains ticker" })).toHaveAttribute(
-    "aria-pressed",
-    "false",
-  );
+  await page.getByRole("link", { name: "Work", exact: true }).click();
+  await expect(page).toHaveURL(/#work$/);
+  await expect(page.getByRole("heading", { name: "Vantage", exact: true })).toBeVisible();
 });
 
-test("reduced motion uses static ticker and a resolved hero sculpture", async ({ page }) => {
+test("reduced motion keeps the hero artifact and project media resolved", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/");
   await page.mouse.move(600, 300);
 
-  await expect(page.locator(".ticker-track")).toBeHidden();
-  await expect(page.locator(".ticker-accessible")).toBeVisible();
-  await expect(page.locator(".signal-sculpture")).toBeVisible();
+  await expect(page.locator(".fn-artifact")).toBeVisible();
+  await expect(page.locator(".fn-project-portal")).toHaveCSS("transform", "none");
 });
 
-test("fine-pointer movement changes the hero sculpture depth", async ({ page }) => {
-  await page.addInitScript(() => {
-    const nativeMatchMedia = window.matchMedia.bind(window);
-    window.matchMedia = (query: string) => {
-      const result = nativeMatchMedia(query);
-      if (query === "(hover: hover) and (pointer: fine)") {
-        Object.defineProperty(result, "matches", { configurable: true, value: true });
-      }
-      return result;
-    };
-  });
+test("fine-pointer movement changes the interface artifact depth", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/");
-  const sculpture = page.locator(".signal-sculpture");
-  await expect(sculpture).toBeVisible();
+  const artifact = page.locator(".fn-artifact");
+  await expect(artifact).toBeVisible();
   await page.waitForTimeout(1800);
-  const before = await sculpture.evaluate((element) => getComputedStyle(element).transform);
+  const before = await artifact.evaluate((element) => getComputedStyle(element).transform);
   await page.mouse.move(700, 320);
   await page.waitForTimeout(900);
-  const after = await sculpture.evaluate((element) => getComputedStyle(element).transform);
+  const after = await artifact.evaluate((element) => getComputedStyle(element).transform);
   expect(after).not.toBe(before);
 });
 

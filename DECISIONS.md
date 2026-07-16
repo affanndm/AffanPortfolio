@@ -278,3 +278,17 @@ Reason: The old canvas read as a background effect. The new sculpture behaves as
 Decision: Add a right-side full-viewport project preview using the native HTML dialog element before visitors enter the full case-study route.
 
 Reason: Affan asked for projects to open into a side page or the comparable behavior used by the references. The side-stage preserves homepage continuity while surfacing real media, ownership, discipline, stack, and direct evidence. Native dialog semantics provide focus management, Escape behavior, and modal accessibility without a routing framework or new dependency.
+
+## 2026-07-16: Stop At The First Vantage Sequence
+
+Decision: Temporarily remove the Lab, About, gRNAlytics homepage chapter, and full contact chapter from the homepage review build.
+
+Reason: The attached recovery brief explicitly makes the first 20% a visual approval gate. Continuing the remaining 80% before that gate would repeat the failed broad-redesign workflow. Existing routes, content audits, project pages, and evidence remain intact.
+
+## 2026-07-16: Select Typographic Distortion Plus Interface Artifact
+
+Decision: Use Prototype C for the identity behavior and Prototype B for the central object and transition source.
+
+Reason: C best matches the reference's type-led confidence; B keeps the spectacle anchored to Affan's real Vantage work. Prototype A is coherent but reads more like a technical visualization and therefore risks returning to the rejected report aesthetic.
+
+Boundary: The implementation borrows proportion, pacing, layered hierarchy, edge metadata, limited palette mechanics, and scroll expansion. It does not reuse Filippo's model, shaders, images, text, project list, source code, or exact branded object.

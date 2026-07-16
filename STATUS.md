@@ -145,3 +145,20 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 - `https://affannadeem.me` returns a permanent redirect to the canonical `www` host.
 - Verified 200 responses: `/`, `/projects/vantage`, `/projects/grnalytics`, `/lab`, `/robots.txt`, and `/sitemap.xml`.
 - The identity-first creative correction is local only and has not been deployed or promoted to production.
+
+## Filippo-Reference Review Gate — 2026-07-16
+
+- Work is isolated on `filippo-visual-redesign` from checkpoint `91a688e`.
+- Production mismatch verified: `www.affannadeem.me` points to Vercel deployment `dpl_Ek21HQ6vC79L2MHFuZdTV4zdxbKd`, created at 00:09:47 immediately after `abd9657`. Its visible copy matches the older evidence-led homepage, not the current repository branch.
+- The linked Vercel project is `affan-portfolio` (`prj_u5CtgGKE2Hns4VDRCmnDxs45aoSA`). Project inspection exposes no Git production-branch connection; the current production deployment was created from the older local state.
+- No domain, alias, production, or Vercel project setting was changed during this milestone.
+- Homepage scope is intentionally limited to navigation, first viewport, hero-to-Vantage transition, first Vantage presentation, and the project-entry boundary.
+- Three isolated hero studies now exist at `/design-lab/hero-a`, `/design-lab/hero-b`, and `/design-lab/hero-c`.
+- Selected direction: C's typographic collision combined with B's real interface fragments. A remains documented as the alternate topology study.
+- Required 390px and 1440px captures are saved under `qa/visual-review/`, including both prototypes and scroll-transition states.
+- Typecheck, lint, and production build pass.
+- Playwright: 71/71 tests pass across navigation, motion, side-stage, links, SEO, accessibility, and 390/768/1024/1440/1920 responsive coverage.
+- Mobile Lighthouse: Performance 96, Accessibility 100, SEO 100, LCP 2.5s, TBT 110ms, CLS 0.
+- Previous final static-intro baseline: Performance 91, Accessibility 100, SEO 100, LCP 2.62s, TBT 257ms. The restricted redesign improves performance by 5 points while adding the new choreography.
+- Redesign checkpoint `29d156e` is committed and pushed to `origin/filippo-visual-redesign`.
+- No production deployment occurred; the custom domain continues to show the older production deployment until Affan explicitly approves a promotion.

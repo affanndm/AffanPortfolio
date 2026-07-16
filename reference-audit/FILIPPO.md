@@ -433,3 +433,11 @@ This remains inference unless verified with browser devtools or source inspectio
 ## Bottom Line
 
 Filippo Ruffini's portfolio is valuable as a reference for conviction: tight grid, sparse palette, expressive type, public project metadata, and motion integrated into the identity. It should not be copied visually. For Affan, the best adaptation is a distinct editorial system with stronger accessibility, clearer case-study substance, verified content only, and motion that earns its cost.
+
+## 2026-07-16 Source Reinspection
+
+The current delivered page source was inspected again for the restricted hero rebuild. Verified runtime assets include Webflow, GSAP 3.11.5, ScrollTrigger, Flip, Lenis, Swiper, jQuery, and the custom `app-live.01.js` bundle. The custom bundle includes Three.js/WebGL shader and refractive material code; the CSS exposes row-cover wipes, hero load covers, custom cursor geometry, a 12-column system, and responsive hero variants.
+
+The live desktop/mobile captures confirm the transferable sequence: tiny edge metadata, huge orange year, serif name crossing the year, central refractive object, corner framing, a concise statement chapter, sparse Selected Projects index, and an oversized closing year. The key quality is coordinated hierarchy—not any isolated effect.
+
+For Affan, the selected translation keeps the year/name/object collision, edge metadata, corner framing, and an object-to-project expansion. It replaces the reference model with sliced real Vantage media and preserves semantic `Affan Nadeem` text, keyboard navigation, static mobile composition, and reduced-motion behavior.

@@ -226,4 +226,14 @@ The system is flat by default. It uses scene changes, real media, border contras
 - **Don't** use a fake loader, fake metrics, fake product output, or decorative motion that delays access to the work.
 - **Don't** copy source code, assets, personal wording, exact palette values, or signature branded objects from Filippo Ruffini, Tigran, or Abhijit Rout. Reference-led composition and palette families must resolve into Affan-specific systems.
 - **Don't** imply sole ownership of Vantage or gRNAlytics, assign private team roles from public handles, or claim unverified biological accuracy, impact, adoption, awards, revenue, or performance gains.
+
+## First-Sequence Visual System
+
+- **Canvas:** `#101010`; the hero, transition, and Vantage entry read as one continuous stage.
+- **Identity accent:** hot coral `#ff6245`; it carries the oversized year and small active states.
+- **Typography:** Geist remains the utility face; Georgia supplies the high-contrast identity/project voice until a licensed production display face is approved.
+- **Composition:** edge metadata, four corner marks, oversized background numerals, two semantic name lines, and one central interface artifact.
+- **Object rule:** the hero object must contain real project media. Generic orbit, particle, glowing sphere, and decorative dashboard imagery are prohibited.
+- **Motion rule:** the object reacts to pointer depth, exits with the hero, and is visually replaced by an expanding Vantage capture. No content is hidden when JavaScript or motion is unavailable.
+- **Mobile rule:** preserve the oversized year, readable full name, central artifact, persistent project label, and a direct open-project control. Desktop choreography collapses to a composed static sequence.
 - **Don't** bury publication status, make information hover-only, or let a canvas carry essential meaning.

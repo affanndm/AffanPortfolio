@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const internalRoutes = ["/", "/projects/vantage", "/projects/grnalytics", "/lab", "/design-lab"];
+const internalRoutes = ["/", "/projects/vantage", "/projects/grnalytics", "/lab", "/design-lab", "/design-lab/hero-a", "/design-lab/hero-b", "/design-lab/hero-c"];
 
 for (const route of internalRoutes) {
   test(`internal route responds: ${route}`, async ({ page }) => {
@@ -14,7 +14,7 @@ test("homepage primary links have hrefs", async ({ page }) => {
   await page.goto("/");
   const links = page.locator("main a[href]");
   const count = await links.count();
-  expect(count).toBeGreaterThan(4);
+  expect(count).toBeGreaterThan(3);
 });
 
 test("homepage in-page links resolve to existing targets", async ({ page }) => {
