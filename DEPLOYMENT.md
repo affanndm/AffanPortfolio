@@ -142,3 +142,32 @@ Observed result:
 - Access check: unauthenticated HTTP returned `200 Login - Vercel`; access protection remains enabled.
 
 No production promotion, production alias change, rollback, or DNS operation was performed.
+
+## 2026-07-16 Production `NOT_FOUND` Resolution
+
+Symptoms:
+
+- `affannadeem.me` reached Vercel but `www.affannadeem.me` returned platform-level `404 NOT_FOUND`.
+- The existing production deployment was initially aliased to the misspelled `affanndm.me`.
+- After correcting aliases, routes still returned 404.
+
+Root cause:
+
+- The Vercel project used Framework Preset `Other`.
+- Because the repository contains a `public/` asset directory, the preset selected `public/` as the deployable output.
+- `next build` succeeded, but Vercel did not serve the Next.js Build Output API artifacts. There is intentionally no `public/index.html`, so the platform had no route to serve.
+
+Resolution:
+
+1. Added `vercel.json` with `framework: nextjs`.
+2. Updated the linked Vercel project to Framework Preset `Next.js` and `Next.js default` output.
+3. Deployed the corrected source to production after Affan explicitly requested the domain fix.
+4. Vercel assigned both `affannadeem.me` and `www.affannadeem.me` to the Ready deployment.
+5. The apex redirects permanently to canonical `https://www.affannadeem.me`.
+
+Verified result:
+
+- Production deployment: `dpl_Ek21HQ6vC79L2MHFuZdTV4zdxbKd`
+- Status: Ready
+- Canonical URL: `https://www.affannadeem.me`
+- 200 responses: `/`, both flagship project routes, `/lab`, `/robots.txt`, and `/sitemap.xml`

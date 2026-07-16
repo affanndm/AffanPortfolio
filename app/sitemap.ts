@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affannadeem.me";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -10,6 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/lab",
   ].map((path) => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date("2026-07-15"),
+    lastModified: new Date("2026-07-16"),
   }));
 }
