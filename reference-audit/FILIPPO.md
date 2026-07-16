@@ -39,14 +39,14 @@ The live page exposes a compact one-page structure:
 - Intro/loading/hero content with "PERSONAL", "Portfolio ( 2023 )", "FILIPPO RUFFINI", "pippo roof", "AVAILABLE FOR FREELANCE PROJECTS", and a large split display name.
 - A self-referential design-system/spec area listing background color, accent colors, fonts, and a 12-column grid.
 - Navigation labels: "( about )", "( works )", "( menu )", "( close )", "( contact )".
-- A full-screen or overlay-style menu state is implied by duplicate "About", "Works", "Contact", and "(CLOSE)" text in the public page extraction.
+- Duplicate "About", "Works", "Contact", and "(CLOSE)" text appears in the public page extraction, indicating that menu/alternate states are present in the public DOM.
 - An About section with a short bio and specialization statement.
 - A Selected Projects section with ten project entries: Marcello Cesini Arch, Silvia Bianchi, Zorah Wines, Deda Elementi, 1000 Miglia, Niu Glasses, Virality, Agave, Poli Cosmesi, and BeGood.
 - A contact/footer section with "get in touch", "right now", an email field placeholder, success/error form states, footer identity, and social/developer links.
 
 ### Implementation inference
 
-This is likely a single-page Webflow site with custom animated section transitions rather than a multi-page case-study archive. The project list appears designed as a navigable index with outbound "live site" links, not as deep case studies hosted inside the portfolio.
+This is likely a single-page Webflow site with custom animated menu or section states rather than a multi-page case-study archive. The project list appears designed as a navigable index with outbound "live site" links, not as deep case studies hosted inside the portfolio.
 
 ### Influence for Affan
 
@@ -151,7 +151,7 @@ The live page extraction includes "0%", indicating a visible loading/progress st
 
 ### Implementation inference
 
-The preloader likely coordinates WebGL/model/media readiness with text reveals. It probably masks asset loading for the 3D hero and large media set. Given the site's WebGL/Three.js disclosures, the loader is likely functional as well as expressive.
+The preloader may coordinate WebGL/model/media readiness with text reveals, but the exact progress source was not verified. Given the site's WebGL/Three.js disclosures, it may be functional as well as expressive, but the public evidence does not prove an accurate asset-readiness counter.
 
 ### Influence for Affan
 
@@ -191,11 +191,11 @@ The live page includes "scroll down" in the hero. Awwwards highlights "Projects 
 
 ### Publicly disclosed technology
 
-Public Webflow and Instagram/search snippets disclose Webflow and GSAP-powered animation. The Webflow showcase tags include WebGL, Three.js, custom cursor, glitch, and pixels. Orpetron tags include transitions, microinteractions, liquid, custom cursor, and typography.
+Public Webflow and Instagram/search snippets disclose Webflow and GSAP-powered animation. A public page-source refresh also exposed Webflow runtime, GSAP, ScrollTrigger, Flip, Lenis, Swiper, jQuery, and custom JavaScript assets. The Webflow showcase tags include WebGL, Three.js, custom cursor, glitch, and pixels. Orpetron tags include transitions, microinteractions, liquid, custom cursor, and typography.
 
 ### Implementation inference
 
-Scroll likely drives text reveals, project image transitions, footer reveal choreography, and WebGL camera/object movement. Page transitions are probably pixel/glitch or distortion-based, even though the live IA is primarily one page.
+Scroll likely drives text reveals, project image transitions, footer reveal choreography, and WebGL camera/object movement. Exact page-transition mechanics were not verified; pixel/glitch language is present in public listing tags, not proof of a specific transition implementation.
 
 ### Influence for Affan
 
@@ -359,7 +359,7 @@ The most defensible public stack summary is:
 
 - Webflow build/dev by Ilja van Eck.
 - WebGL by Federico Valla.
-- GSAP-powered animations.
+- GSAP-powered animations, with public page-source evidence of GSAP, ScrollTrigger, and Flip.
 - Three.js/WebGL tags in Webflow showcase.
 - Custom cursor, glitch/pixel, and typography tags in public listings.
 
@@ -371,7 +371,7 @@ A likely build architecture:
 2. Custom JS initializes a preloader and locks/reveals the page after key assets are ready.
 3. GSAP coordinates page-load text reveals, scroll transitions, hover states, menu overlay animation, and footer animation.
 4. GSAP Flip or a similar FLIP technique powers the menu/easter egg highlight geometry.
-5. Three.js renders a hero WebGL model or object layer into a canvas, reacting to pointer/scroll.
+5. Three.js likely renders a hero WebGL model or object layer into a canvas, reacting to pointer/scroll. Public evidence confirms Three.js/WebGL/3D-model direction, not the exact render pipeline.
 6. Webflow CDN serves static images and possibly exported model/texture/media assets.
 
 This remains inference unless verified with browser devtools or source inspection.

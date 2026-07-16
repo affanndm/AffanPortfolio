@@ -123,14 +123,16 @@ Evidence labels used below:
 - eBill uses static image/mockup assets and a Figma prototype link.
 - The visual treatment is intentionally plain around media: black background, minimal chrome, no decorative cards.
 
-## Publicly Disclosed Technology
+## Publicly Exposed / Disclosed Technology
 
 - Framer infrastructure is visible in network URLs: `framerusercontent.com` JavaScript chunks, `events.framer.com`, and `edit.framer.com/init.mjs`.
+- Public HTML/source evidence includes Framer generator/server markers and Framer search-index data; this makes Framer a public implementation fact, not merely an inference.
 - Framer CDN serves fonts, scripts, images, JSON assets, `.riv` files, and MP4 files.
 - Rive is visible through `@rive-app/canvas@2.26.1/rive.wasm` and multiple `.riv` assets.
 - Vimeo is visible through oEmbed and player URLs for an autoplaying, muted, looping embed.
 - ZAM page copy publicly states that Lottie animations were used for web delivery and describes them as lightweight responsive assets.
 - eBill image links use Framer's image CDN and at least one `scale-down-to=1024` image parameter.
+- Public font evidence points to Neue Regrade and Inter-family usage in addition to the visually observed rounded grotesque direction.
 
 ## Implementation Inference
 
@@ -152,10 +154,11 @@ Observed strategies:
 
 Observed risks:
 
-- Homepage network evidence includes many JSON and `.riv` assets, Rive WASM, Vimeo, Framer analytics/events, and Cloudflare/third-party scripts.
+- Homepage network evidence includes many JSON and `.riv` assets, Rive WASM, Vimeo, Framer analytics/events, and third-party scripts.
 - Vimeo and Rive add runtime weight and third-party dependency risk.
 - Large animated/interactive hero content appears to contribute to loading/play states below the fold.
 - Mobile screenshots show horizontal clipping, which would fail Affan's "no horizontal overflow" target if reproduced.
+- Public search-index inspection did not surface semantic heading entries for the homepage, so Affan should not inherit the reference's visual-heading-only risk.
 
 ## Reduced-Motion Behavior
 
@@ -178,6 +181,7 @@ Risks:
 - Image/media alt quality was not verified; extracted image links appear generically as "Image" in the public text layer.
 - The circular play/media control needs keyboard and screen-reader verification; I could not confirm it.
 - Motion-heavy pages need a stronger visible reduced-motion fallback than I could verify publicly.
+- Semantic headings need independent verification on a site like this; Affan's implementation should expose real `h1`/`h2`/`h3` structure, not only styled text layers.
 
 ## What Should Influence Affan's Website
 
@@ -198,6 +202,7 @@ Risks:
 - Do not copy the mobile overflow/clipping behavior.
 - Do not copy the repeated hidden responsive-content pattern unless hidden variants are proven inaccessible to screen readers.
 - Do not rely on Vimeo/Rive/Lottie-heavy runtime effects if they threaten Affan's Lighthouse and reduced-motion requirements.
+- Do not duplicate separate desktop/mobile content in the DOM unless non-active variants are hidden from assistive technology and search.
 - Do not use Tigran's motion portfolio structure as a one-to-one template. Affan's site needs software-system credibility, contribution evidence, and verified technical ownership, not a pure motion reel.
 
 ## Recommended Translation For Affan
@@ -209,4 +214,4 @@ Affan should adapt Tigran's strongest principle: "show the system in motion befo
 - Lab projects: use persistent thumbnails or short previews, but keep ownership labels visible at list level.
 - Mobile: prioritize readable project links and persistent metadata over dramatic cropping.
 - Reduced motion: render static poster frames and completed signal-network states rather than loading full animation stacks.
-
+- Implementation: use typed project content, semantic Next.js routes, native videos/posters or `next/image` assets, and small client islands only where motion materially improves evidence.

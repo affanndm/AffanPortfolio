@@ -168,6 +168,15 @@ The internal `/design-lab` route should prove:
 
 Use `implementation-planning/DESIGN_SYSTEM_BRIEF.md` as the implementation brief.
 
+Implementation guardrails:
+
+- Use semantic Next.js App Router pages and typed local content as the production source of truth.
+- Keep motion-heavy behavior in small client islands rather than turning the whole page into a client application.
+- Use native media, poster frames, CSS, and `next/image` before reaching for Rive, Vimeo embeds, Lenis, Lottie, or WebGL.
+- Do not duplicate separate desktop/mobile content in the DOM unless inactive variants are hidden from assistive technology and search.
+- Do not add a fake loader. If assets are not genuinely being staged, render the final state immediately.
+- Keep heading structure real: one page `h1`, meaningful section `h2`s, and visible focus states.
+
 ### Hero And Motion Prototypes
 
 Prototype only the signature interactions before building the complete site:
@@ -182,14 +191,23 @@ Prototype only the signature interactions before building the complete site:
 
 Use `implementation-planning/MOTION_PROTOTYPE_BRIEF.md` as the implementation brief.
 
+Performance translation:
+
+- One hero Canvas 2D field is justified because it directly expresses the signal/system concept.
+- Dotted bloom and ticker effects should be CSS/static where possible, with reduced-motion and mobile simplifications.
+- Continuous animation must pause offscreen, clean up `requestAnimationFrame`, and avoid React render loops.
+- GSAP, Lenis, Rive, Lottie, Three.js, and Vimeo are not baseline dependencies for this build.
+
 ### Typed Content And Case Studies
 
 Use the content audit as a hard boundary:
 
 - Vantage: team project, full-stack contributor.
-- gRNAlytics: team project, computational biology contributor.
+- gRNAlytics: team project, computational biology contributor, with detailed Affan-specific scoring/BLAST claims confirmation-gated where alias or ownership is unresolved.
 - Lab items: ownership status visible before any detail.
 - Archive items: labeled as archive, not current polished work.
+
+The site should show proof before prose: role labels, contribution status, evidence links, and team credits appear before reflective copy or cinematic framing.
 
 ## Accessibility And Performance Lessons
 

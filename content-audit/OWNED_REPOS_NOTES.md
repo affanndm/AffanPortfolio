@@ -189,6 +189,7 @@ Representative commit URLs:
 Important limitation:
 
 - Public source currently contains unresolved git merge-conflict markers in `config.py`, `recipe.py`, `shopping.py`, and `validation.py`.
+- A public issue, `Recipe Tracker source contains unresolved merge conflict markers` (#1), was opened on 2026-07-15 to document the broken source state.
 - Raw evidence:
   - https://raw.githubusercontent.com/affanndm/Recipe-Tracker/main/config.py
   - https://raw.githubusercontent.com/affanndm/Recipe-Tracker/main/recipe.py
@@ -204,6 +205,7 @@ Missing or risky claims:
 
 - Do not claim the app currently runs.
 - Do not claim meal planning, nutrition, grocery-list automation, or data-quality features beyond what source shows.
+- Evidence issue: https://github.com/affanndm/Recipe-Tracker/issues/1
 
 ---
 

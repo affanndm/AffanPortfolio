@@ -11,7 +11,7 @@ Refresh note, 2026-07-15 during Next.js architecture reset: public GitHub issue/
 - `gh` is not installed in this environment, so authenticated GitHub history search could not be performed.
 - Evidence used: public GitHub API/search, local mirror clones of the two seed repositories, PR metadata, commit history, changed-file lists, contributors, branches, languages, deployments, releases, issues, and README/docs.
 - Public authored-PR search for `author:affanndm` found Vantage PRs plus Affan-owned repository PRs; no additional non-`affanndm` repository PRs were identified.
-- Public commit search for `author:affanndm` returned external commits in `crackle2k/vantage` and `MisplacedOrange/gRNAlytics` plus Affan-owned repos. A filtered non-owner commit search timed out, so this should be re-run if `gh` becomes available.
+- Public commit search for `author:affanndm` returned external commits in `crackle2k/vantage` and `MisplacedOrange/gRNAlytics` plus Affan-owned repos. The confirmed non-owned contribution set contained only Vantage and gRNAlytics; a refreshed external-only count showed 70 public commits across those two repositories. Re-run with authenticated `gh` if available.
 - Do not treat README business claims, market claims, or biological/scientific accuracy as verified outcomes.
 
 ## Global Search Evidence
@@ -137,7 +137,7 @@ Evidence supports Affan as a contributor to the prototype algorithm/CLI implemen
 Affan-authored / Affan-associated evidence:
 
 - Local mirrored history found 16 commits authored as `Affan Nadeem` or `IdontReallyKnowWhat` with Affan-associated public commit search results.
-- Initial commit `6dfe2eb` implemented a basic BLAST workflow: prompt for gRNA count/sequences, run NCBI BLAST against human sequences, save XML result files, parse BLAST XML, classify transcript/mRNA vs genomic hits, and print match title/length/e-value/snippet. URL: https://github.com/MisplacedOrange/gRNAlytics/commit/6dfe2eb112b3b475f4a19a306566edc6a0709894
+- Initial commit `6dfe2eb` implemented a basic BLAST workflow: prompt for gRNA count/sequences, run NCBI BLAST against human sequences, save XML result files, parse BLAST XML, classify transcript/mRNA vs genomic hits, and print match title/length/e-value/snippet. This commit is name-matched to Affan Nadeem, but because it is part of the alias/name-confirmation set, use conservative wording until Affan confirms the identity. URL: https://github.com/MisplacedOrange/gRNAlytics/commit/6dfe2eb112b3b475f4a19a306566edc6a0709894
 - By commit `d6b07e4`, Affan had expanded `main.py` with essential-gene loading from `AchillesCommonEssentialControls.csv`, regex/fuzzy gene extraction, target-chromosome prompt, specificity scoring based on BLAST e-values and identity percentage, transcript/mRNA penalties, top-match reporting, score comparison, and best-gRNA selection. URL: https://github.com/MisplacedOrange/gRNAlytics/commit/d6b07e4c07980dab950b569ee795dd9a0af3df81
 - Commit `03ccbe7` added BLAST XML result files and modified `main.py`, indicating test/sample result iteration. URL: https://github.com/MisplacedOrange/gRNAlytics/commit/03ccbe7a198603ab71e8bac3a820dbe72fc6e6e7
 - Commit `d91d559` later added `blast_result_1.xml`. URL: https://github.com/MisplacedOrange/gRNAlytics/commit/d91d5590fdf60ebc96ecd72e65117265241854cd

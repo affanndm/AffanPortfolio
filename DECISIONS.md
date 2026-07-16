@@ -81,3 +81,87 @@ Decision: Confirm the Figma MCP server is available, but treat Figma Make reinsp
 Reason: The current prompt describes the Make interaction reference, but no URL appears in the prompt or repository. The Figma MCP tools require a file key or URL to inspect the file.
 
 Fallback: Use the written interaction principles from the brief for the `/design-lab` dotted-grid bloom experiment, and mark the missing URL as `NEEDS_AFFAN_CONFIRMATION` in status until provided.
+
+## 2026-07-15: Use Local Typed Content For The First Production Build
+
+Decision: Store project, lab, metadata, evidence links, and draft-only contribution notes in local typed TypeScript content rather than adding MDX or a CMS.
+
+Reason: The current content surface is small, evidence-sensitive, and tightly tied to `CLAIMS_LEDGER.md`. Typed local content makes unsupported claims easier to catch during code review and avoids a headless CMS or paid dependency before the portfolio needs one.
+
+Rejected Alternatives:
+
+- Add a CMS before the content model has stabilized.
+- Use loose JSON without TypeScript validation.
+- Put long-form public claims directly into page components.
+
+## 2026-07-15: Build Motion With CSS And One Canvas 2D Island
+
+Decision: Use CSS transitions/keyframes and a single lightweight Canvas 2D `SignalField` client component for the first implementation. Remove GSAP after review.
+
+Reason: The required motion can be achieved without a full animation framework. The signal field directly supports the concept, while CSS handles ticker, hover, and reveal polish. This keeps the JavaScript surface smaller and makes reduced-motion behavior simpler to enforce.
+
+Rejected Alternatives:
+
+- Keep GSAP as a baseline dependency for possible future choreography.
+- Add Lenis smooth scrolling.
+- Use Rive, Lottie, Three.js, or Vimeo embeds for the opening system before real project media exists.
+
+## 2026-07-15: Keep Confirmation-Gated Claims Out Of Public Copy
+
+Decision: Public pages use verified or conservative project language. More specific Affan-attribution details that require alias, role, or contribution confirmation are kept in audit docs or marked as draft contribution notes rather than presented as final public claims.
+
+Reason: Vantage and gRNAlytics are team projects with nuanced authorship evidence. The portfolio should be visually confident without overstating individual ownership, biological validity, shipped status, or current production responsibility.
+
+Rejected Alternatives:
+
+- Use all promising audit findings as public portfolio copy.
+- Hide ownership complexity until deep in a case study.
+- Present lab projects as polished production products.
+
+## 2026-07-15: Select Signal Network As The Production Hero Direction
+
+Decision: Use the Signal Network as the production hero base, supported by media-first project trailers. Keep the Dotted Grid Bloom as a design-lab experiment and reference principle, not as the public homepage's dominant background.
+
+Reason: The Signal Network most directly expresses Affan's strategy: resolving noisy constraints into useful systems. The Dotted Bloom is atmospheric but more generic and carries resemblance risk to the unavailable Figma Make reference. The Editorial Project Reel is useful for selected-work presentation, but it is not strong enough alone as Affan's first-viewport identity.
+
+Rejected Alternatives:
+
+- Make Dotted Grid Bloom the main homepage art direction.
+- Lead with a conventional project reel.
+- Use a fake loader or long opening animation before content appears.
+
+## 2026-07-15: Make The Hero Signal Field Progressive
+
+Decision: Render a static signal network immediately on the homepage, and load the Canvas 2D `SignalField` only after first pointer movement on desktop-width, fine-pointer, no-reduced-motion devices.
+
+Reason: The interaction is valuable on desktop, but it is not essential to comprehension and should not hurt mobile Lighthouse, reduced-motion users, or first paint. A static network preserves the visual metaphor while the canvas becomes a progressive enhancement.
+
+Rejected Alternatives:
+
+- Eagerly hydrate the canvas on all devices.
+- Load the canvas on idle, which still affected Lighthouse's measurement window.
+- Remove the signal system entirely from the hero.
+
+## 2026-07-15: Use Native Disclosure Navigation
+
+Decision: Replace the React stateful mobile menu with a server-rendered `<details>/<summary>` disclosure menu.
+
+Reason: Native disclosure behavior keeps mobile navigation keyboard-accessible while reducing client-side hydration work. The portfolio does not need a custom animated menu state for the first preview.
+
+Rejected Alternatives:
+
+- Keep React state and effects solely to close on Escape.
+- Add a heavier menu animation library.
+- Hide mobile navigation behind a non-semantic custom button.
+
+## 2026-07-15: Require Explicit Preview Target For Future Vercel Deploys
+
+Decision: Future preview deployments must use `npx vercel deploy --target=preview` rather than `npx vercel deploy --yes`.
+
+Reason: A deployment attempt using `npx vercel deploy --yes` created production deployment `dpl_6vzX1pXuE2riUKnQJyJsunvVw9hb` and aliased `https://affanndm.me`, even though no `--prod` flag was passed. This violated the intended preview-only constraint. No rollback or alias removal was performed because that would further change production/domain state and requires Affan's explicit approval. A later explicit preview command, `npx vercel deploy --target=preview --yes`, correctly created preview deployment `dpl_3Y5bcLcyCXL7dJJdYc5Q9PgyEecL`.
+
+Rejected Alternatives:
+
+- Attempt rollback or alias removal without approval.
+- Continue using the default linked-project deployment command.
+- Treat the production deployment as an approved launch.

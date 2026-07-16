@@ -6,7 +6,7 @@ Date: 2026-07-15
 
 ## Scope And Evidence
 
-This audit uses only public evidence: rendered page text exposed at `https://www.abhijitrout.in/#about`, the public HTML, HTTP headers, Framer search index, sitemap, robots file, and network-visible Framer asset/module URLs. I did not access private source code, Framer editor files, or unpublished project material. Local headless Chrome inspection was attempted but was not stable enough to rely on for screenshots or live interaction traces, so live hover and route-transition details are marked as inference unless backed by public HTML/module evidence.
+This audit uses only public evidence: rendered page text exposed at `https://www.abhijitrout.in/#about`, the public HTML, HTTP headers, Framer search index, sitemap, robots file, and network-visible Framer asset/module URLs. I did not access private source code, Framer editor files, or unpublished project material. Local headless Chrome inspection was attempted but was not stable enough to rely on for screenshots or live interaction traces, so live hover and route-transition details are marked as inference unless backed by public HTML/module evidence. The site is a live portfolio and may change after this audit snapshot.
 
 Source URLs:
 
@@ -41,7 +41,7 @@ Affan should borrow the editorial confidence and personal depth, not the exact p
 - The `/work/store` page is a long-form case study for "Exclusive Store", dated April 2024, with sections such as Background, Pre Launch Planning, Calendar, Stickers & Badges, MagSafe Card Wallet, Evolution of Store, T-Shirts, Deck of Cards, Tote Bag, Artisanal Perfume, Online Store, Event Experience Design, and a message to the former GrowthX team.
 - The case study explicitly names collaborators and separates at least one boundary of responsibility: "I was obviously not responsible for the logistics of the event, but I did have a role in designing the visual experience."
 
-## Publicly Disclosed Technology
+## Publicly Exposed / Disclosed Technology
 
 - The HTML includes `<!-- Made in Framer - framer.com -->`, `meta name="generator" content="Framer b3492b4"`, and a public publish timestamp: May 10, 2026, 11:26 AM UTC.
 - HTTP headers identify `Server: Framer/71ecfbf`; `Server-Timing` reports a cached, optimized route from `ca-central-1`.
@@ -63,7 +63,7 @@ Affan should borrow the editorial confidence and personal depth, not the exact p
 - The site is almost certainly a Framer static/SSR export with React hydration, Framer Motion/WAAPI entrance effects, Framer responsive variants, and custom code components for ticker and smooth scrolling.
 - The homepage appears to rely on media-heavy Framer layers, transition images, duplicated responsive variants, and sticky/full-height sections. This is inferred from layer names such as `Hero/Section 1`, `Transition Before`, `Transition After`, `Sticky FH`, `Ticker Container`, `Gradient Transition`, and many variant names in public HTML.
 - Smooth scroll behavior is likely powered by Lenis through the public `Smooth_Scroll` module.
-- The ticker/moving media strip is likely a Framer code component or generated custom component using Motion and DOM transforms. The module contains a `canvas` substring, but no `<canvas>` element was directly observed in the public HTML, so Canvas usage is not confirmed.
+- The ticker/moving media strip is likely a Framer code component or generated custom component using Motion and DOM transforms. The module contains a `canvas` substring, but no `<canvas>` element was directly observed in the public HTML, so Canvas usage is unconfirmed and should not be credited as observed behavior.
 - Hover behavior is likely present on media cards, links, and experiment items because the HTML contains many hover-related style strings and interactive anchors, but exact hover states were not directly captured.
 - Page transitions between `/` and `/work/store` could be Framer route transitions or simply composed transition imagery. Public evidence confirms transition layers/images, not the exact navigation animation.
 
@@ -323,6 +323,7 @@ Directly observed risks:
 - The site actively blocks keyboard zoom, Ctrl/Command-wheel zoom, and Safari gesture zoom.
 - Many images have generic or empty alt text.
 - The Framer search index reports no homepage `h1`/`h2`/`h3` entries, despite visible section titles, which suggests semantic heading structure may be weak.
+- This heading issue is a direct search-index finding, not proof of the rendered accessibility tree, but it is enough to treat semantic headings as a risk.
 - Duplicated responsive content may create screen-reader or SEO noise if not hidden correctly.
 - Persistent audio begins after first click and loops; even with click gating, it can surprise users.
 - Hover and motion-heavy sections may need stronger keyboard/touch equivalents than public evidence can confirm.
@@ -364,4 +365,3 @@ Affan's version of this influence should be:
 - Case studies: contribution-first, team-aware, artifact-rich, and technically legible.
 - Motion: structural signal transformation, not constant scroll atmosphere.
 - Accessibility: stricter than the reference, especially around zoom, headings, alt text, and reduced motion.
-

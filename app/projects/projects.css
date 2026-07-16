@@ -1,0 +1,43 @@
+.project-hero {
+  min-height: 68vh;
+  display: grid;
+  align-items: end;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.project-hero-vantage {
+  background: radial-gradient(circle at 76% 24%, rgba(243, 177, 92, 0.14), transparent 30rem);
+}
+
+.project-hero-grnalytics {
+  background: radial-gradient(circle at 76% 24%, rgba(101, 230, 255, 0.14), transparent 30rem);
+}
+
+.case-section {
+  border-top: 1px solid var(--color-rule);
+}
+
+.case-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.65;
+}
+
+.caution-list {
+  margin-top: 2rem;
+}
+
+.evidence-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.next-project {
+  border-top: 1px solid var(--color-rule);
+  background: rgba(18, 19, 16, 0.38);
+}

@@ -1,0 +1,48 @@
+{
+  "name": "affanportfolio",
+  "version": "1.0.0",
+  "description": "Affan Nadeem portfolio website built with Next.js, React, and TypeScript.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test:a11y": "playwright test tests/a11y.spec.ts",
+    "test:links": "playwright test tests/links.spec.ts",
+    "test:navigation": "playwright test tests/navigation.spec.ts",
+    "test:responsive": "playwright test tests/responsive.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/affanndm/AffanPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/affanndm/AffanPortfolio/issues"
+  },
+  "homepage": "https://github.com/affanndm/AffanPortfolio#readme",
+  "dependencies": {
+    "lucide-react": "^1.24.0",
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.10",
+    "playwright": "^1.61.1",
+    "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
+  }
+}
