@@ -165,3 +165,58 @@ Rejected Alternatives:
 - Attempt rollback or alias removal without approval.
 - Continue using the default linked-project deployment command.
 - Treat the production deployment as an approved launch.
+
+## 2026-07-15: Use Verified Media And Source-Backed System Visuals
+
+Decision: Use a real capture of the public Vantage deployment and a code-native gRNAlytics pipeline visual based on the current public repository. Label the pipeline as software flow, not as a biological result.
+
+Reason: Flagship media must show real project evidence. Vantage has a verifiable public deployment. gRNAlytics does not provide a stable public product recording, but its source clearly exposes the input, BLAST, annotation, scoring, and comparison flow.
+
+Rejected Alternatives:
+
+- Keep generic placeholder gradients in flagship trailers.
+- Fabricate terminal output, scientific measurements, or biological accuracy.
+- Present repository-wide behavior as Affan's sole implementation.
+
+## 2026-07-15: Publish Public Contributor Handles Without Inventing Roles
+
+Decision: Credit public GitHub contributor handles for Vantage and gRNAlytics while stating that commit history does not establish private team roles.
+
+Reason: Visible team attribution is more credible than a generic "team project" label, but public history cannot verify preferred names, responsibilities, or organizational context.
+
+Rejected Alternative: Infer role titles or ownership percentages from commit counts.
+
+## 2026-07-15: Use A Server-Rendered Public Shell With Progressive Enhancements
+
+Decision: Keep public routes server rendered. Implement navigation, ticker lifecycle, and desktop signal activation as small native scripts attached to semantic markup. Keep React client components only for hidden design-lab experiments.
+
+Reason: The interactions are small and do not require React state. Removing public client boundaries preserves the visual system while reducing hydration and making mobile/reduced-motion fallbacks immediate.
+
+Implementation Notes:
+
+- The hero canvas is created only after fine-pointer intent on a wide viewport.
+- The ticker and menu remain useful before script enhancement.
+- Internal public navigation uses ordinary anchors and full-document navigation intentionally; this ensures each inline enhancement initializes from a clean document lifecycle and avoids prefetch/runtime overhead.
+- A future strict Content Security Policy must nonce or externalize these scripts.
+
+## 2026-07-15: Use One Downloaded Interface Font And System Contrasts
+
+Decision: Load Geist as the single optimized webfont, use Georgia for editorial serif contrast, and use the system monospace stack for technical labels.
+
+Reason: Three downloaded font families created unnecessary mobile transfer and layout work. The reduced stack preserves typographic hierarchy while lowering cost and avoiding additional licensing or hosting dependencies.
+
+## 2026-07-15: Build Next.js 16 Production Output With Webpack
+
+Decision: Set `npm run build` to `next build --webpack`.
+
+Reason: On the same local production candidate, the default Turbopack build scored 89 on mobile Lighthouse with 279ms TBT. The Webpack build scored 95 with 151ms TBT and 2.48s LCP; desktop scored 100 with 9ms TBT and 0.58s LCP. The implementation and route output are otherwise unchanged.
+
+Rejected Alternative: Accept a slower default production runtime solely because it is the framework default.
+
+## 2026-07-15: Limit Content-Visibility Deferral To Mobile Below-Fold Sections
+
+Decision: Keep desktop sections fully painted. On small mobile viewports only, use `content-visibility: auto` for below-fold section work, with intrinsic sizing and an explicit print override.
+
+Reason: Rendering the entire long-form homepage immediately doubled mobile style/layout time and moved LCP above the target. Mobile browsers render deferred sections ahead of normal scrolling, while desktop review captures and print remain complete. Automated responsive tests still verify every route and required width.
+
+The small-screen opening state is immediate rather than clip-animated. Desktop retains the short session-gated resolve sequence; mobile prioritizes first-read clarity and paint stability.

@@ -10,9 +10,10 @@
   --color-canvas: #090a09;
   --color-surface: #121310;
   --color-surface-2: #181a15;
+  --color-band: #0e100d;
   --color-text: #f2f0e8;
   --color-muted: #a8aaa2;
-  --color-faint: rgba(242, 240, 232, 0.46);
+  --color-faint: rgba(242, 240, 232, 0.58);
   --color-rule: rgba(242, 240, 232, 0.16);
   --color-rule-strong: rgba(242, 240, 232, 0.32);
   --color-signal: #c4ff45;
@@ -34,6 +35,8 @@
   --radius-media: 8px;
   --ease-signal: cubic-bezier(0.16, 1, 0.3, 1);
   --content-max: 1600px;
+  --font-geist-mono: ui-monospace;
+  --font-instrument-serif: Georgia;
   color-scheme: dark;
 }
 
@@ -49,10 +52,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(196, 255, 69, 0.08), transparent 26rem),
-    radial-gradient(circle at 82% 4%, rgba(101, 230, 255, 0.065), transparent 28rem),
-    var(--color-canvas);
+  background: var(--color-canvas);
   color: var(--color-text);
   font-family: var(--font-geist), Arial, sans-serif;
   line-height: 1.6;
@@ -64,6 +64,14 @@ a {
   color: inherit;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 button,
@@ -109,6 +117,7 @@ select {
 .section {
   width: 100%;
   padding: clamp(4.5rem, 10vw, 10rem) clamp(1.25rem, 3vw, 3.5rem);
+  contain: layout style;
 }
 
 .section-tight {
@@ -173,7 +182,7 @@ select {
 
 .label {
   font-family: var(--font-geist-mono), ui-monospace, monospace;
-  font-size: clamp(0.72rem, 0.95vw, 0.82rem);
+  font-size: 0.78rem;
   line-height: 1.35;
   text-transform: uppercase;
 }
@@ -181,7 +190,7 @@ select {
 .display {
   margin: 0;
   max-width: 14ch;
-  font-size: clamp(4rem, 10vw, 10.5rem);
+  font-size: 6rem;
   line-height: 0.88;
   letter-spacing: 0;
   text-wrap: balance;
@@ -190,7 +199,7 @@ select {
 .section-title {
   margin: 0;
   font-family: var(--font-instrument-serif), Georgia, serif;
-  font-size: clamp(3rem, 6.5vw, 7rem);
+  font-size: 4.8rem;
   line-height: 0.96;
   letter-spacing: 0;
   text-wrap: balance;
@@ -198,7 +207,7 @@ select {
 
 .project-title {
   margin: 0;
-  font-size: clamp(2.75rem, 6vw, 6.5rem);
+  font-size: 4.5rem;
   line-height: 0.92;
   letter-spacing: 0;
   text-wrap: balance;
@@ -208,7 +217,7 @@ select {
   max-width: 68ch;
   margin: 0;
   color: var(--color-muted);
-  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+  font-size: 1.35rem;
   line-height: 1.55;
   text-wrap: pretty;
 }
@@ -308,7 +317,7 @@ select {
   overflow: hidden;
   border: 1px solid var(--color-rule);
   border-radius: var(--radius-media);
-  background: linear-gradient(135deg, rgba(242, 240, 232, 0.08), rgba(242, 240, 232, 0.02));
+  background: var(--color-surface);
   aspect-ratio: 16 / 9;
 }
 
@@ -339,6 +348,22 @@ select {
 }
 
 @media (max-width: 1024px) {
+  .display {
+    font-size: 5rem;
+  }
+
+  .section-title {
+    font-size: 3.9rem;
+  }
+
+  .project-title {
+    font-size: 3.75rem;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+  }
+
   .grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
@@ -360,6 +385,8 @@ select {
 
   .section {
     padding-inline: 1.25rem;
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto 48rem;
   }
 
   .grid {
@@ -369,12 +396,31 @@ select {
 
   .display {
     max-width: 12ch;
-    font-size: clamp(3.15rem, 15vw, 5.2rem);
+    font-size: 3.45rem;
+  }
+
+  .section-title {
+    font-size: 2.85rem;
+  }
+
+  .project-title {
+    font-size: 3.25rem;
+  }
+
+  .lead {
+    font-size: 1.08rem;
   }
 
   .metadata-row {
     grid-template-columns: 1fr;
     gap: 0.35rem;
+  }
+}
+
+@media print {
+  .section {
+    content-visibility: visible;
+    contain-intrinsic-block-size: none;
   }
 }
 

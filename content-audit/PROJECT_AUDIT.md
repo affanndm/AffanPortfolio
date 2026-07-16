@@ -37,7 +37,7 @@ Repository owner: `crackle2k`
 
 Repository URL: https://github.com/crackle2k/vantage
 
-Live URL: `NEEDS_AFFAN_CONFIRMATION`
+Live URL: https://vantage-ruddy.vercel.app
 
 Purpose: A community-focused local business discovery platform. The public README describes a trust-first discovery product with consumer discovery, business-owner workflows, claimed profiles, events, deals, saved businesses, reviews, and visibility concepts.
 
@@ -84,6 +84,17 @@ Files and systems personally touched:
 - Frontend API, business/explore pages, account/business UI, saved-business hooks, preference onboarding, and discovery UI components.
 - Supabase compatibility and explore discovery regression tests.
 
+Public GitHub contributor credits:
+
+- `MisplacedOrange`
+- `crackle2k`
+- `affanndm`
+- `OriginalPuppeteer`
+- `MisplacedOranges`
+- `ethan-gobi`
+
+This list reflects the public contributors endpoint and does not assign private team roles. Bot/automation accounts are omitted from portfolio credits.
+
 Technologies personally used:
 
 - TypeScript, React, frontend API integration.
@@ -101,7 +112,6 @@ Missing information:
 
 - `NEEDS_AFFAN_CONFIRMATION`: Exact public role/title for Vantage.
 - `NEEDS_AFFAN_CONFIRMATION`: Which current production features still derive from Affan's implementation after later refactors.
-- `NEEDS_AFFAN_CONFIRMATION`: Live URL to show.
 - `NEEDS_AFFAN_CONFIRMATION`: Team member names/credits.
 
 Recommended media:
@@ -111,6 +121,7 @@ Recommended media:
 - Saved-business interaction.
 - Owner events or business-owner flow.
 - Diagram showing noisy business data -> normalized discovery result.
+- Acquired: public live-deployment homepage capture dated July 15, 2026.
 
 Cautions:
 
@@ -144,6 +155,13 @@ What the team collectively built:
 - Off-target scoring and best-guide selection.
 - README and requirements.
 - Later refactors and hardening by other contributors.
+
+Public GitHub contributor credits:
+
+- `MisplacedOrange`
+- `affanndm`
+
+The contributors endpoint also exposes one anonymous `Affan Nadeem` commit; it is not counted separately in public copy.
 
 Verified personal contributions:
 

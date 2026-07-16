@@ -6,6 +6,7 @@ This repository is the production source of truth for Affan Nadeem's portfolio w
 
 - `SPEC.md` is authoritative for creative direction, structure, content rules, motion principles, accessibility, and performance targets.
 - `PLAN.md`, `STATUS.md`, and `DECISIONS.md` must stay current as work progresses.
+- `DESIGN.md` is the code-aligned visual-system reference; update it when tokens, typography, component rules, or motion doctrine materially change.
 - If implementation reality requires a deviation from `SPEC.md`, record it in `DECISIONS.md`.
 - Do not invent factual claims, personal contributions, awards, metrics, outcomes, or biography.
 - Use `NEEDS_AFFAN_CONFIRMATION` for unverified personal information and unresolved project facts.
@@ -88,3 +89,4 @@ This repository is the production source of truth for Affan Nadeem's portfolio w
 - `PLAN.md`
 - `STATUS.md`
 - `DECISIONS.md`
+- `DESIGN.md`

@@ -4,6 +4,10 @@ export function ProjectMetadata({ project }: { project: Project }) {
   return (
     <dl className="metadata-list" aria-label={`${project.title} project metadata`}>
       <div className="metadata-row">
+        <dt>Year</dt>
+        <dd>{project.year}</dd>
+      </div>
+      <div className="metadata-row">
         <dt>Role</dt>
         <dd>{project.role}</dd>
       </div>

@@ -76,8 +76,8 @@ export function SignalField({ labelled = false }: { labelled?: boolean }) {
         const baseY = node.y * height;
         const driftX = Math.cos(time / 1700 + node.phase) * motion;
         const driftY = Math.sin(time / 1500 + node.phase) * motion;
-        const dx = baseX - pointer.x;
-        const dy = baseY - pointer.y;
+        const dx = pointer.x - baseX;
+        const dy = pointer.y - baseY;
         const distance = Math.hypot(dx, dy);
         const influence = pointer.active && finePointer.matches ? Math.max(0, 1 - distance / 180) : 0;
         return {

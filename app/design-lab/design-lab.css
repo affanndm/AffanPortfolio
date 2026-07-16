@@ -42,7 +42,7 @@
 
 .experiment-card h3 {
   margin: 0;
-  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-size: 1.75rem;
   line-height: 1.1;
 }
 
@@ -87,12 +87,22 @@
 
 .reel-specimen span {
   border-bottom: 1px solid var(--color-rule);
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: 3.25rem;
   line-height: 1;
 }
 
 @media (max-width: 1024px) {
   .experiment-card {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .experiment-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .reel-specimen span {
+    font-size: 2.2rem;
   }
 }

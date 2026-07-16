@@ -5,14 +5,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test:a11y": "playwright test tests/a11y.spec.ts",
     "test:links": "playwright test tests/links.spec.ts",
     "test:navigation": "playwright test tests/navigation.spec.ts",
-    "test:responsive": "playwright test tests/responsive.spec.ts"
+    "test:responsive": "playwright test tests/responsive.spec.ts",
+    "test:motion": "playwright test tests/motion.spec.ts",
+    "test:seo": "playwright test tests/seo.spec.ts",
+    "test": "playwright test"
   },
   "repository": {
     "type": "git",

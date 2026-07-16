@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-15T21:56:37.2934393-04:00",
+  "title": "Design System: Affan Nadeem - Signal / Systems",
+  "extensions": {
+    "colorMeta": {
+      "canvas": { "role": "neutral", "displayName": "Black Field", "canonical": "#090a09", "tonalRamp": ["#090a09", "#121310", "#242720", "#3d4138", "#656b5e", "#92978d", "#c5c7bf", "#f2f0e8"] },
+      "signal": { "role": "primary", "displayName": "Signal Lime", "canonical": "#c4ff45", "tonalRamp": ["#172500", "#2d4700", "#4b7000", "#6d9900", "#8fc51d", "#aff04a", "#d2ff85", "#efffcf"] },
+      "vantage": { "role": "secondary", "displayName": "Vantage Amber", "canonical": "#f3b15c", "tonalRamp": ["#2a1604", "#512d0b", "#794718", "#a26429", "#c9853e", "#e5a65a", "#f8c98a", "#ffebce"] },
+      "grnalytics": { "role": "secondary", "displayName": "gRNA Cyan", "canonical": "#65e6ff", "tonalRamp": ["#00252c", "#004653", "#006a7b", "#008fa4", "#13b3cb", "#5ed9eb", "#a5f1fa", "#e2fbff"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero and project names only." },
+      "statement": { "displayName": "Statement", "purpose": "Interpretive section arguments and transitions." },
+      "body": { "displayName": "Body", "purpose": "Evidence-backed narrative and case-study prose." },
+      "label": { "displayName": "Metadata", "purpose": "Roles, years, system state, controls, and provenance." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-signal", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Shared exponential ease for reveals, controls, and media response." },
+      { "name": "hover", "value": "180-260ms", "purpose": "Immediate state response." },
+      { "name": "reveal", "value": "600-750ms", "purpose": "Clipped text and project arrival." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px" },
+      { "name": "navigation", "value": "760px" },
+      { "name": "tablet", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Command Link",
+      "kind": "button",
+      "refersTo": "command-link",
+      "description": "Compact command for navigation or source evidence.",
+      "html": "<a class=\"ds-command\" href=\"#\">READ CASE STUDY <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-command{display:inline-flex;min-height:44px;align-items:center;gap:.55rem;border:1px solid rgba(242,240,232,.16);border-radius:8px;background:#090a09;color:#f2f0e8;padding:.75rem .9rem;font:400 .78rem/1.1 ui-monospace,monospace;text-decoration:none;text-transform:uppercase;transition:border-color 220ms cubic-bezier(.16,1,.3,1),background-color 220ms cubic-bezier(.16,1,.3,1),transform 160ms cubic-bezier(.16,1,.3,1)}.ds-command:hover{border-color:#c4ff45;background:rgba(196,255,69,.06)}.ds-command:focus-visible{outline:2px solid #c4ff45;outline-offset:4px}.ds-command:active{transform:scale(.98)}"
+    },
+    {
+      "name": "Ownership Label",
+      "kind": "chip",
+      "refersTo": "ownership-label",
+      "description": "Persistent attribution shown before project entry.",
+      "html": "<span class=\"ds-owner\"><i></i><strong>TEAM PROJECT</strong><span>FULL-STACK CONTRIBUTOR</span></span>",
+      "css": ".ds-owner{display:inline-flex;width:max-content;align-items:center;gap:.55rem;border:1px solid rgba(242,240,232,.16);border-radius:8px;padding:.45rem .65rem;color:#f2f0e8;font:400 .72rem/1.35 ui-monospace,monospace;text-transform:uppercase}.ds-owner i{width:.42rem;height:.42rem;border-radius:50%;background:#c4ff45}.ds-owner strong{font-weight:500}.ds-owner span{color:rgba(242,240,232,.58)}"
+    },
+    {
+      "name": "Lab Row",
+      "kind": "custom",
+      "description": "Dense, status-aware index row for smaller work.",
+      "html": "<article class=\"ds-lab\"><span>01</span><div><strong>SOLUTIONS</strong><small>VERIFIED SOURCE</small></div><p>Python algorithm practice with visible evidence boundaries.</p></article>",
+      "css": ".ds-lab{display:grid;grid-template-columns:3rem minmax(12rem,.7fr) 1fr;gap:1.5rem;align-items:center;border-block:1px solid rgba(242,240,232,.16);padding:1.25rem 0;color:#f2f0e8;background:#090a09}.ds-lab>span,.ds-lab small{color:rgba(242,240,232,.58);font:400 .72rem/1.35 ui-monospace,monospace}.ds-lab div{display:grid;gap:.4rem}.ds-lab p{margin:0;color:#a8aaa2}.ds-lab:focus-within{outline:2px solid #c4ff45;outline-offset:4px}"
+    },
+    {
+      "name": "Project Media Frame",
+      "kind": "custom",
+      "description": "Flat 16:9 evidence surface for real media or labeled code flow.",
+      "html": "<figure class=\"ds-media\"><div>VERIFIED PROJECT MEDIA</div><figcaption>Capture source, date, and evidence boundary.</figcaption></figure>",
+      "css": ".ds-media{margin:0;color:#f2f0e8}.ds-media>div{display:grid;aspect-ratio:16/9;place-items:center;border:1px solid rgba(242,240,232,.16);border-radius:8px;background:#121310;font:400 .78rem/1.35 ui-monospace,monospace}.ds-media figcaption{margin-top:.75rem;color:rgba(242,240,232,.58);font:400 .72rem/1.45 ui-monospace,monospace}"
+    },
+    {
+      "name": "Ticker Control",
+      "kind": "button",
+      "description": "Explicit pause control for the moving technical-domain strip.",
+      "html": "<button class=\"ds-ticker\" type=\"button\" aria-label=\"Pause ticker\">Ⅱ</button>",
+      "css": ".ds-ticker{display:grid;width:44px;height:44px;place-items:center;border:1px solid rgba(242,240,232,.32);border-radius:8px;background:#090a09;color:#f2f0e8;cursor:pointer;transition:border-color 180ms cubic-bezier(.16,1,.3,1),color 180ms cubic-bezier(.16,1,.3,1)}.ds-ticker:hover{border-color:#c4ff45;color:#c4ff45}.ds-ticker:focus-visible{outline:2px solid #c4ff45;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Resolved Signal",
+    "overview": "The interface feels like a dark technical field becoming legible under examination. Theatre always resolves into evidence, and mobile is recomposed as a compact evidence index rather than a stacked desktop page.",
+    "keyCharacteristics": ["Dark untextured canvas", "Strong scale contrast and thin rules", "Real project media before prose", "Visible ownership and evidence state", "Motion that communicates resolution or state"],
+    "rules": [
+      { "name": "The Rare Signal Rule", "body": "Signal lime appears only on focus, selection, a meaningful node, or verified state.", "section": "colors" },
+      { "name": "The One Serif Move Rule", "body": "Serif type marks interpretation or reflection and cannot become the default heading treatment for every block.", "section": "typography" },
+      { "name": "The Flat Evidence Rule", "body": "Evidence sits on the same plane as the story and is separated by alignment, spacing, and one-pixel rules.", "section": "elevation" }
+    ],
+    "dos": ["Do show ownership before project entry.", "Do use real media or clearly labeled source-backed diagrams.", "Do keep claims aligned with the claims ledger."],
+    "donts": ["Don't use generic student-portfolio patterns.", "Don't use generic gradient blobs or decorative grid overlays.", "Don't imply sole ownership or invent outcomes."]
+  }
+}

@@ -2,133 +2,98 @@
 
 ## Current Milestone
 
-Milestone 8: Vercel Preview Preparation / Deployment Incident Review.
+Milestone 8: preview delivery and human review.
 
-Milestones 0-7 have working deliverables in the repository. A Vercel preview deployment is ready. A separate earlier Vercel command unexpectedly created a production-target deployment despite no `--prod` flag, so remaining work includes explicit human decision on rollback/domain aliases and final confirmation cleanup.
+Milestones 0-7 are implemented and locally validated. The current site is an evidence-led Next.js portfolio with complete public routes, flagship case studies, a Lab index, design-system experiments, responsive motion fallbacks, and automated QA. Remaining work is limited to preview deployment, richer Affan-provided media and biography inputs, and an explicit decision about the earlier Vercel production-alias incident.
 
 ## Completed Work
 
-- Read the current user brief, `SPEC.md`, repository instructions, workspace state, and recent git history.
-- Created working branch `portfolio-rebuild`.
-- Confirmed existing commits were available and created architecture-reset checkpoint commit `4077bcf`.
-- Confirmed `gh` is not installed; public GitHub API/search was used and the limitation is documented.
-- Confirmed Figma MCP tooling is available, but no Figma Make URL is present in the repo or prompt.
-- Removed stale `.framer-temp/` helper files.
-- Renamed `framer-planning/` to `implementation-planning/` and revised the briefs for Next.js rather than Framer platform work.
-- Updated `AGENTS.md`, `PLAN.md`, `SPEC.md`, `DECISIONS.md`, implementation-planning docs, and QA plans for the fixed Next.js/React/TypeScript + Vercel architecture.
-- Refreshed public GitHub evidence:
-  - 7 owned public repositories confirmed.
-  - 14 public authored PRs confirmed.
-  - Public commit search found 153 commits across audited repos.
-  - Public non-owned contribution evidence remains limited to `crackle2k/vantage` and `MisplacedOrange/gRNAlytics`.
-- Refreshed content audits and claims ledger with conservative publication status.
-- Updated reference audits for Filippo Ruffini, Tigran Azatyan, and Abhijit Rout, including reviewer corrections around public technology evidence, semantic/accessibility risks, and implementation inference.
-- Built the Next.js App Router foundation with TypeScript strict mode, ESLint, metadata, sitemap, robots, font loading, shared layout, CSS tokens, and typed content.
-- Created `/design-lab` with design tokens, component specimens, and three hero experiments:
-  - Signal Network.
-  - Editorial Project Reel.
-  - Dotted Grid Bloom.
-- Selected the production direction: combine Signal Network with restrained media-first project evidence; keep Dotted Bloom as a secondary design-lab reference only.
-- Built production routes:
-  - `/`
-  - `/design-lab`
-  - `/lab`
-  - `/projects/vantage`
-  - `/projects/grnalytics`
-  - `404`
-  - `robots.txt`
-  - `sitemap.xml`
-- Built reusable components:
-  - `Navigation`
-  - `SignalField`
-  - `DesktopSignalField`
-  - `DottedBloom`
-  - `SignalTicker`
-  - `ProjectTrailer`
-  - `OwnershipLabel`
-  - `ProjectMetadata`
-  - `MediaFrame`
-- Removed GSAP after motion/performance review determined the current build only needs CSS and a pointer-triggered Canvas 2D enhancement.
-- Converted navigation to server-rendered native disclosure behavior to reduce hydration cost.
-- Added Playwright link, axe, navigation, and responsive smoke tests.
-- Installed Playwright Chromium for local test execution.
-- Started a local production server on `http://127.0.0.1:3000` for QA.
-- Generated screenshots for home, project, Lab, and design-lab routes at 390, 768, 1024, 1440, and 1920px.
-- Added `qa/FINAL_REVIEW.md`.
-- Added `DEPLOYMENT.md`.
-- Ran `npx vercel deploy --yes`; Vercel created production deployment `dpl_6vzX1pXuE2riUKnQJyJsunvVw9hb` and aliased `https://affanndm.me`. This was not intended and is documented as a deployment incident.
-- Ran `npx vercel deploy --target=preview --yes`; Vercel created preview deployment `dpl_3Y5bcLcyCXL7dJJdYc5Q9PgyEecL`.
+- Created and worked on branch `portfolio-rebuild`; checkpoint commits `4077bcf` and `73e75be` preserve the architecture reset and initial preview.
+- Replaced stale Framer platform architecture with Next.js App Router, React, strict TypeScript, GitHub source control, and Vercel hosting documentation.
+- Confirmed Figma MCP availability. The specific Figma Make URL is still absent, so only its written interaction principles informed the dotted-bloom experiment.
+- Audited seven Affan-owned public repositories, public pull requests, commits, and the known contribution-only Vantage and gRNAlytics repositories. Authenticated `gh` search remains unavailable because `gh` is not installed.
+- Updated all required reference audits, project audits, claims ledger, and media requirements.
+- Built `/design-lab` with the Signal Network, Editorial Project Reel, and Dotted Grid Bloom experiments; selected the Signal Network plus media-first evidence.
+- Built `/`, `/projects/vantage`, `/projects/grnalytics`, `/lab`, 404, Open Graph image, robots, and sitemap routes.
+- Added evidence-safe flagship case-study structure: Signal, Noise, System, My Contribution, Important Decisions, Product in Motion, Verified Outcome, Reflection, Evidence, Team and Credits, and Next Project.
+- Added a verified Vantage deployment capture and a source-backed gRNAlytics pipeline visual. Public contributor handles are credited without inventing private roles.
+- Added visible Lab ownership and status labels, project chronology, verified public email, GitHub, and LinkedIn contact links.
+- Implemented a session-gated opening reveal, static signal network, pointer-triggered desktop Canvas 2D enhancement, pausable ticker, accessible mobile navigation, and complete reduced-motion/mobile fallbacks.
+- Removed unnecessary animation dependencies. The public shell is server rendered and uses small native progressive-enhancement scripts; design-lab-only React canvas experiments remain isolated from public routes.
+- Chose Webpack for deterministic Next.js 16 production builds after measured mobile performance showed substantially lower runtime cost than the default Turbopack build.
+- Completed adversarial design, credibility, accessibility, motion, and performance reviews and resolved all blocker/high code findings.
 
 ## Work In Progress
 
-- Human decision on whether to rollback or alter the unintended Vercel production aliases.
-- Optional preview redeploy using `npx vercel deploy --target=preview`.
-- Next checkpoint commit for the implemented Next.js app.
+- Create a fresh explicit Vercel preview from the final checkpoint.
+- Smoke-check the resulting preview to the extent allowed by Vercel access protection.
+- Await Affan's decision on the unintended existing production deployment/domain aliases.
 
 ## Next Action
 
-- Wait for explicit approval before changing Vercel production/domain state.
-- If approved, rollback or adjust aliases in Vercel.
-- Commit the implemented Next.js app and QA docs.
+- Commit the polished implementation and QA records.
+- Run only `npx vercel deploy --target=preview --yes` for the final preview.
+- Do not alter production aliases, promote a deployment, or change DNS without explicit approval.
 
-## Blockers
+## Blockers And Missing Human Inputs
 
-- `gh` is unavailable, so authenticated GitHub contribution search cannot run through GitHub CLI unless it is installed or another authenticated path is provided.
-- The Figma Make project URL is not present in the current prompt or repository, so the interaction reference cannot be reinspected yet.
-- LinkedIn public access is restricted; background claims remain confirmation-gated.
-- Final project media, resume, email, portrait, and exact public availability require Affan confirmation.
-- Vercel production/domain rollback or alias changes require explicit Affan approval.
-
-## Outstanding Human Inputs
-
-- `NEEDS_AFFAN_CONFIRMATION`: Current final email address.
-- `NEEDS_AFFAN_CONFIRMATION`: Resume PDF or public resume link.
-- `NEEDS_AFFAN_CONFIRMATION`: Whether "available for collaboration" is currently true.
-- `NEEDS_AFFAN_CONFIRMATION`: Portrait or candid image.
-- `NEEDS_AFFAN_CONFIRMATION`: LinkedIn export or reviewed biography for final About chronology.
-- `NEEDS_AFFAN_CONFIRMATION`: Vantage live URL and team credits.
-- `NEEDS_AFFAN_CONFIRMATION`: Which current Vantage production features still derive from Affan's implementation after later refactors.
-- `NEEDS_AFFAN_CONFIRMATION`: gRNAlytics team/context details, alias confirmation, scoring-logic ownership, and current run reliability.
-- `NEEDS_AFFAN_CONFIRMATION`: Figma Make URL if that interaction reference should be reinspected.
+- `gh` is unavailable, so authenticated cross-repository GitHub search has not been rerun.
+- LinkedIn public access is restricted; detailed biography claims remain confirmation-gated.
+- `NEEDS_AFFAN_CONFIRMATION`: resume PDF or public resume URL.
+- `NEEDS_AFFAN_CONFIRMATION`: portrait or candid photography.
+- `NEEDS_AFFAN_CONFIRMATION`: current collaboration availability.
+- `NEEDS_AFFAN_CONFIRMATION`: preferred real names and roles for full team credits.
+- `NEEDS_AFFAN_CONFIRMATION`: which current Vantage production features still derive from Affan's implementation after later refactors.
+- `NEEDS_AFFAN_CONFIRMATION`: gRNAlytics scoring ownership, current run reliability, and biological interpretation boundaries.
+- `NEEDS_AFFAN_CONFIRMATION`: Figma Make URL for direct reinspection.
+- Richer project recordings, device captures, and a public resume remain listed in `content-audit/MEDIA_NEEDED.md`.
+- Any rollback/removal of the unintended Vercel production aliases requires explicit approval.
 
 ## Test Results
 
+Final local production candidate on 2026-07-15:
+
 - `npm run typecheck`: pass.
 - `npm run lint`: pass.
-- `npm audit --json`: pass, 0 vulnerabilities after removing GSAP and keeping PostCSS override.
-- `npm run build`: pass.
-- `npm run test:links`: pass, 6 tests.
-- `npm run test:a11y`: pass, 4 tests with color-contrast enabled.
-- `npm run test:navigation`: pass, 1 test.
-- `npm run test:responsive`: pass, 20 tests across 390, 768, 1024, 1440, and 1920px.
+- `npm audit --json`: pass, 0 vulnerabilities.
+- `npm run build`: pass using Next.js 16.2.10 with Webpack.
+- `npm test`: 49/49 pass in Chromium.
+- Axe scans: homepage, both case studies, Lab, and design lab pass with color contrast enabled.
+- Responsive checks: five routes pass at 390, 768, 1024, 1440, and 1920px with no horizontal overflow or console errors.
+- Navigation: menu open/close, Escape focus return, and section selection pass.
+- Motion: keyboard ticker controls, reduced-motion static state, and fine-pointer lazy canvas activation pass.
+- SEO/link checks: metadata, Open Graph image, Twitter card, case-study structure, 404, robots/sitemap privacy, internal routes, external-link safety, and public email pass.
 
 ## Performance Results
 
-- Production build passed.
-- Lighthouse desktop homepage: Performance 100, Accessibility 100, Best Practices 100, SEO 100, LCP 0.7s, CLS 0, TBT 20ms, Speed Index 0.4s.
-- Lighthouse mobile homepage: Accessibility 100, Best Practices 100, SEO 100. Performance was volatile because Lighthouse repeatedly failed during Chrome temp-directory cleanup with `EPERM` while many unrelated Chrome processes were active. Post-fix samples ranged from 89 down to 72; the latest recorded sample was Performance 72, LCP 3.4s, CLS 0, TBT 820ms, Speed Index 1.3s. Treat mobile Lighthouse as not yet meeting the 90 target until rerun in a clean CI/Vercel environment.
-- Current performance choices:
-  - No Framer platform runtime.
-  - No GSAP/Lenis/Rive/Lottie/Three/Vimeo dependencies.
-  - Static signal network renders immediately.
-  - Canvas 2D enhancement loads only after first desktop pointer movement, and respects reduced motion.
-  - `design-lab` is excluded from robots and public navigation.
+Lighthouse against the local Webpack production server on 2026-07-15:
+
+| Profile | Performance | Accessibility | Best Practices | SEO | LCP | TBT | CLS | Speed Index |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Mobile | 91-95 | 100 | 100 | 100 | 2.48-2.62s | 151-257ms | 0 | 2.35-2.49s |
+| Desktop | 100 | 100 | 100 | 100 | 0.58s | 9ms | 0 | 0.42s |
+
+- Repeated final mobile samples were volatile on the Windows Chrome harness. The Performance target was met in all retained final samples, but LCP moved around the 2.5s target and is not claimed as consistently below it.
+- One isolated temp-directory run fell to Performance 87/TBT 364ms while the same build's neighboring samples scored 91-95; it is retained as evidence of local harness instability rather than omitted.
+- Lighthouse produced valid reports; on some Windows runs Chrome cleanup ended with an `EPERM` temp-directory warning after report generation.
+- No GSAP, Lenis, Three.js, Lottie, Rive, video embed, analytics, or other third-party runtime is loaded.
+- The desktop canvas does not initialize on mobile, coarse pointers, reduced motion, or before a qualifying pointer interaction.
 
 ## Accessibility Results
 
-- Automated axe smoke tests pass after adding proper role/labels to diagram media frames.
-- Implemented semantic headings, skip link, keyboard-accessible native disclosure navigation, visible focus styles, reduced-motion media queries, nonessential canvas hidden from assistive tech, and persistent project ownership labels.
-- Manual visual review completed on representative homepage, mobile menu, Vantage mobile, and Lab mobile screenshots.
+- Automated axe checks pass on all primary and design-lab routes.
+- Semantic headings, skip navigation, accessible disclosure navigation, focus visibility, descriptive link names, persistent ownership labels, and nonessential-canvas hiding are implemented.
+- The ticker has an explicit keyboard-operable pause control and pauses on hover, focus, offscreen state, and page visibility changes.
+- Reduced-motion users receive the final opening state immediately, a static ticker, no public hero canvas, and near-zero CSS animation durations.
+- Small-screen users also receive the resolved opening state immediately; the clip reveal is desktop-only.
+- Manual visual review covered homepage, mobile menu, project pages, Lab, and design lab across required widths.
 
 ## Deployment Status
 
-- Local production server: running at `http://127.0.0.1:3000`.
-- Vercel deployment attempt: unintended production target created.
-- Vercel deployment id: `dpl_6vzX1pXuE2riUKnQJyJsunvVw9hb`.
-- Vercel deployment URL: `https://affan-portfolio-ptzswyuhf-affan-s-projects-45c33b7e.vercel.app`.
-- Vercel aliases reported: `https://affanndm.me`, `https://affan-portfolio-ten.vercel.app`, `https://affan-portfolio-affan-s-projects-45c33b7e.vercel.app`, `https://affan-portfolio-nadeemaffan23-3638-affan-s-projects-45c33b7e.vercel.app`.
-- Vercel preview deployment id: `dpl_3Y5bcLcyCXL7dJJdYc5Q9PgyEecL`.
-- Vercel preview URL: `https://affan-portfolio-k7xtqgyhg-affan-s-projects-45c33b7e.vercel.app`.
-- Preview access check: Vercel reports Ready/preview, but unauthenticated HTTP requests return `Login - Vercel`, so the preview is access-protected.
-- No rollback, production promotion, or domain removal was performed after inspection.
-- Production deployment and custom-domain changes remain prohibited without explicit approval.
+- Local production server: `http://127.0.0.1:3005` during final QA.
+- Existing preview deployment id: `dpl_3Y5bcLcyCXL7dJJdYc5Q9PgyEecL`.
+- Existing preview URL: `https://affan-portfolio-k7xtqgyhg-affan-s-projects-45c33b7e.vercel.app`.
+- The existing preview is Ready but unauthenticated requests receive Vercel's login page because access protection is enabled.
+- Deployment incident: earlier `npx vercel deploy --yes` created production deployment `dpl_6vzX1pXuE2riUKnQJyJsunvVw9hb` and aliases including `https://affanndm.me` unexpectedly.
+- No rollback, alias removal, production promotion, or DNS change was performed after that incident.
+- Production and custom-domain actions remain prohibited without explicit Affan approval.

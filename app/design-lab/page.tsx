@@ -85,8 +85,8 @@ export default function DesignLabPage() {
           </div>
           <div className="span-7">
             <p className="lead">
-              These are isolated experiments. Production selection must be documented in `DECISIONS.md`
-              after visual, accessibility, mobile, and performance review.
+              These isolated experiments were compared for meaning, accessibility, mobile behavior, and cost.
+              Signal Network is the production base; the reel informs project presentation, while bloom remains internal.
             </p>
           </div>
           <Experiment title="Experiment 1: Signal Network">

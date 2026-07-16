@@ -7,7 +7,7 @@ playwright-report/
 test-results/
 qa/screenshots/
 qa/lighthouse*.json
-qa/lighthouse-temp/
+qa/lighthouse-temp*/
 .vercel/
 .env
 .env.*

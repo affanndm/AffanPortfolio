@@ -1,4 +1,5 @@
 .ticker-section {
+  position: relative;
   overflow: hidden;
   border-block: 1px solid var(--color-rule);
   background: rgba(18, 19, 16, 0.52);
@@ -20,7 +21,7 @@
   gap: 2rem;
   color: var(--color-text);
   font-family: var(--font-geist-mono), ui-monospace, monospace;
-  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  font-size: 1.45rem;
   line-height: 1;
   text-transform: uppercase;
   animation: ticker-move 32s linear infinite;
@@ -31,8 +32,65 @@
 }
 
 .ticker-section:hover .ticker-track,
-.ticker-section:focus-within .ticker-track {
+.ticker-section:focus-within .ticker-track,
+.ticker-section[data-paused] .ticker-track {
   animation-play-state: paused;
+}
+
+.ticker-control {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid var(--color-rule-strong);
+  border-radius: var(--radius-media);
+  background: var(--color-canvas);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 180ms var(--ease-signal), color 180ms var(--ease-signal);
+}
+
+.ticker-control:hover {
+  border-color: var(--color-signal);
+  color: var(--color-signal);
+}
+
+.ticker-control-icon {
+  position: relative;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.ticker-control-icon.is-pause::before,
+.ticker-control-icon.is-pause::after {
+  content: "";
+  position: absolute;
+  top: 0.15rem;
+  width: 2px;
+  height: 0.7rem;
+  background: currentColor;
+}
+
+.ticker-control-icon.is-pause::before {
+  left: 0.28rem;
+}
+
+.ticker-control-icon.is-pause::after {
+  right: 0.28rem;
+}
+
+.ticker-control-icon.is-play::before {
+  content: "";
+  position: absolute;
+  left: 0.32rem;
+  top: 0.16rem;
+  border-block: 0.34rem solid transparent;
+  border-left: 0.52rem solid currentColor;
 }
 
 @keyframes ticker-move {
@@ -41,7 +99,7 @@
   }
 
   to {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(calc(-50% - 1rem), 0, 0);
   }
 }
 
@@ -64,6 +122,10 @@
   }
 
   .ticker-track {
+    display: none;
+  }
+
+  .ticker-control {
     display: none;
   }
 }

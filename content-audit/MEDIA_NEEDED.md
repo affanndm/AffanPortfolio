@@ -10,7 +10,7 @@ Rule: do not use generic stock media as if it represents a project. Use real pro
 | --- | --- | --- | --- |
 | Portrait or candid image of Affan | About section | `NEEDS_AFFAN_CONFIRMATION` | Use one strong image, not a gallery. |
 | Resume PDF or public resume link | Contact and About verification | `NEEDS_AFFAN_CONFIRMATION` | Needed before final biography and resume link. |
-| Final email address | Contact | `NEEDS_AFFAN_CONFIRMATION` | Direct mail link preferred over contact form. |
+| Final email address | Contact | Acquired from public profile | `nadeemaffan23@gmail.com` is exposed as the email contact in Affan's public GitHub profile README. |
 | LinkedIn export or reviewed biography | About chronology | `NEEDS_AFFAN_CONFIRMATION` | Do not scrape guesses into final copy. |
 | Confirmation of collaboration availability | Hero metadata | `NEEDS_AFFAN_CONFIRMATION` | Only include if true. |
 
@@ -25,7 +25,8 @@ Rule: do not use generic stock media as if it represents a project. Use real pro
 | Signup/auth flow screenshot or recording | Contribution evidence | Needed | Use only if safe and no credentials exposed. |
 | Architecture diagram: discovery inputs -> enrichment -> UI result | Case study explanation | Needed | Can be custom diagram based on verified systems. |
 | Team/credits list | Case study credits | `NEEDS_AFFAN_CONFIRMATION` | Must not conceal team attribution. |
-| Live URL | Project link | `NEEDS_AFFAN_CONFIRMATION` | Confirm correct production/preview URL. |
+| Live URL | Project link | Acquired | GitHub repository metadata links to `https://vantage-ruddy.vercel.app`; it returned a rendered Vantage page during the audit. |
+| Public live-deployment homepage capture | Flagship homepage trailer and case study | Acquired | Captured July 15, 2026 from the repository-linked Vercel deployment. |
 
 ## gRNAlytics
 
@@ -33,7 +34,7 @@ Rule: do not use generic stock media as if it represents a project. Use real pro
 | --- | --- | --- | --- |
 | Terminal screen recording with safe sample input/output | Flagship homepage trailer and case study | Needed | Avoid exposing private API keys or sensitive data. |
 | Static sequence visualization | Hero/project media | Needed | Can be generated as explanatory diagram, not as scientific validation. |
-| Diagram: guide candidates -> BLAST results -> off-target scoring -> selected guide | Case study explanation | Needed | Label as system diagram. |
+| Diagram: guide candidates -> BLAST results -> off-target scoring -> selected guide | Case study explanation | Acquired | Code-native visual reconstructed from public `main.py`; explicitly labeled as code flow, not biological output. |
 | Screenshot of XML/BLAST-result processing or parsed output | Evidence media | Needed | Use small excerpt, not huge raw XML dump. |
 | Confirmation of current run reliability | Case study/demo | `NEEDS_AFFAN_CONFIRMATION` | NCBI/Biopython behavior may have changed. |
 | Team/context details | Credits and role | `NEEDS_AFFAN_CONFIRMATION` | Class/research/team context needed. |
@@ -85,4 +86,3 @@ Rule: do not use generic stock media as if it represents a project. Use real pro
 | Award verification | About/credentials | Not available | DECA/FBLA claims require Affan-provided evidence or reviewed LinkedIn export. |
 | Biological accuracy validation | gRNAlytics outcome | Not available | Do not claim research-grade or validated accuracy. |
 | Vantage production analytics | Vantage outcome | Not available | Do not claim active users, revenue, or business impact. |
-

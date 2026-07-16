@@ -16,14 +16,10 @@ export function DottedBloom() {
     let frame = 0;
     let targetX = 50;
     let targetY = 50;
-    let currentX = 50;
-    let currentY = 50;
 
     const update = () => {
-      currentX += (targetX - currentX) * 0.16;
-      currentY += (targetY - currentY) * 0.16;
-      bloom.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
-      frame = window.requestAnimationFrame(update);
+      bloom.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
+      frame = 0;
     };
 
     const onPointerMove = (event: PointerEvent) => {
@@ -31,11 +27,11 @@ export function DottedBloom() {
       if (!parent) return;
       targetX = event.clientX - parent.left;
       targetY = event.clientY - parent.top;
+      if (!frame) frame = window.requestAnimationFrame(update);
     };
 
     const parent = bloom.parentElement;
     parent?.addEventListener("pointermove", onPointerMove, { passive: true });
-    frame = window.requestAnimationFrame(update);
     return () => {
       window.cancelAnimationFrame(frame);
       parent?.removeEventListener("pointermove", onPointerMove);

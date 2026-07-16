@@ -15,11 +15,8 @@ npm install
 npm run typecheck
 npm run lint
 npm run build
-npm run test:links
-npm run test:a11y
-npm run test:navigation
-npm run test:responsive
-npx vercel deploy --target=preview --prebuilt
+npm test
+npx vercel deploy --target=preview --yes
 ```
 
 If Vercel is not linked yet:
@@ -27,8 +24,7 @@ If Vercel is not linked yet:
 ```powershell
 npx vercel login
 npx vercel link
-npx vercel build
-npx vercel deploy --target=preview --prebuilt
+npx vercel deploy --target=preview --yes
 ```
 
 Choose the existing `affanndm/AffanPortfolio` project if Vercel prompts for a project. Do not select any production-promotion option.
@@ -38,6 +34,8 @@ Important: On 2026-07-15, `npx vercel deploy --yes` unexpectedly created a produ
 ## Environment Variables
 
 No private runtime environment variables are required for the current static portfolio.
+
+The repository's `npm run build` intentionally uses Next.js Webpack. Local Lighthouse testing showed materially lower mobile main-thread cost than the Next.js 16 default Turbopack production build for this site.
 
 Optional:
 

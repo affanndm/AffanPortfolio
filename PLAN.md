@@ -2,6 +2,14 @@
 
 Build Affan Nadeem's portfolio as an evidence-backed Next.js, React, and TypeScript site around the `Signal / Systems` concept. The work proceeds audit-first, then architecture reset, design-system exploration, motion prototypes, production implementation, responsive/accessibility/performance refinement, adversarial review, and Vercel preview preparation. Production publishing and custom-domain changes are out of scope until Affan explicitly approves them.
 
+## Progress Snapshot
+
+- Milestones 0-5: complete in the repository.
+- Milestone 6: complete locally; 49 Playwright tests pass, Lighthouse category targets are met, and the remaining mobile LCP variance around 2.5s is documented.
+- Milestone 7: complete; blocker/high review findings were resolved and remaining media/confirmation gaps are documented.
+- Milestone 8: in progress; a prior protected preview exists and a fresh preview-only deployment is the next action.
+- Production promotion, domain changes, and rollback of the unintended production aliases remain excluded pending explicit approval.
+
 ## Scope
 
 - In: repository reset, stale Framer removal, reference audits, GitHub contribution audit, LinkedIn/background analysis, Next.js app setup, `/design-lab`, hero experiments, homepage, project routes, Lab, About, Contact, local content model, media placeholders, accessibility/performance validation, preview deployment preparation.

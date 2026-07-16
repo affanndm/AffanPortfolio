@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const routes = ["/", "/projects/vantage", "/projects/grnalytics", "/lab"];
+const routes = ["/", "/projects/vantage", "/projects/grnalytics", "/lab", "/design-lab"];
 
 const viewports = [
   { width: 390, height: 844 },
@@ -19,7 +19,8 @@ for (const viewport of viewports) {
       });
 
       await page.setViewportSize(viewport);
-      await page.goto(route, { waitUntil: "networkidle" });
+      await page.goto(route, { waitUntil: "domcontentloaded" });
+      await expect(page.locator("main#main")).toBeVisible();
 
       const overflow = await page.evaluate(() => {
         const documentWidth = document.documentElement.clientWidth;

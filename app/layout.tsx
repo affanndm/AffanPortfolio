@@ -1,26 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout/Navigation";
 
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-geist",
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-  display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
-  display: "swap",
+  display: "optional",
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
@@ -44,6 +30,11 @@ export const metadata: Metadata = {
     siteName: "Affan Nadeem Portfolio",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Affan Nadeem - Signal / Systems",
+    description: "Software for complex systems, from local discovery to computational biology.",
+  },
 };
 
 export const viewport: Viewport = {
@@ -55,7 +46,18 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={geist.variable}
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!sessionStorage.getItem('affan-intro-seen')){document.documentElement.dataset.intro='active';sessionStorage.setItem('affan-intro-seen','1')}}catch(e){}`,
+          }}
+        />
+      </head>
       <body>
         <a className="skip-link" href="#main">
           Skip to content

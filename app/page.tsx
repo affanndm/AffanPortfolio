@@ -1,10 +1,9 @@
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { DesktopSignalField } from "@/components/interactive/DesktopSignalField";
 import { SignalTicker } from "@/components/interactive/SignalTicker";
+import { LabIndex } from "@/components/LabIndex";
 import { ProjectTrailer } from "@/components/ProjectTrailer";
-import { OwnershipLabel } from "@/components/OwnershipLabel";
-import { flagshipProjects, labItems } from "@/lib/content";
+import { flagshipProjects, labItems, publicEmail, trajectory } from "@/lib/content";
 import { externalLinkProps } from "@/lib/utils";
 
 export default function HomePage() {
@@ -33,20 +32,30 @@ export default function HomePage() {
             </h1>
             <p className="lead">From trusted local discovery to computational biology.</p>
             <div className="hero-actions">
-              <Link className="command-link" href="#work">
+              <a className="command-link" href="#work">
                 Selected work <ArrowUpRight aria-hidden="true" size={16} />
-              </Link>
-              <a className="command-link" href="https://github.com/affanndm" {...externalLinkProps("GitHub evidence")}>
-                GitHub evidence <ArrowUpRight aria-hidden="true" size={16} />
+              </a>
+              <a className="command-link" href="https://github.com/affanndm" {...externalLinkProps("Affan Nadeem GitHub")}>
+                GitHub <ArrowUpRight aria-hidden="true" size={16} />
               </a>
             </div>
           </div>
-          <aside className="hero-proof" aria-label="Current evidence boundaries">
-            <p className="label">Evidence rule</p>
-            <p>
-              Team projects are labeled before entry. Claims about impact, awards, scientific validity,
-              availability, and final biography stay out until verified.
-            </p>
+          <aside className="hero-proof" aria-label="Affan's working method">
+            <p className="label">A repeated method</p>
+            <ol className="hero-method">
+              <li>
+                <span>01</span>
+                <strong>Read the noise</strong>
+              </li>
+              <li>
+                <span>02</span>
+                <strong>Expose the structure</strong>
+              </li>
+              <li>
+                <span>03</span>
+                <strong>Build the useful path</strong>
+              </li>
+            </ol>
           </aside>
         </div>
       </section>
@@ -63,8 +72,8 @@ export default function HomePage() {
           </div>
           <div className="span-7">
             <p className="lead">
-              The flagship case studies are intentionally limited to projects with public evidence of
-              Affan&apos;s contribution. They are presented as team projects, not solo mythology.
+              One begins with local businesses and trust. The other begins with guide sequences and BLAST output.
+              Both ask software to turn an overwhelming search space into a clearer next decision.
             </p>
           </div>
           <div className="span-12">
@@ -78,40 +87,18 @@ export default function HomePage() {
       <section id="lab" className="section lab-section" aria-labelledby="lab-title">
         <div className="grid">
           <div className="span-6">
-            <p className="label muted">The Lab</p>
             <h2 id="lab-title" className="section-title">
-              Smaller work, visible boundaries.
+              Not every useful project needs a case study.
             </h2>
           </div>
           <div className="span-6">
             <p className="lead">
-              The Lab is not a pile of equal cards. It separates polished experiments, algorithms,
-              early systems, and archive items so the visitor understands what each piece can prove.
+              The Lab tracks smaller experiments, algorithm practice, and early systems with their current
+              status visible. It reads as a working index, not a second awards shelf.
             </p>
           </div>
-          <div className="span-12 lab-grid">
-            {labItems.map((item) => (
-              <article key={item.title} className={`lab-item lab-item-${item.status}`}>
-                <OwnershipLabel value={item.ownership} detail={item.category} />
-                <div>
-                  <p className="label muted">{item.year}</p>
-                  <h3>{item.title}</h3>
-                  <p>{item.summary}</p>
-                </div>
-                <div className="lab-links">
-                  {item.repoUrl ? (
-                    <a href={item.repoUrl} {...externalLinkProps(`${item.title} repository`)}>
-                      Repository <ArrowUpRight aria-hidden="true" size={15} />
-                    </a>
-                  ) : null}
-                  {item.liveUrl ? (
-                    <a href={item.liveUrl} {...externalLinkProps(`${item.title} live site`)}>
-                      Live <ArrowUpRight aria-hidden="true" size={15} />
-                    </a>
-                  ) : null}
-                </div>
-              </article>
-            ))}
+          <div className="span-12">
+            <LabIndex items={labItems} />
           </div>
         </div>
       </section>
@@ -119,22 +106,31 @@ export default function HomePage() {
       <section id="about" className="section about-section" aria-labelledby="about-title">
         <div className="grid">
           <div className="span-7">
-            <p className="label muted">About</p>
             <h2 id="about-title" className="section-title">
-              I am interested in what happens when a difficult problem has too much information.
+              Too much information is not the problem. Unclear structure is.
             </h2>
           </div>
           <div className="span-5 about-copy">
             <p>
-              The public evidence points to a pattern: local discovery, computational biology, algorithms,
-              and early data tools all ask the same question in different forms. What matters, what is noise,
-              and how should software make the answer easier to act on?
+              Affan&apos;s work moves between product engineering, scientific computing, algorithms, and early
+              data tools. The subject changes; the working question does not: what matters here, and how can
+              software make it easier to act on?
             </p>
             <p>
-              Final biography, school chronology, resume details, collaboration availability, and personal
-              media stay out of public copy until final source material is provided.
+              That thread starts with small Python systems, grows through constraint-driven practice, then
+              reaches team products and computational biology. The portfolio is organized around that
+              progression rather than a list of technologies.
             </p>
           </div>
+          <ol className="span-12 trajectory" aria-label="Selected project chronology">
+            {trajectory.map((item) => (
+              <li key={`${item.year}-${item.title}`}>
+                <span className="label muted">{item.year}</span>
+                <strong>{item.title}</strong>
+                <p>{item.detail}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -146,6 +142,9 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="span-4 contact-links">
+            <a className="command-link" href={`mailto:${publicEmail}`}>
+              Email <ArrowUpRight aria-hidden="true" size={16} />
+            </a>
             <a className="command-link" href="https://github.com/affanndm" {...externalLinkProps("Affan Nadeem GitHub")}>
               GitHub <ArrowUpRight aria-hidden="true" size={16} />
             </a>
@@ -156,9 +155,6 @@ export default function HomePage() {
             >
               LinkedIn <ArrowUpRight aria-hidden="true" size={16} />
             </a>
-            <p className="media-caption">
-              Email and resume link are intentionally withheld until final public contact details are provided.
-            </p>
           </div>
         </div>
       </section>
