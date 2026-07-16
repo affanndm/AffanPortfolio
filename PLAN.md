@@ -7,8 +7,9 @@ Build Affan Nadeem's portfolio as an evidence-backed Next.js, React, and TypeScr
 - Milestones 0-5: complete in the repository.
 - Milestone 6: complete locally; 49 Playwright tests pass, Lighthouse category targets are met, and the remaining mobile LCP variance around 2.5s is documented.
 - Milestone 7: complete; blocker/high review findings were resolved and remaining media/confirmation gaps are documented.
-- Milestone 8: preview complete; deployment `dpl_2wuLSCQtT8xWmqzkoSUWcbyGgbnV` is Ready and explicitly targeted to preview, with human review and the production-state decision remaining.
-- Production promotion, domain changes, and rollback of the unintended production aliases remain excluded pending explicit approval.
+- Milestone 8: production deployment complete after explicit approval to fix `affannadeem.me`; the corrected Next.js deployment is Ready and public routes are verified.
+- Milestone 9: identity-first creative correction implemented and fully validated locally after Affan rejected the first production art direction.
+- Future production promotions and domain changes continue to require explicit approval. The creative correction has not been deployed.
 
 ## Scope
 
@@ -16,6 +17,29 @@ Build Affan Nadeem's portfolio as an evidence-backed Next.js, React, and TypeScr
 - Out: Framer platform work, Figma Sites, production publishing, final-domain connection, paid hosting dependencies, fabricated claims or metrics, destructive git history changes.
 
 ## Milestones
+
+### Milestone 9: Identity-First Creative Correction
+
+Objective: Replace the evidence-report feel with an authored, personal, media-rich portfolio sequence informed by a renewed public-source inspection of Filippo Ruffini, Tigran, and Abhijit Rout.
+
+Tasks:
+
+- Reinspect live public HTML, runtime modules, media composition, responsive variants, and animation technology for all three references.
+- Make `AFFAN NADEEM` the unmistakable first viewport identity.
+- Replace the single dark report surface with distinct visual chapters.
+- Present flagship project media before explanatory detail while preserving ownership boundaries.
+- Turn the homepage Lab into a dense irregular field while keeping status and ownership readable.
+- Convert homepage About copy from analyst voice to evidence-safe first person.
+- Add only the structural scroll motion that materially improves continuity.
+- Re-run lint, typecheck, build, full Playwright, accessibility, responsive, motion, navigation, link, and SEO checks.
+
+Acceptance Criteria:
+
+- The homepage cannot be mistaken for a project audit or résumé report.
+- Affan's name is the dominant hero read on desktop and mobile.
+- All public factual claims remain permitted by `CLAIMS_LEDGER.md`.
+- Reduced motion, semantic headings, contrast, keyboard operation, and no-overflow tests still pass.
+- No production deployment or domain change occurs without a new explicit approval.
 
 ### Milestone 0: Architecture Reset
 

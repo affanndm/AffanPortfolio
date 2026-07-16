@@ -40,6 +40,20 @@ Evidence labels used below:
 - Publicly disclosed technology: visible public network/source URL or project text.
 - Implementation inference: likely approach based on behavior and public network evidence, not claimed as private source knowledge.
 
+## 2026-07-16 Public Source Reinspection
+
+The live homepage and its publicly delivered source were rechecked after Affan rejected the first production art direction.
+
+- The HTML response was approximately 269 KB and identified `Framer 5b26096` with `Server: Framer/71ecfbf`.
+- The server-delivered markup contained 26 canvas elements and 82 inline SVG elements. Public component names include `home.riv`, `MotionDesigner.riv`, `nav_work.riv`, `nav_about.riv`, `nav_contact.riv`, a Showreel, Work, About, client-logo Rive scenes, Contact, and Footer.
+- The visible client-logo system includes separate Rive scenes for Tencent, Evernote, Airbnb, Trovo, Alice, PUBG, Vornado, PBX, Nano, and Keeva. This is a concrete reason the site feels animated at the component level rather than decorated after layout.
+- Public modulepreloads expose a Framer runtime, the site main module, and multiple split chunks. Public network evidence also exposes Rive WASM, `.riv` scenes, Vimeo, MP4, and PNG project assets.
+- The source includes distinct desktop, tablet, small/tablet, and phone variants. Repeated About copy in extraction is consistent with those separate responsive compositions.
+- The raw HTML pass contained no conventional `h1` or `h2` elements despite strong visible display hierarchy. Affan's implementation should preserve the visual confidence while keeping real semantic headings.
+- Neue Regrade is the dominant disclosed family across multiple weights. The richness comes from one committed display voice, bespoke motion scenes, and media sequencing—not from piling generic fonts or cards onto the page.
+
+Implementation consequence for Affan: use Tigran's media-first confidence and project-trailer pacing, but keep motion tied to real project evidence, keep role boundaries visible, and avoid reproducing the Rive-led showreel mechanic.
+
 ## Directly Observed Behavior
 
 ### Information Architecture

@@ -12,6 +12,9 @@ colors:
   rule: "#f2f0e829"
   rule-strong: "#f2f0e852"
   signal: "#c4ff45"
+  workCanvas: "#e8e9e3"
+  contactCanvas: "#f0f1ec"
+  darkInk: "#090a09"
   vantage: "#f3b15c"
   grnalytics: "#65e6ff"
   violet: "#9b82ff"
@@ -70,15 +73,15 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Resolved Signal"**
+**Creative North Star: "Affan Nadeem / The Resolved Signal"**
 
-The interface should feel like a dark technical field becoming legible under examination. It is precise, experimental, and cinematic, but the theatre always resolves into evidence: a working product state, a source-backed system diagram, an ownership label, or a commit trail.
+The interface should feel like Affan's authored world first and a technical field becoming legible under examination second. It is precise, kinetic, and evidence-rich, but the theatre always resolves into a working product state, a source-backed system diagram, an ownership label, or a commit trail.
 
 The visual system is flat, ruled, and deliberately asymmetric. Large sans-serif declarations establish confidence; serif statements slow the reader at moments of interpretation; monospaced text is reserved for provenance and system state. Mobile is recomposed as a compact evidence index, not a stacked imitation of desktop.
 
 **Key Characteristics:**
 
-- Dark, untextured canvas with sparse project-specific color.
+- Five distinct scenes: dark identity hero, neutral work canvas, signal-lime Lab, dark personal chapter, and neutral close.
 - Strong scale contrast and thin structural rules.
 - Real project media before long explanation.
 - Ownership, publication status, and evidence visible before entry.
@@ -107,7 +110,7 @@ The palette behaves like an instrument panel: neutral structure, one rare signal
 - **Measured Muted:** Supporting prose that remains comfortably readable.
 - **Rules:** Structural dividers, not decorative outlines.
 
-**The Rare Signal Rule.** Signal lime appears only on focus, selection, a meaningful node, or verified state. If a viewport reads as lime-colored, the rule is broken.
+**The Signal Chapter Rule.** Signal lime remains scarce in the hero, project stories, About, and controls, but it is allowed to drench the Lab chapter once. That committed field marks experimentation as a different mode without turning every section into lime decoration.
 
 **The Project Color Rule.** Amber and cyan belong to their projects. They do not decorate unrelated sections.
 
@@ -135,7 +138,7 @@ The palette behaves like an instrument panel: neutral structure, one rare signal
 
 ## Elevation
 
-The system is flat by default. It uses tonal bands, real media, border contrast, sticky positioning, and overlap inside project visuals instead of drop shadows. Ambient glows and glass cards are prohibited; the hero signal field provides atmosphere without changing text contrast.
+The system is flat by default. It uses scene changes, real media, border contrast, sticky positioning, and overlap inside project visuals instead of drop shadows. Ambient glows and glass cards are prohibited; the hero signal field provides atmosphere without changing text contrast.
 
 **The Flat Evidence Rule.** Evidence does not float in decorative cards. It sits on the same plane as the story and is separated by alignment, spacing, and one-pixel rules.
 
@@ -162,6 +165,13 @@ The system is flat by default. It uses tonal bands, real media, border contrast,
 - **gRNAlytics:** Uses a source-backed sequence and pipeline visualization labeled as code flow, not biological output.
 - **Motion:** At most a 1.025 media scale or a bounded sequence scanner; reduced motion shows the final static state.
 
+### Homepage Project Reel
+
+- **Structure:** Moving proof first, title and contribution context second, source actions last.
+- **Pacing:** Two large project chapters with deliberate vertical separation, not a grid of equal cards.
+- **Pinned argument:** On large screens, the selected-work statement remains fixed while the project evidence moves past it.
+- **Mobile:** The statement returns to normal document flow and every project remains fully readable without hover.
+
 ### Lab Index
 
 - **Structure:** Ruled rows with index, persistent abstract thumbnail, ownership, status, description, and repository action.
@@ -180,6 +190,13 @@ The system is flat by default. It uses tonal bands, real media, border contrast,
 - **Purpose:** Establishes technical range between hero and project evidence.
 - **Control:** Pauses on hover, focus, explicit keyboard command, when offscreen, and while the page is hidden.
 - **Fallback:** Static wrapped text on mobile and under reduced motion.
+
+### Scroll Motion
+
+- GSAP, `@gsap/react`, and ScrollTrigger are used only for the homepage's pinned work statement and word-by-word About clarification on qualifying desktop viewports.
+- The desktop motion chunk is loaded lazily after the viewport qualifies; mobile and reduced-motion users never download it.
+- Initial word contrast remains WCAG-compliant; the reveal moves from muted-readable to fully clear rather than hidden to visible.
+- All remaining hover, press, media, and navigation feedback stays in CSS for responsiveness and lower runtime cost.
 
 ## Do's and Don'ts
 

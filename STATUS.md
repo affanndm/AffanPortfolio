@@ -2,11 +2,17 @@
 
 ## Current Milestone
 
-Milestone 8: human review and production-state decision.
+Milestone 9: identity-first creative correction and local regression review.
 
-Milestones 0-7 are implemented and locally validated. The current site is an evidence-led Next.js portfolio with complete public routes, flagship case studies, a Lab index, design-system experiments, responsive motion fallbacks, and automated QA. Remaining work is limited to preview deployment, richer Affan-provided media and biography inputs, and an explicit decision about the earlier Vercel production-alias incident.
+Affan rejected the first production art direction as report-like and insufficiently personal. A materially new homepage is implemented locally but has not been deployed. The currently public site at `https://www.affannadeem.me` remains the earlier production version until Affan explicitly approves another production deployment.
 
 ## Completed Work
+
+- Reinspected the public HTML/runtime evidence for Filippo Ruffini, Tigran Azatyan, and Abhijit Rout on 2026-07-16, including framework markers, public modules, media counts, responsive variants, font systems, and motion stacks.
+- Rebuilt the homepage hierarchy around an unmistakable `AFFAN NADEEM` hero, media-first flagship projects, a dense irregular Lab, first-person About copy, and a direct closing invitation.
+- Added five distinct visual scenes rather than one continuous dark report surface.
+- Added isolated GSAP ScrollTrigger behavior for a desktop pinned-work narrative and a contrast-compliant scrubbed About statement, with complete reduced-motion bypass.
+- Removed the homepage's numbered method panel, third-person analyst framing, metadata-heavy project opening, and spreadsheet-like Lab rows.
 
 - Created and worked on branch `portfolio-rebuild`; checkpoint commits `4077bcf` and `73e75be` preserve the architecture reset and initial preview.
 - Replaced stale Framer platform architecture with Next.js App Router, React, strict TypeScript, GitHub source control, and Vercel hosting documentation.
@@ -22,16 +28,18 @@ Milestones 0-7 are implemented and locally validated. The current site is an evi
 - Removed unnecessary animation dependencies. The public shell is server rendered and uses small native progressive-enhancement scripts; design-lab-only React canvas experiments remain isolated from public routes.
 - Chose Webpack for deterministic Next.js 16 production builds after measured mobile performance showed substantially lower runtime cost than the default Turbopack build.
 - Completed adversarial design, credibility, accessibility, motion, and performance reviews and resolved all blocker/high code findings.
+- Fixed the production `NOT_FOUND` incident by correcting the Vercel framework preset from `Other` to `Next.js`, using the Next.js default output instead of `public/`, and deploying the corrected build.
+- Corrected the custom-domain mismatch from `affanndm.me` to `affannadeem.me`; the apex now redirects to canonical `www` and all public routes return 200.
 
 ## Work In Progress
 
-- Await Affan's review through the access-protected Vercel preview or local production server.
-- Await Affan's decision on the unintended existing production deployment/domain aliases.
+- Await Affan's visual review of the new local direction before any deployment decision.
 
 ## Next Action
 
-- Provide the remaining personal media and confirmation inputs when available.
-- Do not alter production aliases, promote a deployment, or change DNS without explicit approval.
+- Review the new local homepage composition and iterate on concrete visual feedback.
+- Provide the remaining personal media and confirmation inputs when available; a real portrait and richer project recordings would further improve the authored depth.
+- Continue requiring explicit approval for future production deployments or domain changes.
 
 ## Blockers And Missing Human Inputs
 
@@ -49,7 +57,19 @@ Milestones 0-7 are implemented and locally validated. The current site is an evi
 
 ## Test Results
 
-Final local production candidate on 2026-07-15:
+Identity-first creative-correction candidate on 2026-07-16:
+
+- `npm run typecheck`: pass.
+- `npm run lint`: pass.
+- `npm run build`: pass using Next.js 16.2.10 with Webpack.
+- `npm test`: 49/49 pass in Chromium against a clean local production server at `http://127.0.0.1:3005`.
+- Axe scans: homepage, both case studies, Lab, and design lab pass with color contrast enabled.
+- Responsive checks: five routes pass at 390, 768, 1024, 1440, and 1920px with no horizontal overflow or console errors.
+- Motion checks: keyboard ticker controls, reduced-motion static state, fine-pointer canvas activation, desktop work pinning, and accessible About reveal fallbacks are implemented; the existing automated motion lifecycle checks pass.
+- Manual screenshot review completed for the 1440×1000 hero, full desktop page, and 390×844 mobile composition.
+- Mobile Lighthouse after lazy desktop-only GSAP loading: Performance 94, Accessibility 100, SEO 100, LCP 2.7s, TBT 160ms, CLS 0, Speed Index 2.3s.
+
+Earlier production candidate on 2026-07-15:
 
 - `npm run typecheck`: pass.
 - `npm run lint`: pass.
@@ -74,7 +94,8 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 - Repeated final mobile samples were volatile on the Windows Chrome harness. The Performance target was met in all retained final samples, but LCP moved around the 2.5s target and is not claimed as consistently below it.
 - One isolated temp-directory run fell to Performance 87/TBT 364ms while the same build's neighboring samples scored 91-95; it is retained as evidence of local harness instability rather than omitted.
 - Lighthouse produced valid reports; on some Windows runs Chrome cleanup ended with an `EPERM` temp-directory warning after report generation.
-- No GSAP, Lenis, Three.js, Lottie, Rive, video embed, analytics, or other third-party runtime is loaded.
+- The currently deployed production build has no GSAP, Lenis, Three.js, Lottie, Rive, video embed, analytics, or other third-party runtime.
+- The 2026-07-16 local creative-correction candidate adds GSAP and `@gsap/react` only for two homepage ScrollTrigger sequences. An initial static import scored 83 on mobile Lighthouse, so the motion code was split into a lazy desktop-only chunk. The corrected candidate scored 94 Performance / 100 Accessibility / 100 SEO with 160ms TBT and zero CLS in the retained mobile sample.
 - The desktop canvas does not initialize on mobile, coarse pointers, reduced motion, or before a qualifying pointer interaction.
 
 ## Accessibility Results
@@ -95,5 +116,9 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 - Vercel inspection confirms `target: preview` and `status: Ready`.
 - Unauthenticated HTTP requests return `200 Login - Vercel`, so the preview remains protected by Vercel access controls.
 - Deployment incident: earlier `npx vercel deploy --yes` created production deployment `dpl_6vzX1pXuE2riUKnQJyJsunvVw9hb` and aliases including `https://affanndm.me` unexpectedly.
-- No rollback, alias removal, production promotion, or DNS change was performed after that incident.
-- Production and custom-domain actions remain prohibited without explicit Affan approval.
+- Incident resolved on 2026-07-16 after Affan explicitly requested the deployed domain be fixed.
+- Current production deployment: `dpl_Ek21HQ6vC79L2MHFuZdTV4zdxbKd`, Ready.
+- Canonical production URL: `https://www.affannadeem.me`.
+- `https://affannadeem.me` returns a permanent redirect to the canonical `www` host.
+- Verified 200 responses: `/`, `/projects/vantage`, `/projects/grnalytics`, `/lab`, `/robots.txt`, and `/sitemap.xml`.
+- The identity-first creative correction is local only and has not been deployed or promoted to production.

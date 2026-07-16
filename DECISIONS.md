@@ -220,3 +220,41 @@ Decision: Keep desktop sections fully painted. On small mobile viewports only, u
 Reason: Rendering the entire long-form homepage immediately doubled mobile style/layout time and moved LCP above the target. Mobile browsers render deferred sections ahead of normal scrolling, while desktop review captures and print remain complete. Automated responsive tests still verify every route and required width.
 
 The small-screen opening state is immediate rather than clip-animated. Desktop retains the short session-gated resolve sequence; mobile prioritizes first-read clarity and paint stability.
+
+## 2026-07-16: Configure Vercel Explicitly As Next.js
+
+Decision: Add `vercel.json` with `framework: nextjs` and update the linked Vercel project from the `Other` framework preset to `Next.js`.
+
+Reason: Under the `Other` preset, Vercel detected the repository's asset-only `public/` directory as the deployment output. The Next.js build succeeded, but its `.next`/Build Output API artifacts were not served, so every application route returned platform-level `NOT_FOUND`. The Next.js preset now uses the framework's default output and deploys all App Router routes.
+
+## 2026-07-16: Canonicalize Production At www.affannadeem.me
+
+Decision: Use `https://www.affannadeem.me` as the canonical production origin and redirect the apex domain to it.
+
+Reason: The registered and DNS-configured domain is `affannadeem.me`, not the earlier misspelled alias `affanndm.me`. Production metadata and sitemap fallbacks now use the canonical host instead of localhost.
+
+## 2026-07-16: Replace The Report-Like Homepage With An Identity-First Sequence
+
+Decision: Rebuild the homepage around `AFFAN NADEEM` as the dominant first read, followed by five authored scenes: dark identity hero, neutral media-led selected work, signal-lime Lab, dark first-person About, and a neutral direct-contact close.
+
+Reason: Affan correctly rejected the first homepage because evidence scaffolding had become the visual product. The page accurately described the portfolio but felt like an analyst report: method steps, metadata, status rows, and third-person explanation appeared before personal identity and project energy. The new sequence keeps the verified content boundaries while changing the hierarchy and emotional pacing.
+
+Rejected Alternatives:
+
+- Recolor the existing report-like layout.
+- Remove evidence and ownership detail entirely for spectacle.
+- Clone the split-name, showreel, experiment ticker, or personal-story mechanics of the reference sites.
+
+## 2026-07-16: Add GSAP Only For Two Structural Homepage Motions
+
+Decision: Add `gsap` and `@gsap/react` for one desktop pinned-work sequence and one scroll-scrubbed About statement. Keep the canvas, ticker lifecycle, navigation, press states, and media hover responses in native code and CSS.
+
+Reason: The user explicitly requested the `gpt-taste` motion workflow and a materially richer result. Two bounded ScrollTrigger interactions materially clarify continuity without turning the entire public shell into a client application. Reduced-motion users bypass both effects, and the initial word state remains contrast-compliant. After an initial mobile Lighthouse sample loaded the static GSAP bundle and scored 83, the motion implementation was split into a lazy desktop-only chunk; mobile and reduced-motion users do not request it.
+
+This is a deliberate deviation from the earlier "no GSAP baseline dependency" performance decision. The dependency is now justified by the revised creative brief and remains isolated to a null-rendering client island on the homepage.
+
+## 2026-07-16: Permit One Committed Signal-Lime Chapter
+
+Decision: Allow the Lab section to use signal lime as a full-field background while keeping lime scarce everywhere else.
+
+Reason: A single committed color chapter separates exploratory work from flagship evidence and breaks the previous one-surface report feel. The exception is narrow: the hero, selected work, About, project pages, navigation, and contact retain restrained signal usage.

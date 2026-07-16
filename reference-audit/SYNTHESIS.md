@@ -20,6 +20,21 @@ Source URLs:
 
 Each audit separates directly observed behavior, publicly disclosed technology, and implementation inference. Do not claim access to private source code.
 
+## 2026-07-16 Creative-Correction Synthesis
+
+Affan's review exposed a hierarchy failure in the first implementation: it accurately documented evidence, but the homepage opened like an audit report. Method labels, status language, explanatory paragraphs, and metadata were visually louder than the person.
+
+The corrected synthesis is therefore stricter:
+
+1. **Name before framework.** `AFFAN NADEEM` must be the unmistakable first read, with the Signal / Systems idea supporting his identity rather than replacing it.
+2. **A portfolio is a sequence of authored scenes.** Use a dark identity hero, a light media-led work chapter, a signal-lime Lab field, a quiet personal chapter, and a direct light close. One global dark report surface is not enough.
+3. **Evidence belongs inside visual storytelling.** Ownership and source links stay, but they follow the project title and moving proof instead of becoming the main visual language.
+4. **Personal voice replaces analyst voice.** Homepage copy should use first person where the source claim is verified or clearly positioning. Audit caveats remain in deeper case studies and the claims ledger.
+5. **Motion gets two signature jobs.** Pin the selected-work argument while evidence moves past it; scrub the About statement from muted to clear. Avoid uniform fade-ups and continuous decoration.
+6. **The Lab should feel exploratory.** Preserve status and ownership, but present the four items as an irregular, gapless visual field instead of a spreadsheet-like index on the homepage.
+
+This keeps Filippo's conviction, Tigran's media immediacy, and Abhijit's lived-in depth while producing an original system around Affan's software work.
+
 ## Strongest Principles To Carry Forward
 
 ### 1. Identity Before Inventory

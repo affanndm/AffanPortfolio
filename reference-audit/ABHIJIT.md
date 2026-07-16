@@ -20,6 +20,19 @@ Source URLs:
 - https://framerusercontent.com/sites/3AqSpaz8wgO7KojULcrkFt/Smooth_Scroll.8nYpjD2s.mjs
 - https://framerusercontent.com/sites/3AqSpaz8wgO7KojULcrkFt/script_main.MAmlxRA2.mjs
 
+## 2026-07-16 Public Source Reinspection
+
+The live homepage and publicly delivered source were rechecked after Affan rejected the first production art direction.
+
+- The HTML response was approximately 366 KB and identified `Framer b3492b4` with `Server: Framer/71ecfbf`.
+- The server-delivered markup contained 96 images, two videos, 24 inline SVG elements, and no canvas element. The experience is therefore primarily built from authored media, DOM composition, Framer Motion, ticker behavior, and smooth scrolling rather than a custom WebGL centerpiece.
+- Public component names expose the actual long-form rhythm: Hero, Ticker Container, transition images, Selected Work, a 16-variant Visual Experiments system, About, Social, Video, Work Chronicle, Chair, CTA, gradient transition, and Footer.
+- The public preload graph explicitly includes React, Framer, Motion, `Ticker.BEeyAnQp.mjs`, and `Smooth_Scroll.8nYpjD2s.mjs`. GIF assets, an MP4, profile imagery, transition imagery, and a looping audio script create the lived-in texture.
+- The public CSS declares a deliberately eclectic font world including Geist, Instrument Serif, Inter Tight, NewYork, PP Mondwest, PP Pangaia, PP NeueBit, and several display faces. The breadth is part of Abhijit's identity, but it also creates a transfer and cohesion risk that Affan should not inherit literally.
+- Repeated desktop/mobile copy and duplicated footer content are visible in public extraction. Affan should achieve responsive recomposition without exposing duplicate reading order to assistive technology or search.
+
+Implementation consequence for Affan: carry forward the personal chronology, experimental second tier, abundant real artifacts, and authored close. Do not copy the soundtrack, eclectic type collection, visual-experiment mechanics, or personal narrative.
+
 ## High-Level Takeaway
 
 Abhijit's site works because it makes the portfolio feel lived-in: selected work, experiments, chronology, personal context, and a long-form project story all sit in one identity system. For Affan, the useful lesson is not the visual style. It is the structure: flagship work, lab work, chronology, and personal narrative can coexist if the role boundaries and evidence stay clear.

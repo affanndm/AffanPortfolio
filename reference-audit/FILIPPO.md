@@ -24,6 +24,20 @@ Scope note: This audit uses public page extraction, public award/listing pages, 
 - LinkedIn launch post: https://www.linkedin.com/posts/filippo-ruffini-036b9a145_freelance-designer-ui-activity-7085216572725706752-QgFB
 - Public Instagram post URL surfaced in search results: https://www.instagram.com/p/CuAM5qVsWjy/
 
+## 2026-07-16 Public Source Reinspection
+
+The live homepage and its publicly delivered HTML, CSS, and JavaScript were rechecked after Affan rejected the first production art direction. This is inspection of public production assets, not private project access.
+
+- The HTML response was approximately 91 KB, served through Cloudflare, and exposed Webflow runtime classes and assets.
+- The page loads public GSAP 3.11.5, ScrollTrigger, GSAP Flip, Lenis 1.0.36, Swiper 9, Webflow, and a public custom bundle at `app-live.01.js`.
+- The public custom bundle was approximately 1.22 MB and includes Three.js revision 152 plus GSAP code. This confirms that the visual spectacle is an engineered runtime layer, not only CSS transitions.
+- The HTML contained 66 images and public references to ten project MP4 previews. Project richness comes from a sustained media system rather than a single hero effect.
+- Public class names expose bespoke interaction surfaces including `cursor-w`, `cursor-e`, `cursor-dot`, cursor notes, crosshair lines, corner brackets, split text, the hero name, menu fades, and multiple project-media states.
+- The page retains a real `h1` and `h2` in the raw HTML while visually fragmenting display text. That balance is worth keeping even though the exact split-name treatment must not be copied.
+- The source itself publishes the identity system: `#101010`, `#FD6746`, `#777777`, `#333333`, Editorial New, Neue Montreal, and a 12-column grid with 30px spacing. The site feels authored because these constraints appear everywhere.
+
+Implementation consequence for Affan: carry forward the uncompromising identity, strict grid, deliberate first-load choreography, and project motion previews. Do not copy the split-name typography, coral palette, cursor treatment, WebGL object, or loading theatre.
+
 ## Executive Read
 
 Filippo Ruffini's portfolio is an award-style, one-page personal site built around a strict dark editorial system, large expressive typography, a narrow color palette, dense grid metadata, custom motion, and WebGL/3D spectacle. It is not primarily a conventional case-study portfolio. It behaves more like a personal brand specimen: the grid, colors, fonts, nav labels, projects, and contact state are all treated as designed objects.

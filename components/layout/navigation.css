@@ -3,13 +3,12 @@
   top: 0;
   z-index: 50;
   border-bottom: 1px solid rgba(242, 240, 232, 0.08);
-  background: rgba(9, 10, 9, 0.82);
-  backdrop-filter: blur(16px);
+  background: #090a09;
 }
 
 .site-nav {
   display: flex;
-  min-height: 72px;
+  min-height: 76px;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -19,12 +18,21 @@
 }
 
 .wordmark {
-  display: grid;
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
   color: var(--color-text);
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
-  font-size: 0.78rem;
-  line-height: 1.08;
+  font-size: 0.88rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
   text-decoration: none;
+}
+
+.wordmark small {
+  color: var(--color-faint);
+  font-size: 0.68rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .desktop-nav {
@@ -40,10 +48,9 @@
   align-items: center;
   gap: 0.4rem;
   color: var(--color-muted);
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: none;
   transition: color 180ms var(--ease-signal);
 }
 
@@ -169,6 +176,10 @@
   }
 
   .desktop-nav {
+    display: none;
+  }
+
+  .wordmark small {
     display: none;
   }
 

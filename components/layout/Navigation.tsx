@@ -39,8 +39,8 @@ export function Navigation() {
       <header className="site-header">
         <nav className="site-nav" aria-label="Primary navigation">
           <a className="wordmark" href="/">
-            <span>AFFAN</span>
-            <span>NADEEM</span>
+            <span>AFFAN NADEEM</span>
+            <small>Software / science / systems</small>
           </a>
           <div className="desktop-nav">
             {navItems.map((item) => (
