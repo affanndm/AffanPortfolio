@@ -4,7 +4,7 @@
 
 Milestone 12: purposeful Lenis, GSAP, and React Bits motion integration.
 
-The approved first-sequence branch now combines desktop Lenis interpolation, GSAP SplitText/ScrollTrigger choreography, and two adapted React Bits interactions. The stack is intentionally limited to moments that clarify identity, project entry, and scroll continuity. It is committed only after regression and performance validation; production remains unchanged until Affan explicitly approves deployment.
+The approved first-sequence branch combines desktop Lenis interpolation, GSAP SplitText/ScrollTrigger choreography, and two adapted React Bits interactions. After Affan's explicit production authorization, validated commit `03d53cc` was deployed to Vercel production and assigned to the canonical domain.
 
 ## Completed Work
 
@@ -44,11 +44,11 @@ The approved first-sequence branch now combines desktop Lenis interpolation, GSA
 
 ## Work In Progress
 
-- Await Affan's visual review of the enhanced first sequence before any deployment decision.
+- Monitor the newly deployed production build for concrete visual or runtime feedback.
 
 ## Next Action
 
-- Review the new local homepage composition and iterate on concrete visual feedback.
+- Review the live homepage composition and iterate on concrete visual feedback.
 - Provide the remaining personal media and confirmation inputs when available; a real portrait and richer project recordings would further improve the authored depth.
 - Continue requiring explicit approval for future production deployments or domain changes.
 
@@ -145,19 +145,24 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 
 ## Deployment Status
 
-- Local production server: `http://127.0.0.1:3005` during final QA.
-- Final checkpoint commit: `4fc4762` (`Polish evidence-led portfolio experience`).
+- Deployed source commit: `03d53cc` (`Integrate Lenis and reference motion components`).
+- Current production deployment: `dpl_EDJy5HFp5HCnuRd79sZDBSzdi4iL`, target `production`, status `Ready`.
+- Production deployment URL: `https://affan-portfolio-3itj6u6hz-affan-s-projects-45c33b7e.vercel.app`.
+- Canonical production URL: `https://www.affannadeem.me`.
+- `https://affannadeem.me` returns `308 Permanent Redirect` to the canonical `www` host.
+- Verified `200` responses after deployment: `/`, `/projects/vantage`, `/projects/grnalytics`, `/lab`, `/robots.txt`, and `/sitemap.xml`.
+- Live homepage HTML contains the new Affan identity, Vantage sequence, and first-sequence review marker.
+- Production motion smoke suite: 5/5 pass against the canonical domain, covering desktop Lenis/SplitText, native mobile and reduced-motion fallbacks, pointer depth, navigation, and project drawer Escape close.
+
+Historical deployment context:
+
 - Current preview deployment id: `dpl_2wuLSCQtT8xWmqzkoSUWcbyGgbnV`.
 - Current preview URL: `https://affan-portfolio-lqhfx50ve-affan-s-projects-45c33b7e.vercel.app`.
 - Vercel inspection confirms `target: preview` and `status: Ready`.
 - Unauthenticated HTTP requests return `200 Login - Vercel`, so the preview remains protected by Vercel access controls.
 - Deployment incident: earlier `npx vercel deploy --yes` created production deployment `dpl_6vzX1pXuE2riUKnQJyJsunvVw9hb` and aliases including `https://affanndm.me` unexpectedly.
 - Incident resolved on 2026-07-16 after Affan explicitly requested the deployed domain be fixed.
-- Current production deployment: `dpl_Ek21HQ6vC79L2MHFuZdTV4zdxbKd`, Ready.
-- Canonical production URL: `https://www.affannadeem.me`.
-- `https://affannadeem.me` returns a permanent redirect to the canonical `www` host.
-- Verified 200 responses: `/`, `/projects/vantage`, `/projects/grnalytics`, `/lab`, `/robots.txt`, and `/sitemap.xml`.
-- The identity-first creative correction is local only and has not been deployed or promoted to production.
+- Previous production deployment: `dpl_Ek21HQ6vC79L2MHFuZdTV4zdxbKd`.
 
 ## Filippo-Reference Review Gate — 2026-07-16
 
@@ -174,4 +179,4 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 - Mobile Lighthouse: Performance 96, Accessibility 100, SEO 100, LCP 2.5s, TBT 110ms, CLS 0.
 - Previous final static-intro baseline: Performance 91, Accessibility 100, SEO 100, LCP 2.62s, TBT 257ms. The restricted redesign improves performance by 5 points while adding the new choreography.
 - Redesign checkpoint `29d156e` is committed and pushed to `origin/filippo-visual-redesign`.
-- No production deployment occurred; the custom domain continues to show the older production deployment until Affan explicitly approves a promotion.
+- No production deployment occurred during that review-gate milestone; Affan later explicitly approved the 2026-07-16 production promotion recorded above.
