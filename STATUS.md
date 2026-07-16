@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Milestone 8: preview delivery and human review.
+Milestone 8: human review and production-state decision.
 
 Milestones 0-7 are implemented and locally validated. The current site is an evidence-led Next.js portfolio with complete public routes, flagship case studies, a Lab index, design-system experiments, responsive motion fallbacks, and automated QA. Remaining work is limited to preview deployment, richer Affan-provided media and biography inputs, and an explicit decision about the earlier Vercel production-alias incident.
 
@@ -25,14 +25,12 @@ Milestones 0-7 are implemented and locally validated. The current site is an evi
 
 ## Work In Progress
 
-- Create a fresh explicit Vercel preview from the final checkpoint.
-- Smoke-check the resulting preview to the extent allowed by Vercel access protection.
+- Await Affan's review through the access-protected Vercel preview or local production server.
 - Await Affan's decision on the unintended existing production deployment/domain aliases.
 
 ## Next Action
 
-- Commit the polished implementation and QA records.
-- Run only `npx vercel deploy --target=preview --yes` for the final preview.
+- Provide the remaining personal media and confirmation inputs when available.
 - Do not alter production aliases, promote a deployment, or change DNS without explicit approval.
 
 ## Blockers And Missing Human Inputs
@@ -91,9 +89,11 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 ## Deployment Status
 
 - Local production server: `http://127.0.0.1:3005` during final QA.
-- Existing preview deployment id: `dpl_3Y5bcLcyCXL7dJJdYc5Q9PgyEecL`.
-- Existing preview URL: `https://affan-portfolio-k7xtqgyhg-affan-s-projects-45c33b7e.vercel.app`.
-- The existing preview is Ready but unauthenticated requests receive Vercel's login page because access protection is enabled.
+- Final checkpoint commit: `4fc4762` (`Polish evidence-led portfolio experience`).
+- Current preview deployment id: `dpl_2wuLSCQtT8xWmqzkoSUWcbyGgbnV`.
+- Current preview URL: `https://affan-portfolio-lqhfx50ve-affan-s-projects-45c33b7e.vercel.app`.
+- Vercel inspection confirms `target: preview` and `status: Ready`.
+- Unauthenticated HTTP requests return `200 Login - Vercel`, so the preview remains protected by Vercel access controls.
 - Deployment incident: earlier `npx vercel deploy --yes` created production deployment `dpl_6vzX1pXuE2riUKnQJyJsunvVw9hb` and aliases including `https://affanndm.me` unexpectedly.
 - No rollback, alias removal, production promotion, or DNS change was performed after that incident.
 - Production and custom-domain actions remain prohibited without explicit Affan approval.

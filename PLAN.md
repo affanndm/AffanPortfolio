@@ -7,7 +7,7 @@ Build Affan Nadeem's portfolio as an evidence-backed Next.js, React, and TypeScr
 - Milestones 0-5: complete in the repository.
 - Milestone 6: complete locally; 49 Playwright tests pass, Lighthouse category targets are met, and the remaining mobile LCP variance around 2.5s is documented.
 - Milestone 7: complete; blocker/high review findings were resolved and remaining media/confirmation gaps are documented.
-- Milestone 8: in progress; a prior protected preview exists and a fresh preview-only deployment is the next action.
+- Milestone 8: preview complete; deployment `dpl_2wuLSCQtT8xWmqzkoSUWcbyGgbnV` is Ready and explicitly targeted to preview, with human review and the production-state decision remaining.
 - Production promotion, domain changes, and rollback of the unintended production aliases remain excluded pending explicit approval.
 
 ## Scope

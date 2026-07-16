@@ -123,3 +123,22 @@ Observed result:
 - Alias reported by Vercel:
   - `https://affan-portfolio-nadeemaffan23-3638-affan-s-projects-45c33b7e.vercel.app`
 - Access check: unauthenticated HTTP requests returned Vercel's login page, so the preview appears protected by Vercel access controls.
+
+## 2026-07-15 Final Checkpoint Preview
+
+Command run after commit `4fc4762`:
+
+```powershell
+npx vercel deploy --target=preview --yes
+```
+
+Observed result:
+
+- Deployment id: `dpl_2wuLSCQtT8xWmqzkoSUWcbyGgbnV`
+- Target: `preview`
+- Status: Ready
+- Preview URL: `https://affan-portfolio-lqhfx50ve-affan-s-projects-45c33b7e.vercel.app`
+- Alias: `https://affan-portfolio-nadeemaffan23-3638-affan-s-projects-45c33b7e.vercel.app`
+- Access check: unauthenticated HTTP returned `200 Login - Vercel`; access protection remains enabled.
+
+No production promotion, production alias change, rollback, or DNS operation was performed.
