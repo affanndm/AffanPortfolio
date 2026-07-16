@@ -160,4 +160,5 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 - Playwright: 71/71 tests pass across navigation, motion, side-stage, links, SEO, accessibility, and 390/768/1024/1440/1920 responsive coverage.
 - Mobile Lighthouse: Performance 96, Accessibility 100, SEO 100, LCP 2.5s, TBT 110ms, CLS 0.
 - Previous final static-intro baseline: Performance 91, Accessibility 100, SEO 100, LCP 2.62s, TBT 257ms. The restricted redesign improves performance by 5 points while adding the new choreography.
-- No production deployment occurred. Commit and branch push remain the only unfinished handoff steps.
+- Redesign checkpoint `29d156e` is committed and pushed to `origin/filippo-visual-redesign`.
+- No production deployment occurred; the custom domain continues to show the older production deployment until Affan explicitly approves a promotion.

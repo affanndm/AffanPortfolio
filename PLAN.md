@@ -422,4 +422,4 @@ Objective: Prove one exceptional sequence before rebuilding the remaining homepa
 - [x] Preserve static and reduced-motion compositions.
 - [x] Capture desktop, mobile, and transition review images.
 - [x] Complete full regression, accessibility, and performance comparison.
-- [ ] Commit and push the review branch; do not deploy production.
+- [x] Commit and push the review branch; do not deploy production.
