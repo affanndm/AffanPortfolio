@@ -258,3 +258,23 @@ This is a deliberate deviation from the earlier "no GSAP baseline dependency" pe
 Decision: Allow the Lab section to use signal lime as a full-field background while keeping lime scarce everywhere else.
 
 Reason: A single committed color chapter separates exploratory work from flagship evidence and breaks the previous one-surface report feel. The exception is narrow: the hero, selected work, About, project pages, navigation, and contact retain restrained signal usage.
+
+## 2026-07-16: Supersede The First Identity-First Correction With A Filippo-Led Art Direction
+
+Decision: Treat Filippo Ruffini as the dominant composition and motion reference for the new local homepage, with Tigran informing saturated color energy and Abhijit informing long-form chapter variety.
+
+Reason: Affan explicitly rejected the prior correction as static and unlike the references. The new direction therefore prioritizes monumental identity, a persistent responsive object, type/object collision, stacked work, saturated chapter changes, and project entry theatre.
+
+Boundary: The site does not copy the reference source code, GLTF model, shaders, visual assets, personal copy, exact color values, split-name motif, custom cursor, or loader. The palette family was explicitly requested; distinct values and Affan-specific content/composition are used.
+
+## 2026-07-16: Replace The Homepage Canvas Metaphor With A Responsive Signal Sculpture
+
+Decision: Remove the public homepage's progressive signal-field canvas and replace it with server-rendered DOM/CSS geometry enhanced by a lazy desktop GSAP island.
+
+Reason: The old canvas read as a background effect. The new sculpture behaves as an authored object: it carries verified Vantage texture, intersects the name, responds to pointer depth, and exits with the hero. It is visible without JavaScript, lighter than a copied Three.js/WebGL stack, and simple to resolve under reduced motion.
+
+## 2026-07-16: Add A Native Project Side-Stage
+
+Decision: Add a right-side full-viewport project preview using the native HTML dialog element before visitors enter the full case-study route.
+
+Reason: Affan asked for projects to open into a side page or the comparable behavior used by the references. The side-stage preserves homepage continuity while surfacing real media, ownership, discipline, stack, and direct evidence. Native dialog semantics provide focus management, Escape behavior, and modal accessibility without a routing framework or new dependency.

@@ -2,11 +2,19 @@
 
 ## Current Milestone
 
-Milestone 9: identity-first creative correction and local regression review.
+Milestone 10: Filippo-led full visual redesign and local regression review.
 
-Affan rejected the first production art direction as report-like and insufficiently personal. A materially new homepage is implemented locally but has not been deployed. The currently public site at `https://www.affannadeem.me` remains the earlier production version until Affan explicitly approves another production deployment.
+Affan rejected both the first production art direction and the initial identity-first correction as too static and unlike the approved references. A second, materially new homepage is implemented locally with Filippo as the dominant motion/composition reference. It has not been deployed. The currently public site at `https://www.affannadeem.me` remains the earlier production version until Affan explicitly approves another production deployment.
 
 ## Completed Work
+
+- Verified Filippo's publicly delivered custom runtime in detail: Three.js GLTF loading, front/back render targets for refraction, 32×32 pointer-distortion texture, continuously rotating hero geometry, Lenis easing, scroll-tracked 3D positioning, and hover/tap project video texture swapping.
+- Captured and inspected current desktop states for Filippo Ruffini, Tigran Azatyan, and Abhijit Rout, including their opening objects, color systems, project entry patterns, and long-page composition.
+- Rebuilt the hero around a two-line `AFFAN NADEEM` field and an Affan-specific DOM/CSS signal sculpture with coral/acid geometry, real Vantage texture, GSAP load choreography, scroll depth, and fine-pointer response.
+- Replaced the pale selected-work chapter with a black stage and saturated sticky project posters; added scroll-linked scale/stack continuity without lowering text opacity or contrast.
+- Added an accessible native-dialog side-stage for each flagship project, with media, verified ownership, discipline, stack, full case-study entry, source evidence, Escape/backdrop close, and reduced-motion behavior.
+- Reart-directed the entire homepage into black, hot coral, acid signal, and project-cyan chapters, including a moving Lab rail, geometric About portrait, scrubbed statement, orbit motion, and monumental coral close.
+- Reworked mobile intentionally: no hover dependency, resolved sculpture state, non-sticky project posters, full-width project drawer, one-column Lab, and persistent role/actions.
 
 - Reinspected the public HTML/runtime evidence for Filippo Ruffini, Tigran Azatyan, and Abhijit Rout on 2026-07-16, including framework markers, public modules, media counts, responsive variants, font systems, and motion stacks.
 - Rebuilt the homepage hierarchy around an unmistakable `AFFAN NADEEM` hero, media-first flagship projects, a dense irregular Lab, first-person About copy, and a direct closing invitation.
@@ -24,8 +32,8 @@ Affan rejected the first production art direction as report-like and insufficien
 - Added evidence-safe flagship case-study structure: Signal, Noise, System, My Contribution, Important Decisions, Product in Motion, Verified Outcome, Reflection, Evidence, Team and Credits, and Next Project.
 - Added a verified Vantage deployment capture and a source-backed gRNAlytics pipeline visual. Public contributor handles are credited without inventing private roles.
 - Added visible Lab ownership and status labels, project chronology, verified public email, GitHub, and LinkedIn contact links.
-- Implemented a session-gated opening reveal, static signal network, pointer-triggered desktop Canvas 2D enhancement, pausable ticker, accessible mobile navigation, and complete reduced-motion/mobile fallbacks.
-- Removed unnecessary animation dependencies. The public shell is server rendered and uses small native progressive-enhancement scripts; design-lab-only React canvas experiments remain isolated from public routes.
+- The previous candidate's static signal network and progressive Canvas 2D enhancement are retained only in history/design-lab; the public hero now uses the reference-led signal sculpture.
+- Kept the public shell server rendered. GSAP remains a lazy desktop-only island, while navigation, ticker, and project drawers use small native progressive-enhancement scripts; design-lab React canvas experiments remain isolated from public routes.
 - Chose Webpack for deterministic Next.js 16 production builds after measured mobile performance showed substantially lower runtime cost than the default Turbopack build.
 - Completed adversarial design, credibility, accessibility, motion, and performance reviews and resolved all blocker/high code findings.
 - Fixed the production `NOT_FOUND` incident by correcting the Vercel framework preset from `Other` to `Next.js`, using the Next.js default output instead of `public/`, and deploying the corrected build.
@@ -57,17 +65,22 @@ Affan rejected the first production art direction as report-like and insufficien
 
 ## Test Results
 
-Identity-first creative-correction candidate on 2026-07-16:
+Filippo-led full-redesign candidate on 2026-07-16:
 
 - `npm run typecheck`: pass.
 - `npm run lint`: pass.
 - `npm run build`: pass using Next.js 16.2.10 with Webpack.
-- `npm test`: 49/49 pass in Chromium against a clean local production server at `http://127.0.0.1:3005`.
+- `npm test`: 50/50 pass in Chromium against a clean local production server at `http://127.0.0.1:3010`.
 - Axe scans: homepage, both case studies, Lab, and design lab pass with color contrast enabled.
 - Responsive checks: five routes pass at 390, 768, 1024, 1440, and 1920px with no horizontal overflow or console errors.
-- Motion checks: keyboard ticker controls, reduced-motion static state, fine-pointer canvas activation, desktop work pinning, and accessible About reveal fallbacks are implemented; the existing automated motion lifecycle checks pass.
-- Manual screenshot review completed for the 1440×1000 hero, full desktop page, and 390×844 mobile composition.
-- Mobile Lighthouse after lazy desktop-only GSAP loading: Performance 94, Accessibility 100, SEO 100, LCP 2.7s, TBT 160ms, CLS 0, Speed Index 2.3s.
+- Motion checks: keyboard ticker controls, reduced-motion static state, fine-pointer sculpture response, project side-stage open/Escape close, desktop work pinning/stacking, and accessible About reveal fallbacks pass.
+- Manual screenshot review completed for the 1440×1000 hero, selected work, project side-stage, full desktop page, and 390×844 mobile composition.
+- Mobile Lighthouse after below-fold paint deferral and server-rendered drawer runtime: Performance 91, Accessibility 96, SEO 100, LCP 2.7s, TBT 250ms, CLS 0, Speed Index 2.5s.
+
+Earlier identity-first creative-correction candidate on 2026-07-16:
+
+- `npm test`: 49/49 pass in Chromium.
+- Mobile Lighthouse: Performance 94, Accessibility 100, SEO 100, LCP 2.7s, TBT 160ms, CLS 0, Speed Index 2.3s.
 
 Earlier production candidate on 2026-07-15:
 
@@ -83,6 +96,16 @@ Earlier production candidate on 2026-07-15:
 - SEO/link checks: metadata, Open Graph image, Twitter card, case-study structure, 404, robots/sitemap privacy, internal routes, external-link safety, and public email pass.
 
 ## Performance Results
+
+Filippo-led local candidate on 2026-07-16:
+
+| Profile | Performance | Accessibility | SEO | LCP | TBT | CLS | Speed Index |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Mobile | 91 | 96 | 100 | 2.7s | 250ms | 0 | 2.5s |
+
+- The hero image is optimized by Next.js and the GSAP/ScrollTrigger bundle is not requested on mobile or under reduced motion.
+- The project side-stage uses native dialog behavior and a small inline runtime; it does not hydrate duplicated React media trees.
+- Below-fold mobile chapters use `content-visibility: auto` with intrinsic sizing and a print override, reducing initial style/layout work without hiding content during normal scrolling.
 
 Lighthouse against the local Webpack production server on 2026-07-15:
 

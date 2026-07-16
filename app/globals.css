@@ -16,8 +16,10 @@
   --color-faint: rgba(242, 240, 232, 0.58);
   --color-rule: rgba(242, 240, 232, 0.16);
   --color-rule-strong: rgba(242, 240, 232, 0.32);
-  --color-signal: #c4ff45;
-  --color-signal-dim: rgba(196, 255, 69, 0.16);
+  --color-signal: #c8ff2f;
+  --color-signal-dim: rgba(200, 255, 47, 0.16);
+  --color-acid: #c8ff2f;
+  --color-coral: #ff5d3a;
   --color-vantage: #f3b15c;
   --color-grna: #65e6ff;
   --color-violet: #9b82ff;
@@ -32,7 +34,7 @@
   --space-4xl: 6rem;
   --space-5xl: 8rem;
   --space-6xl: 10rem;
-  --radius-media: 8px;
+  --radius-media: 2px;
   --ease-signal: cubic-bezier(0.16, 1, 0.3, 1);
   --content-max: 1600px;
   --font-geist-mono: ui-monospace;
@@ -82,7 +84,7 @@ select {
 }
 
 ::selection {
-  background: var(--color-signal);
+  background: var(--color-coral);
   color: var(--color-canvas);
 }
 

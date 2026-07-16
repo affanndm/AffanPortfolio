@@ -2,7 +2,7 @@
 name: Affan Nadeem - Signal / Systems
 description: An evidence-led portfolio for software that resolves complex systems.
 colors:
-  canvas: "#090a09"
+  canvas: "#0b0b0b"
   band: "#0e100d"
   surface: "#121310"
   surface-raised: "#181a15"
@@ -11,9 +11,10 @@ colors:
   faint: "#f2f0e894"
   rule: "#f2f0e829"
   rule-strong: "#f2f0e852"
-  signal: "#c4ff45"
-  workCanvas: "#e8e9e3"
-  contactCanvas: "#f0f1ec"
+  signal: "#ff5d3a"
+  acid: "#c8ff2f"
+  workCanvas: "#0b0b0b"
+  contactCanvas: "#ff5d3a"
   darkInk: "#090a09"
   vantage: "#f3b15c"
   grnalytics: "#65e6ff"
@@ -44,7 +45,7 @@ typography:
     lineHeight: 1.35
     letterSpacing: "0"
 rounded:
-  media: "8px"
+  media: "2px"
 spacing:
   xs: "8px"
   sm: "12px"
@@ -75,13 +76,13 @@ components:
 
 **Creative North Star: "Affan Nadeem / The Resolved Signal"**
 
-The interface should feel like Affan's authored world first and a technical field becoming legible under examination second. It is precise, kinetic, and evidence-rich, but the theatre always resolves into a working product state, a source-backed system diagram, an ownership label, or a commit trail.
+The interface should feel like Affan's authored world first and a technical field becoming legible under examination second. It is bold, kinetic, object-led, and evidence-rich: monumental identity and motion lead, then the theatre resolves into a working product state, source-backed diagram, ownership label, or commit trail.
 
 The visual system is flat, ruled, and deliberately asymmetric. Large sans-serif declarations establish confidence; serif statements slow the reader at moments of interpretation; monospaced text is reserved for provenance and system state. Mobile is recomposed as a compact evidence index, not a stacked imitation of desktop.
 
 **Key Characteristics:**
 
-- Five distinct scenes: dark identity hero, neutral work canvas, signal-lime Lab, dark personal chapter, and neutral close.
+- Five distinct scenes: black/coral identity hero, black stacked-work stage, acid Lab, black personal chapter, and coral close.
 - Strong scale contrast and thin structural rules.
 - Real project media before long explanation.
 - Ownership, publication status, and evidence visible before entry.
@@ -93,7 +94,8 @@ The palette behaves like an instrument panel: neutral structure, one rare signal
 
 ### Primary
 
-- **Signal Lime:** Active nodes, focus rings, selection, and rare proof markers. It must remain visually scarce.
+- **Hot Coral:** Primary authored accent for identity, selection, section transitions, and the final contact field.
+- **Acid Signal:** Active nodes, focus rings, project actions, and the fully drenched Lab chapter.
 
 ### Secondary
 
@@ -110,7 +112,7 @@ The palette behaves like an instrument panel: neutral structure, one rare signal
 - **Measured Muted:** Supporting prose that remains comfortably readable.
 - **Rules:** Structural dividers, not decorative outlines.
 
-**The Signal Chapter Rule.** Signal lime remains scarce in the hero, project stories, About, and controls, but it is allowed to drench the Lab chapter once. That committed field marks experimentation as a different mode without turning every section into lime decoration.
+**The Two-Energy Rule.** Coral owns identity and contact; acid owns experimentation and live signal. They may meet only in small responsive-object details and project controls.
 
 **The Project Color Rule.** Amber and cyan belong to their projects. They do not decorate unrelated sections.
 
@@ -172,6 +174,13 @@ The system is flat by default. It uses scene changes, real media, border contras
 - **Pinned argument:** On large screens, the selected-work statement remains fixed while the project evidence moves past it.
 - **Mobile:** The statement returns to normal document flow and every project remains fully readable without hover.
 
+### Project Side-Stage
+
+- **Entry:** A visible `Open project` control sits over each media poster; no essential entry depends on hover.
+- **Behavior:** Native modal dialog slides from the right and occupies most of the viewport, preserving the feeling of staying inside the homepage while giving the project its own stage.
+- **Content:** Project identity, real media, ownership, discipline, stack, and explicit links to the full case study and public source evidence.
+- **Accessibility:** Focus is trapped/restored by the native dialog, Escape closes with a bounded exit, backdrop click closes, and reduced motion resolves nearly instantly.
+
 ### Lab Index
 
 - **Structure:** Ruled rows with index, persistent abstract thumbnail, ownership, status, description, and repository action.
@@ -193,7 +202,7 @@ The system is flat by default. It uses scene changes, real media, border contras
 
 ### Scroll Motion
 
-- GSAP, `@gsap/react`, and ScrollTrigger are used only for the homepage's pinned work statement and word-by-word About clarification on qualifying desktop viewports.
+- GSAP, `@gsap/react`, and ScrollTrigger orchestrate the hero load/depth response, hero scroll exit, pinned work statement, stacked project chapters, Lab rail, About clarification, portrait rings, and contact signature on qualifying desktop viewports.
 - The desktop motion chunk is loaded lazily after the viewport qualifies; mobile and reduced-motion users never download it.
 - Initial word contrast remains WCAG-compliant; the reveal moves from muted-readable to fully clear rather than hidden to visible.
 - All remaining hover, press, media, and navigation feedback stays in CSS for responsiveness and lower runtime cost.
@@ -215,6 +224,6 @@ The system is flat by default. It uses scene changes, real media, border contras
 - **Don't** use generic AI gradient blobs, decorative grid overlays, glassmorphism, beige editorial surfaces, or purple-blue atmosphere as identity.
 - **Don't** turn the site into a resume dump or use generic "passionate developer" language.
 - **Don't** use a fake loader, fake metrics, fake product output, or decorative motion that delays access to the work.
-- **Don't** clone the layouts, wording, colors, assets, or signature interactions of Filippo Ruffini, Tigran, or Abhijit Rout.
+- **Don't** copy source code, assets, personal wording, exact palette values, or signature branded objects from Filippo Ruffini, Tigran, or Abhijit Rout. Reference-led composition and palette families must resolve into Affan-specific systems.
 - **Don't** imply sole ownership of Vantage or gRNAlytics, assign private team roles from public handles, or claim unverified biological accuracy, impact, adoption, awards, revenue, or performance gains.
 - **Don't** bury publication status, make information hover-only, or let a canvas carry essential meaning.

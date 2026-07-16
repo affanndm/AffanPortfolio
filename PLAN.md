@@ -393,3 +393,19 @@ Risks:
 
 - Vercel login may require human action.
 - Preview deployment may expose placeholders if not gated; block or document before sharing.
+
+### Milestone 10: Filippo-Led Full Visual Redesign
+
+Objective: Replace the rejected identity-first candidate with an unmistakably authored, motion-rich portfolio led by the interaction and composition qualities Affan approved in Filippo Ruffini's site.
+
+Tasks:
+
+- Reinspect all three live references and their publicly delivered source/runtime evidence.
+- Recompose the hero around monumental `AFFAN NADEEM` typography and a persistent responsive signal object.
+- Replace neutral report-like work treatment with saturated, stacked project posters.
+- Add an accessible right-side project preview stage before the full evidence route.
+- Expand GSAP choreography across hero depth, project stacking, Lab continuity, About reveal, and contact exit while preserving reduced-motion fallbacks.
+- Update reference audits, visual system, decision history, status, and motion tests.
+- Validate production build, responsive behavior, accessibility, and the drawer interaction locally.
+
+Status: implementation complete; final regression and visual review in progress. No deployment is authorized by this milestone.

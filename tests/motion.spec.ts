@@ -20,7 +20,7 @@ test("ticker can be paused and resumed from the keyboard", async ({ page }) => {
   );
 });
 
-test("reduced motion uses static ticker and does not load the hero canvas", async ({ page }) => {
+test("reduced motion uses static ticker and a resolved hero sculpture", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/");
@@ -28,10 +28,10 @@ test("reduced motion uses static ticker and does not load the hero canvas", asyn
 
   await expect(page.locator(".ticker-track")).toBeHidden();
   await expect(page.locator(".ticker-accessible")).toBeVisible();
-  await expect(page.locator(".signal-field canvas")).toHaveCount(0);
+  await expect(page.locator(".signal-sculpture")).toBeVisible();
 });
 
-test("fine-pointer movement progressively loads the hero canvas", async ({ page }) => {
+test("fine-pointer movement changes the hero sculpture depth", async ({ page }) => {
   await page.addInitScript(() => {
     const nativeMatchMedia = window.matchMedia.bind(window);
     window.matchMedia = (query: string) => {
@@ -44,8 +44,27 @@ test("fine-pointer movement progressively loads the hero canvas", async ({ page 
   });
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/");
-  await expect(page.locator(".signal-field canvas")).toHaveCount(0);
-  await page.waitForTimeout(500);
+  const sculpture = page.locator(".signal-sculpture");
+  await expect(sculpture).toBeVisible();
+  await page.waitForTimeout(1800);
+  const before = await sculpture.evaluate((element) => getComputedStyle(element).transform);
   await page.mouse.move(700, 320);
-  await expect(page.locator(".signal-field canvas")).toHaveCount(1);
+  await page.waitForTimeout(900);
+  const after = await sculpture.evaluate((element) => getComputedStyle(element).transform);
+  expect(after).not.toBe(before);
+});
+
+test("project preview opens as a side-stage dialog and closes with Escape", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("/");
+
+  const trigger = page.getByRole("button", { name: "Open project" }).first();
+  await trigger.scrollIntoViewIfNeeded();
+  await trigger.click();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByRole("heading", { name: "Vantage", exact: true })).toBeVisible();
+
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).toBeHidden();
 });

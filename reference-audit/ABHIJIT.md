@@ -39,6 +39,15 @@ Abhijit's site works because it makes the portfolio feel lived-in: selected work
 
 Affan should borrow the editorial confidence and personal depth, not the exact page mechanics, typography, colors, audio gimmicks, copy, assets, or Framer implementation patterns.
 
+### 2026-07-16 live visual confirmation
+
+- The opening is an object carousel before it is a headline: a wide row of thin, perspective-tilted artwork planes occupies the visual center while name, time, positioning, and scroll direction sit at the edges.
+- The homepage is exceptionally long and changes visual worlds repeatedly. Selected work, experiments, biography, chronology, availability, and the final seated-character scene each receive their own pacing rather than one repeated component.
+- The public page currently exposes project detail as a true route while the homepage remains browseable, reinforcing the value of an intermediate preview surface for Affan.
+- Two very long paused Web Animations were present in the inspected runtime, consistent with continuous ticker media rather than repeated section fade-ins.
+
+Translation for Affan: preserve the object-first opening, long-form chapter variety, and personal ending. Affan's version uses a signal sculpture, lab system, verified trajectory, and direct contact close rather than Abhijit's objects, biography, or audio.
+
 ## Directly Observed Behavior
 
 - The homepage opens with identity-led copy: "Abhijit Rout", "in India", and "I design and dictate culture".

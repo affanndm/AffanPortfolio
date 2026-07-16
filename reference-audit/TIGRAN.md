@@ -54,6 +54,15 @@ The live homepage and its publicly delivered source were rechecked after Affan r
 
 Implementation consequence for Affan: use Tigran's media-first confidence and project-trailer pacing, but keep motion tied to real project evidence, keep role boundaries visible, and avoid reproducing the Rive-led showreel mechanic.
 
+### 2026-07-16 live visual confirmation
+
+- The first viewport is almost entirely black until the custom illustrated `motion designer` wordmark resolves, with lime, coral, violet, pink, and yellow used as character color rather than interface chrome.
+- The navigation stays extremely small and calm against the hero, so the animated identity owns the viewport.
+- A large repeating location/name rail separates the opening from the work chapter and gives motion a structural job.
+- The project routes are ordinary URLs, while the homepage behaves like a showreel. This separation supports Affan's new side-stage previews plus evidence-heavy full case-study routes.
+
+Translation for Affan: keep the saturated color confidence, black canvas, calm navigation, and trailer-first project rhythm; use Affan's project imagery, ownership copy, and system language rather than Tigran's illustrated lettering or client work.
+
 ## Directly Observed Behavior
 
 ### Information Architecture

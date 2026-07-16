@@ -36,7 +36,18 @@ The live homepage and its publicly delivered HTML, CSS, and JavaScript were rech
 - The page retains a real `h1` and `h2` in the raw HTML while visually fragmenting display text. That balance is worth keeping even though the exact split-name treatment must not be copied.
 - The source itself publishes the identity system: `#101010`, `#FD6746`, `#777777`, `#333333`, Editorial New, Neue Montreal, and a 12-column grid with 30px spacing. The site feels authored because these constraints appear everywhere.
 
-Implementation consequence for Affan: carry forward the uncompromising identity, strict grid, deliberate first-load choreography, and project motion previews. Do not copy the split-name typography, coral palette, cursor treatment, WebGL object, or loading theatre.
+Implementation consequence for Affan: carry forward the uncompromising identity, strict grid, deliberate first-load choreography, and project motion previews. Affan explicitly requested the same near-black/hot-accent palette family, so the implementation uses distinct values and Affan-specific composition while avoiding the source site's assets, split-name treatment, cursor, WebGL model, loader, and personal copy.
+
+### Public runtime details verified in the second inspection
+
+- The custom bundle constructs a Three.js `WebGLRenderer`, caps device pixel ratio, loads a GLTF model, and uses front/back render targets to create refractive glass rather than faking the hero with a CSS blur.
+- Pointer coordinates are eased over 0.5 seconds and feed both object rotation and a 32×32 data texture. That texture decays every frame and is disturbed by mouse velocity, which explains the fluid/glitch response around the central object.
+- The hero model scales in with a one-second `power4.inOut` animation. Its nested forms rotate continuously on different axes, so the object stays alive even before pointer input.
+- Project rows create muted looping video textures. Hover on desktop and tap on mobile swap the media shown on the 3D screen, making the work index itself a playable portfolio surface.
+- Scroll position is normalized through Lenis with a one-second exponential easing curve. A 1.8-second programmatic scroll is used for section navigation.
+- The 3D portfolio object tracks both the main work span and the footer span; its vertical position, x/y rotation, and exit are continuously derived from scroll and pointer state.
+
+Translation for Affan: use a persistent central object, pointer depth, scroll-linked continuity, and media swapping as a motion grammar. The implementation uses lightweight DOM/CSS geometry and GSAP instead of copying the GLTF, shaders, or source code.
 
 ## Executive Read
 

@@ -2,8 +2,8 @@
   position: relative;
   overflow: hidden;
   border-block: 1px solid var(--color-rule);
-  background: rgba(18, 19, 16, 0.52);
-  padding: 1.15rem 0;
+  background: var(--color-coral);
+  padding: 0.85rem 0;
 }
 
 .ticker-accessible {
@@ -19,9 +19,10 @@
   display: flex;
   width: max-content;
   gap: 2rem;
-  color: var(--color-text);
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
-  font-size: 1.45rem;
+  color: #090a09;
+  font-family: var(--font-geist), Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
   animation: ticker-move 32s linear infinite;
@@ -47,8 +48,8 @@
   place-items: center;
   transform: translateY(-50%);
   border: 1px solid var(--color-rule-strong);
-  border-radius: var(--radius-media);
-  background: var(--color-canvas);
+  border-radius: 999px;
+  background: #090a09;
   color: var(--color-text);
   cursor: pointer;
   transition: border-color 180ms var(--ease-signal), color 180ms var(--ease-signal);

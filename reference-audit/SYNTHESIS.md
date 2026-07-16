@@ -1,5 +1,15 @@
 # Reference Audit Synthesis
 
+## 2026-07-16 Redesign Translation
+
+The current local candidate treats Filippo as the dominant composition and motion reference, Tigran as the color-energy reference, and Abhijit as the depth/continuity reference:
+
+- Filippo → monumental identity, near-black/hot-accent discipline, central responsive object, fine structural rules, motion integrated into the brand, and work that opens through interaction.
+- Tigran → saturated character color, restrained navigation, media-first project trailers, and a structural moving rail.
+- Abhijit → object-first opening, long-form chapter variation, experiments as creative proof, and a personal authored close.
+
+The translation is deliberately not a source clone. It uses an Affan-specific signal sculpture, verified Vantage/gRNAlytics media, explicit ownership, an accessible modal side-stage, semantic text, native dialog behavior, reduced-motion fallbacks, and distinct palette values.
+
 ## Purpose
 
 This synthesis turns the three reference audits into one original system for Affan Nadeem's portfolio. It is not a recipe for copying any reference site. The portfolio direction remains `AFFAN NADEEM - SIGNAL / SYSTEMS`: complex, noisy problems becoming understandable systems.
