@@ -3,17 +3,16 @@ import { externalLinkProps } from "@/lib/utils";
 
 const navItems = [
   { href: "/#work", label: "Work" },
-  { href: "/#lab", label: "Lab" },
-  { href: "/#about", label: "About" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/projects/vantage", label: "Vantage" },
+  { href: "mailto:nadeemaffan23@gmail.com", label: "Contact" },
 ];
 
 const navigationRuntime = String.raw`
 (() => {
   const menu = document.getElementById("site-mobile-menu");
   const summary = document.getElementById("site-mobile-menu-trigger");
-  if (!menu || !summary || menu.dataset.bound) return;
-  menu.dataset.bound = "true";
+  if (!menu || !summary || menu.__affanBound) return;
+  menu.__affanBound = true;
 
   const close = () => { menu.open = false; };
   const pointer = (event) => { if (!menu.contains(event.target)) close(); };
@@ -40,7 +39,7 @@ export function Navigation() {
         <nav className="site-nav" aria-label="Primary navigation">
           <a className="wordmark" href="/">
             <span>AFFAN NADEEM</span>
-            <small>Software / science / systems</small>
+            <small>PORTFOLIO / 2026</small>
           </a>
           <div className="desktop-nav">
             {navItems.map((item) => (
@@ -48,9 +47,7 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
-            <a href="https://github.com/affanndm" {...externalLinkProps("Affan Nadeem GitHub")}>
-              GitHub <span className="external-glyph" aria-hidden="true" />
-            </a>
+            <span className="nav-availability">TORONTO / CANADA</span>
           </div>
           <details id="site-mobile-menu" className="mobile-menu">
             <summary id="site-mobile-menu-trigger" className="menu-button">

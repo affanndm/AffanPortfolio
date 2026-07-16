@@ -409,3 +409,17 @@ Tasks:
 - Validate production build, responsive behavior, accessibility, and the drawer interaction locally.
 
 Status: implementation complete; final regression and visual review in progress. No deployment is authorized by this milestone.
+
+### Milestone 11: Restricted First-Sequence Rebuild
+
+Objective: Prove one exceptional sequence before rebuilding the remaining homepage.
+
+- [x] Preserve checkpoint `91a688e` on a dedicated branch.
+- [x] Identify the production mismatch without changing domain settings.
+- [x] Inspect Filippo's delivered grid, palette, WebGL/Three.js bundle, GSAP/ScrollTrigger/Flip, Lenis, loader covers, cursor states, and responsive composition.
+- [x] Build three standalone responsive hero prototypes.
+- [x] Select the type/interface hybrid and replace the homepage only through Vantage.
+- [x] Preserve static and reduced-motion compositions.
+- [x] Capture desktop, mobile, and transition review images.
+- [x] Complete full regression, accessibility, and performance comparison.
+- [ ] Commit and push the review branch; do not deploy production.

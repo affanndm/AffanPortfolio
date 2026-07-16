@@ -5,6 +5,7 @@
 @import "./home.css";
 @import "./projects/projects.css";
 @import "./design-lab/design-lab.css";
+@import "./design-lab/hero-prototypes.css";
 
 :root {
   --color-canvas: #090a09;

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { DottedBloom } from "@/components/interactive/DottedBloom";
 import { SignalField } from "@/components/interactive/SignalField";
 import { SignalTicker } from "@/components/interactive/SignalTicker";
@@ -89,6 +90,11 @@ export default function DesignLabPage() {
               Signal Network is the production base; the reel informs project presentation, while bloom remains internal.
             </p>
           </div>
+          <nav className="span-12 hero-prototype-links" aria-label="Hero prototype routes">
+            <Link href="/design-lab/hero-a"><span>A</span> Topological Signal</Link>
+            <Link href="/design-lab/hero-b"><span>B</span> Interface Artifact</Link>
+            <Link href="/design-lab/hero-c"><span>C</span> Typographic Distortion</Link>
+          </nav>
           <Experiment title="Experiment 1: Signal Network">
             <SignalField labelled />
             <div className="experiment-copy">

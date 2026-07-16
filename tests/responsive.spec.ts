@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const routes = ["/", "/projects/vantage", "/projects/grnalytics", "/lab", "/design-lab"];
+const routes = ["/", "/projects/vantage", "/projects/grnalytics", "/lab", "/design-lab", "/design-lab/hero-a", "/design-lab/hero-b", "/design-lab/hero-c"];
 
 const viewports = [
   { width: 390, height: 844 },

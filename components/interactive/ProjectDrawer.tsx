@@ -6,8 +6,8 @@ import { externalLinkProps } from "@/lib/utils";
 const projectDrawerRuntime = String.raw`
 (() => {
   document.querySelectorAll("[data-project-drawer]").forEach((dialog) => {
-    if (!(dialog instanceof HTMLDialogElement) || dialog.dataset.bound) return;
-    dialog.dataset.bound = "true";
+    if (!(dialog instanceof HTMLDialogElement) || dialog.__affanBound) return;
+    dialog.__affanBound = true;
     const trigger = document.querySelector('[aria-controls="' + dialog.id + '"]');
     const closeButton = dialog.querySelector("[data-drawer-close]");
     let closeTimer = 0;
