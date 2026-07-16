@@ -2,56 +2,80 @@
 
 ## Current Milestone
 
-Milestone 1 complete. Ready for Milestone 2: Framer design foundation.
+Milestone 0: Architecture Reset, ready for checkpoint commit.
 
 ## Completed Work
 
-- Ran Framer agent setup.
-- Confirmed workspace initially had no `SPEC.md`, `AGENTS.md`, or `README.md`.
-- Reconstructed `SPEC.md` from Affan's pasted brief.
-- Created agent instructions in `AGENTS.md`.
-- Created `PRODUCT.md` for design workflow context.
-- Created initial `PLAN.md`.
-- Created `DECISIONS.md`.
-- Framer design-system specialist completed `framer-planning/DESIGN_SYSTEM_BRIEF.md`.
-- Reference-site analyst for Filippo Ruffini completed `reference-audit/FILIPPO.md`.
-- Reference-site analyst for Abhijit Rout completed `reference-audit/ABHIJIT.md`.
-- Reference-site analyst for Tigran completed `reference-audit/TIGRAN.md`.
-- Motion and interaction specialist completed `framer-planning/MOTION_PROTOTYPE_BRIEF.md`.
-- Accessibility and performance reviewer completed `qa/ACCESSIBILITY_PERFORMANCE_PLAN.md`.
-- Adversarial portfolio reviewer completed `qa/ADVERSARIAL_REVIEW_PLAN.md`.
-- Cross-repository contribution auditor completed `content-audit/CROSS_REPO_NOTES.md`.
-- GitHub ownership and repository auditor completed `content-audit/OWNED_REPOS_NOTES.md`.
-- Lead consolidation completed `reference-audit/SYNTHESIS.md`.
-- Lead consolidation completed `content-audit/PROJECT_AUDIT.md`.
-- Lead consolidation completed `content-audit/CLAIMS_LEDGER.md`.
-- Lead consolidation completed `content-audit/MEDIA_NEEDED.md`.
-- Created checkpoint commit `88ffac4` (`Create portfolio audit baseline`).
+- Read the current user brief and existing repository instructions.
+- Ran the `impeccable` project context script; it confirmed the portfolio is a brand-register project and loaded `PRODUCT.md`.
+- Read `SPEC.md`, repository file inventory, git status, and recent git history.
+- Created working branch `portfolio-rebuild`.
+- Confirmed the repository had only planning/audit files and no Next.js app implementation yet.
+- Confirmed existing commits are available: `88ffac4`, `7cd3b68`, and `3bbb360`.
+- Confirmed `gh` is not installed in this environment.
+- Confirmed Node and npm are available.
+- Confirmed Vercel CLI is not installed globally; `npx vercel` may still work later if authentication permits.
+- Confirmed Figma MCP tools are available through the connected Figma server.
+- Searched the repository for Figma links; no Figma Make URL is saved locally.
+- Removed stale `.framer-temp/` helper scripts.
+- Renamed `framer-planning/` to `implementation-planning/` to preserve useful design and motion briefs without retaining Framer platform architecture.
+- Updated `AGENTS.md` with fixed Next.js/React/TypeScript, GitHub, Vercel, Figma-reference, and no-Framer rules.
+- Replaced `PLAN.md` with the Next.js/Vercel implementation plan.
+- Updated `SPEC.md` to remove the old platform architecture and define the Next.js/Vercel production stack.
+- Updated implementation-planning and QA artifacts to target the Next.js implementation.
+- Re-ran stale platform-reference search. Remaining matches are explicit bans, superseded decisions, permitted `framer-motion` library references, or public reference-site technology observations.
+- Refreshed public GitHub evidence:
+  - 7 owned public repositories confirmed.
+  - 14 public authored PRs confirmed.
+  - Public commit search found 153 commits across only the already-audited repos.
+  - No additional unauthenticated contribution-only repositories found beyond Vantage and gRNAlytics.
+- Updated content audit notes and claims ledger with the public GitHub and LinkedIn refresh.
 
 ## Work In Progress
 
-- Waiting to begin Milestone 2 Framer design foundation.
+- Six read-only subagents are refreshing reference-site, GitHub, and LinkedIn/background findings.
+- Checkpoint commit for the architecture reset.
 
 ## Next Action
 
-- Connect to the intended Framer project, read the generated Framer task map, and create the hidden design-system page described in `framer-planning/DESIGN_SYSTEM_BRIEF.md`.
+- Create the architecture-reset checkpoint commit.
+- Spawn the remaining strategy/design/motion/accessibility/performance/adversarial reviewers when current subagents finish.
+- Begin Milestone 2 Next.js foundation after checkpoint.
 
 ## Blockers
 
-- Original `SPEC.md` and `AGENTS.md` were missing from the workspace. The prompt has been preserved as the working spec.
-- Framer project identity is not yet known. Framer editing is intentionally blocked until Milestone 1 is complete.
-- GitHub CLI (`gh`) is not installed, so authenticated GitHub history cannot be searched through `gh` in this environment. Public GitHub web/API and repository history will be used unless another authenticated path is available.
+- `gh` is unavailable, so authenticated GitHub contribution search cannot run through GitHub CLI unless it is installed or another authenticated path is provided.
+- The Figma Make project URL is not present in the current prompt or repository, so the interaction reference cannot be reinspected yet. The written description in the brief can guide the dotted-grid bloom experiment until the URL is provided.
+- LinkedIn public access may be restricted and should not be used to invent private biography.
 
 ## Outstanding Human Inputs
 
+- `NEEDS_AFFAN_CONFIRMATION`: Current final email address.
+- `NEEDS_AFFAN_CONFIRMATION`: Resume PDF or public resume link.
 - `NEEDS_AFFAN_CONFIRMATION`: Whether "available for collaboration" is currently true.
-- `NEEDS_AFFAN_CONFIRMATION`: Resume or LinkedIn export for final About chronology and personal facts.
 - `NEEDS_AFFAN_CONFIRMATION`: Portrait or candid image.
-- `NEEDS_AFFAN_CONFIRMATION`: Final email address and resume file/link.
+- `NEEDS_AFFAN_CONFIRMATION`: LinkedIn export or reviewed biography for final About chronology.
+- `NEEDS_AFFAN_CONFIRMATION`: Vantage live URL and team credits.
+- `NEEDS_AFFAN_CONFIRMATION`: gRNAlytics team/context details and current run reliability.
+- `NEEDS_AFFAN_CONFIRMATION`: Figma Make URL if that interaction reference should be reinspected.
 
 ## Test Results
 
-- No implementation tests have run yet.
-- No Framer production pages have been edited.
-- Milestone 1 audits were produced from public evidence. Authenticated GitHub search could not be run because `gh` is unavailable.
-- Latest git checkpoint before Framer work: `88ffac4`.
+- No implementation tests have run yet because the Next.js app has not been created.
+- No Vercel preview has been created yet.
+- No production publish or custom-domain action has occurred.
+
+## Performance Results
+
+- Not measured yet.
+
+## Accessibility Results
+
+- Not measured yet.
+
+## Deployment Status
+
+- Local app: not created yet.
+- Vercel preview: not attempted yet.
+- Production deployment: prohibited without explicit approval.
+- Custom domain: prohibited without explicit approval.

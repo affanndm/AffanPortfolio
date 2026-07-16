@@ -1,6 +1,6 @@
 # Adversarial Review Plan
 
-Scope: prebuild adversarial checklist and risk review for Affan Nadeem's Framer portfolio. This is a planning QA artifact only. Do not edit Framer and do not publish.
+Scope: prebuild adversarial checklist and risk review for Affan Nadeem's Next.js portfolio. This is a planning QA artifact only. Do not publish production or connect the custom domain.
 
 ## Source Basis
 
@@ -9,7 +9,7 @@ Scope: prebuild adversarial checklist and risk review for Affan Nadeem's Framer 
 - `PLAN.md` places adversarial review after responsive refinement, but this plan identifies risks before build work starts.
 - `STATUS.md` shows Milestone 1 is still in progress. Treat missing audit deliverables as blockers before production construction.
 - `reference-audit/FILIPPO.md` and `reference-audit/ABHIJIT.md` define usable influence and non-copy boundaries.
-- `framer-planning/DESIGN_SYSTEM_BRIEF.md`, `framer-planning/MOTION_PROTOTYPE_BRIEF.md`, and `qa/ACCESSIBILITY_PERFORMANCE_PLAN.md` define design, motion, accessibility, and performance checks.
+- `implementation-planning/DESIGN_SYSTEM_BRIEF.md`, `implementation-planning/MOTION_PROTOTYPE_BRIEF.md`, and `qa/ACCESSIBILITY_PERFORMANCE_PLAN.md` define design, motion, accessibility, and performance checks.
 
 ## Prebuild Readiness Gate
 
@@ -19,7 +19,7 @@ Before page construction begins, answer these gate questions. Any failure blocks
 | --- | --- |
 | Are all Milestone 1 required deliverables present? | `reference-audit/TIGRAN.md`, `reference-audit/SYNTHESIS.md`, `content-audit/PROJECT_AUDIT.md`, `content-audit/CLAIMS_LEDGER.md`, or `content-audit/MEDIA_NEEDED.md` is missing. |
 | Is every factual project claim backed by evidence or marked `NEEDS_AFFAN_CONFIRMATION`? | Any claim about role, impact, metrics, users, awards, biological accuracy, revenue, or personal biography lacks a source or confirmation marker. |
-| Is Framer still untouched for production pages? | Any production Framer page was edited before Milestone 1 completion. |
+| Is the fixed architecture respected? | Any Framer platform, Figma Sites, production publish, custom-domain action, or paid hosting dependency is introduced. |
 | Is the design-system work still hidden/internal? | Hidden system or prototype pages are linked from public navigation, indexed, or treated as launch pages. |
 | Is the portfolio direction distinct from reference sites? | A reviewer can identify Filippo, Tigran, or Abhijit as the direct visual template rather than as an influence. |
 
@@ -94,8 +94,8 @@ Severity:
 
 | Review question | Failure condition |
 | --- | --- |
-| Is each React Code Component justified by interaction, accessibility, or performance needs? | Code components are used for ordinary cards, buttons, static metadata, or simple layout. |
-| Are native Framer features used where sufficient? | External libraries duplicate Framer-native behavior without measurable benefit. |
+| Is each client component justified by interaction, accessibility, or performance needs? | Client components are used for ordinary cards, buttons, static metadata, or simple layout that could stay server-rendered. |
+| Are native browser/CSS/React features used where sufficient? | External libraries duplicate simple layout, hover, reveal, or routing behavior without measurable benefit. |
 | Are animation libraries limited to cases that need them? | GSAP, Lenis, Three.js, or similar tools are added for simple reveals, hover states, or smooth-scroll fashion. |
 | Are component cleanup paths defined before build? | Planned code lacks cleanup for animation frames, observers, listeners, media queries, or WebGL/canvas resources. |
 
@@ -182,7 +182,7 @@ Severity:
 | Editorial-template drift | The spec uses dark canvas, serif statements, mono labels, and rules, which can become a saturated AI/editorial pattern. | High | Require project-specific evidence media, signal-network logic, ownership metadata, and non-repeated section grammar. |
 | Motion overreach | Hero network, ticker, split text, shared transitions, and project interactions are all planned. | High | Prototype and budget motion before production; remove any effect that does not clarify structure. |
 | Mobile degradation | Desktop interactions include hover, cursor, canvas, ticker, and shared transitions. | High | Design persistent mobile states first for project entry, ownership, and contact. |
-| Dependency creep | Planned components could invite WebGL, smooth scroll, animation libraries, or custom code. | Medium | Require a native-Framer-first justification note for every dependency or Code Component. |
+| Dependency creep | Planned components could invite WebGL, smooth scroll, animation libraries, or custom code. | Medium | Require a documented quality, accessibility, or performance justification for every non-baseline dependency. |
 | Placeholder leakage | Media and personal inputs are still outstanding. | High | Use clearly labeled missing-media states and block public metadata with unresolved placeholders. |
 
 ## Review Procedure

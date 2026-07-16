@@ -23,16 +23,18 @@ Avoid resume tropes: no "passionate coder", no skills cloud, no six rounded card
 ## Required Execution Order
 
 1. Evidence and reference audit.
-2. Framer design foundation.
-3. Motion prototypes.
-4. Page and CMS construction.
-5. Content and media.
-6. Responsive and interaction refinement.
-7. Adversarial review.
-8. Final validation.
+2. Repository architecture reset.
+3. Next.js foundation.
+4. `/design-lab` visual system.
+5. Hero experiments.
+6. Production page construction.
+7. Content and media.
+8. Responsive and interaction refinement.
+9. Adversarial review.
+10. Final validation and Vercel preview preparation.
 
-Do not edit Framer production pages during Milestone 1.
 Do not publish the website.
+Do not connect the custom domain without explicit approval.
 
 ## Reference Sites
 
@@ -326,25 +328,53 @@ Sections:
 
 Contribution sections should link to selected pull requests or commits where useful.
 
-## Framer Architecture
+## Production Architecture
 
-Use Framer for responsive page composition, typography and color variables, CMS collections, navigation, standard section effects, breakpoints, image/video placement, SEO metadata, and publishing.
+The production architecture is fixed:
 
-Use Code Components only where they materially improve the experience:
+- This GitHub repository is the production source of truth.
+- The website must be built with Next.js App Router, React, and TypeScript.
+- Vercel will host preview deployments and the final approved website.
+- Figma is a visual-design and interaction-reference tool only.
+- Do not use Figma Sites.
+- Framer is removed from the website-building platform architecture.
+- Do not use Framer hosting, Framer CMS, Framer Agent, Framer Code Components, or Framer external-agent workflows.
+- The Motion or `framer-motion` React library may still be used as a normal React animation library if technically appropriate.
+- Do not introduce paid hosting dependencies.
 
-- `SignalField.tsx`
-- `ProjectReel.tsx`
-- `SplitTextReveal.tsx`
-- `SharedProjectTransition.tsx`
-- `SignalTicker.tsx`
-- `ContributionLabel.tsx`
-- `MediaCursor.tsx`
-- `ReducedMotionProvider.tsx`
-- `PerformanceMonitor.tsx`
+Preferred production stack:
 
-Code components must be React 18 compatible, expose Framer property controls, avoid unnecessary dependencies, clean up listeners and animation frames, pause offscreen, respect reduced motion, and provide mobile fallbacks.
+- Next.js App Router.
+- React.
+- TypeScript strict mode.
+- Next.js font optimization.
+- Next.js image optimization.
+- Native CSS, CSS Modules, Tailwind, or another maintainable styling system chosen after app setup.
+- Typed local content or MDX.
+- Motion for React only where it materially improves interaction quality.
+- Canvas 2D for the signal field if CSS/DOM is insufficient and the performance budget remains healthy.
 
-## CMS Structure
+Potential components:
+
+- `SignalField`
+- `DottedBloom`
+- `SplitTextReveal`
+- `ProjectReel`
+- `ProjectTrailer`
+- `SignalTicker`
+- `OwnershipLabel`
+- `ProjectMetadata`
+- `MediaFrame`
+- `CaseStudySection`
+- `ProjectTransition`
+- `Navigation`
+- `MobileMenu`
+- `ReducedMotionProvider`
+- `PerformanceBoundary`
+
+Components must avoid unnecessary dependencies, clean up listeners and animation frames, pause offscreen, respect reduced motion, avoid hydration errors, and provide mobile fallbacks.
+
+## Content Structure
 
 Projects collection:
 
@@ -400,6 +430,8 @@ Timeline collection:
 - Link
 - Order
 
+Implementation note: these collections should be modeled as typed local content or MDX first. Add a headless CMS only if static typed content becomes insufficient and the tradeoff is documented in `DECISIONS.md`.
+
 ## Accessibility And Performance Targets
 
 Targets:
@@ -443,5 +475,5 @@ Requirements:
 - Inventing impact metrics.
 - Generating final case-study copy before auditing commits.
 - Sacrificing mobile usability for desktop effects.
-- Adding dependencies when native Framer functionality is enough.
-
+- Adding dependencies when native browser, CSS, or existing React/Next.js patterns are enough.
+- Using Framer hosting, Framer CMS, Framer Agent, Framer Code Components, or Framer external-agent workflows.

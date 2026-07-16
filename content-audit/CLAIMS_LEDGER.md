@@ -84,6 +84,6 @@ Publication status values:
 | Proposed Website Wording | Supporting Evidence | Evidence URL | Confidence | Publication Status |
 | --- | --- | --- | --- | --- |
 | Affan is interested in Python, computational biology, simulations, gene-network models, algorithms, AI, data science, and biotechnology entrepreneurship. | GitHub profile README self-description; may be outdated and needs direct confirmation. | https://github.com/affanndm | probable | needs confirmation |
-| Affan has DECA / FBLA leadership or finalist experience. | User prompt references LinkedIn snippet, but full verified evidence was not audited. | https://www.linkedin.com/in/affan-nadeem-9b4aa0250/ | probable | needs confirmation |
+| Affan has FBLA National Finalist experience. | Public search result for the exact LinkedIn profile title says "Student at Milliken Mills \| FBLA National Finalist"; full LinkedIn page fetch was blocked by robots, so direct confirmation or export is still needed. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | probable | needs confirmation |
+| Affan has DECA experience or leadership. | User prompt references DECA / FBLA, but public search evidence in this pass only surfaced FBLA in the LinkedIn title snippet. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | unverified | needs confirmation |
 | Affan's final About chronology. | Requires resume or LinkedIn export per `SPEC.md`. | N/A | unverified | needs confirmation |
-

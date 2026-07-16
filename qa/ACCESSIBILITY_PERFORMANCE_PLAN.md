@@ -1,6 +1,6 @@
 # Accessibility And Performance QA Plan
 
-Scope: Milestone 6 implementation QA and Milestone 8 final launch-readiness QA for Affan Nadeem's Framer portfolio. This plan does not require editing Framer production pages and does not publish the site.
+Scope: Milestone 6 implementation QA and Milestone 8 final launch-readiness QA for Affan Nadeem's Next.js portfolio. This plan does not publish production or connect the custom domain.
 
 ## Source Constraints
 
@@ -8,7 +8,7 @@ Scope: Milestone 6 implementation QA and Milestone 8 final launch-readiness QA f
 - `DECISIONS.md` must record any implementation deviation from `SPEC.md`.
 - Do not invent factual claims, personal contributions, awards, metrics, or biography.
 - Use `NEEDS_AFFAN_CONFIRMATION` for any unverified personal information found during QA.
-- Native Framer features are preferred unless a React Code Component materially improves the experience.
+- Prefer semantic HTML, CSS, native browser APIs, and existing React/Next.js patterns unless a dependency materially improves the experience.
 
 ## Milestone Coverage
 
@@ -35,7 +35,7 @@ Required output:
 - Core Web Vitals measurements from at least one throttled lab run and one unthrottled local run.
 - SEO metadata and social preview verification.
 - Known browser/device coverage gaps, especially Safari, iOS, and Android.
-- Confirmation that no Framer publish action was performed during QA.
+- Confirmation that no production Vercel promotion or custom-domain action was performed during QA.
 
 ## Test Matrix
 
@@ -287,9 +287,9 @@ Failure thresholds:
 Steps:
 
 1. Review network and coverage panels for JavaScript transferred and executed.
-2. Identify Framer runtime, custom code components, analytics, fonts, embeds, and media players.
+2. Identify Next.js route bundles, client components, animation libraries, analytics, fonts, embeds, and media players.
 3. Disable optional third-party scripts locally where possible and compare interaction latency.
-4. Confirm code components do not run heavy work during initial render when below the fold.
+4. Confirm client components do not run heavy work during initial render when below the fold.
 
 Failure thresholds:
 
@@ -372,4 +372,4 @@ Milestone 8 passes only when:
 - LCP, CLS, and INP meet target thresholds on primary pages/templates.
 - Keyboard, focus, semantics, reduced motion, hover/touch parity, autoplay, lazy loading, canvas pause, mobile simplification, and SEO checks pass.
 - Safari, iOS, and Android are either tested or listed as explicit known limitations.
-- No Framer publish action was performed during QA.
+- No production Vercel promotion or custom-domain action was performed during QA.

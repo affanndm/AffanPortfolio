@@ -1,316 +1,363 @@
 # Plan
 
-Build Affan Nadeem's portfolio as an evidence-backed Framer site around the "Signal / Systems" concept. The work proceeds audit-first, then design foundation, motion prototypes, CMS/page construction, media, refinement, adversarial review, and final validation without publishing.
+Build Affan Nadeem's portfolio as an evidence-backed Next.js, React, and TypeScript site around the `Signal / Systems` concept. The work proceeds audit-first, then architecture reset, design-system exploration, motion prototypes, production implementation, responsive/accessibility/performance refinement, adversarial review, and Vercel preview preparation. Production publishing and custom-domain changes are out of scope until Affan explicitly approves them.
 
 ## Scope
 
-- In: reference audits, GitHub contribution audit, planning files, Framer design-system page, motion prototypes, CMS/page construction, verified draft content, media placeholders, responsive/accessibility/performance validation.
-- Out: publishing, production-domain changes, fabricated claims or metrics, unverified personal biography, cloning reference sites, destructive git history changes.
+- In: repository reset, stale Framer removal, reference audits, GitHub contribution audit, LinkedIn/background analysis, Next.js app setup, `/design-lab`, hero experiments, homepage, project routes, Lab, About, Contact, local content model, media placeholders, accessibility/performance validation, preview deployment preparation.
+- Out: Framer platform work, Figma Sites, production publishing, final-domain connection, paid hosting dependencies, fabricated claims or metrics, destructive git history changes.
 
 ## Milestones
 
-### Milestone 1: Evidence And Reference Audit
+### Milestone 0: Architecture Reset
 
-Objective: Establish verified content and original design direction before any Framer production edits.
+Objective: Convert the project from a Framer-planning workspace into a Next.js production repository without discarding useful audit work.
 
 Tasks:
 
-- Inspect `SPEC.md`, `AGENTS.md`, workspace state, git state, and available tools.
-- Audit Filippo Ruffini, Tigran, and Abhijit Rout reference sites with browser inspection and public-source observation.
-- Write `reference-audit/FILIPPO.md`, `reference-audit/TIGRAN.md`, `reference-audit/ABHIJIT.md`, and `reference-audit/SYNTHESIS.md`.
-- Audit `affanndm` owned repositories and contribution-only repositories, starting with Vantage and gRNAlytics.
-- Search authenticated GitHub commit and pull-request history for additional public contributions.
-- Write `content-audit/PROJECT_AUDIT.md`, `content-audit/CLAIMS_LEDGER.md`, and `content-audit/MEDIA_NEEDED.md`.
-- Mark unresolved personal facts as `NEEDS_AFFAN_CONFIRMATION`.
+- Read `SPEC.md`, `AGENTS.md`, project docs, workspace state, and git history.
+- Create a working branch.
+- Search for stale Framer platform references and revise or remove them.
+- Remove obsolete Framer temp files.
+- Preserve useful reference, content, QA, design, and motion planning artifacts.
+- Record the architecture change in `DECISIONS.md`.
+
+Dependencies:
+
+- Local repository access.
+- Existing git history.
+
+Deliverables:
+
+- Updated `AGENTS.md`, `PLAN.md`, `STATUS.md`, `DECISIONS.md`, and relevant planning docs.
+- Platform-neutral implementation briefs.
+- Clean stale-platform search results except for legitimate reference-site technology observations.
+
+Acceptance Criteria:
+
+- Repository architecture is clearly Next.js/React/TypeScript with Vercel hosting.
+- Framer platform instructions are removed from active project guidance.
+- Figma is documented as a reference/prototyping tool only.
+- No production publishing or domain change occurs.
+
+Validation:
+
+- Run `rg -n -i "framer|@framer/agent|framer hosting|framer cms|framer project" .`.
+- Confirm remaining matches are either historical/reference-site observations or explicitly allowed library references.
+- Run `git status --short --branch`.
+
+Risks:
+
+- Some old audit files mention Framer because reference sites are publicly built on Framer; these should remain when they are factual observations, not project architecture.
+
+### Milestone 1: Evidence And Reference Audit Refresh
+
+Objective: Verify that current content and reference research remain accurate before production copy and case-study structure are written.
+
+Tasks:
+
+- Audit all public repositories owned by `affanndm`.
+- Search for public contribution-only repositories, starting with Vantage and gRNAlytics.
+- Use authenticated GitHub CLI/API if available; otherwise use public GitHub API/web evidence and document the limitation.
+- Inspect public LinkedIn/profile evidence where accessible, without inventing private biography.
+- Revisit Filippo Ruffini, Tigran, and Abhijit Rout reference sites where needed.
+- Refresh `PROJECT_AUDIT.md`, `CLAIMS_LEDGER.md`, `MEDIA_NEEDED.md`, and `SYNTHESIS.md`.
 
 Dependencies:
 
 - Network access.
-- GitHub CLI or API authentication.
-- Browser inspection tools.
+- GitHub and LinkedIn public accessibility.
+- Optional GitHub authentication.
 
 Deliverables:
 
-- Reference audit files.
-- Content audit files.
-- Updated `STATUS.md` and `DECISIONS.md`.
+- Verified contribution and project hierarchy.
+- Updated claims ledger and media needs.
+- Updated reference synthesis if sites changed materially.
+- Status notes for any authentication limits.
 
 Acceptance Criteria:
 
-- All prominent project claims have evidence status.
-- Contribution-only projects have been searched.
-- Every proposed project has ownership classification.
-- All three reference websites have separate analyses.
-- `SYNTHESIS.md` defines an original, actionable system for Affan.
+- Every public project claim has evidence status.
+- Contribution-only work separates team output from Affan's personal contributions.
+- Unverified personal facts remain marked `NEEDS_AFFAN_CONFIRMATION`.
+- Reference analyses separate observed behavior, public technology evidence, and inference.
 
 Validation:
 
-- Cross-check claims ledger against repository URLs, commits, and PRs.
-- Ensure reference audit labels direct observations vs implementation inference.
-- Confirm no Framer production pages were edited.
+- Cross-check project copy candidates against commits, PRs, repository files, and the claims ledger.
+- Document unavailable authenticated searches in `STATUS.md` and `DECISIONS.md`.
 
-Known Risks:
+Risks:
 
-- GitHub authentication may be unavailable or insufficient.
-- Some contribution history may be private or inaccessible.
-- Reference sites may block inspection or have changed since the original brief.
+- LinkedIn may restrict public access.
+- `gh` may remain unavailable.
+- Some project media or private role details may require Affan confirmation.
 
-### Milestone 2: Framer Design Foundation
+### Milestone 2: Next.js Foundation
 
-Objective: Build a hidden Framer design-system page that makes the portfolio direction concrete without relying on final project media.
+Objective: Create a maintainable production app foundation before building the full homepage.
 
 Tasks:
 
-- Connect to the intended Framer project.
-- Read generated Framer project context and relevant task-map sections.
-- Create variables/styles for colors, typography, grids, spacing, rules, borders, focus states, hover states, ownership labels, metadata, media containers, buttons, links, navigation elements, reduced-motion variants, and timing demos.
-- Avoid generic SaaS card systems.
+- Initialize Next.js App Router with React, TypeScript strict mode, ESLint, and production build scripts.
+- Add global metadata, robots/sitemap strategy, font loading, CSS tokens, and base layout.
+- Define typed local content for projects, lab items, claims, navigation, and media placeholders.
+- Establish semantic layout, skip link, focus styles, and reduced-motion utilities.
+- Document dependency choices in `DECISIONS.md`.
 
 Dependencies:
 
-- Milestone 1 complete.
-- Framer project access.
+- Milestones 0 and 1 sufficiently complete.
+- Node/npm availability.
 
 Deliverables:
 
-- Hidden Framer design-system page.
-- Updated `STATUS.md` and `DECISIONS.md`.
+- Next.js app in the repository.
+- Base routes and shared layout.
+- Typed content model.
+- Initial lint/build configuration.
 
 Acceptance Criteria:
 
-- System feels authored without project screenshots.
-- Components respond at desktop, tablet, and mobile breakpoints.
-- Contrast and focus treatments pass accessibility checks.
-- No generic SaaS card system is present.
+- `npm run build` succeeds once the foundation is complete.
+- TypeScript strict mode is enabled.
+- No Framer platform package or workflow is introduced.
+- Public copy does not include unresolved placeholders as final content.
 
 Validation:
 
-- Framer preview inspection.
-- Screenshot checks at target breakpoints.
-- Contrast and keyboard focus review.
+- Run install, lint, typecheck, and production build.
+- Inspect generated routes locally.
 
-Known Risks:
+Risks:
 
-- Framer project authorization may require Affan.
-- Exact Framer API methods must be checked before use.
+- Network/package install failures.
+- Existing repo lacks app code, so initial setup is a large diff.
 
-### Milestone 3: Motion Prototypes
+### Milestone 3: `/design-lab` And Design System
 
-Objective: Prove the signature motion language before building full pages.
+Objective: Establish the visual system and interaction grammar before broad homepage implementation.
 
 Tasks:
 
-- Prototype hero signal network, opening transition, split-text reveals, Vantage interaction, gRNAlytics sequence, shared project-page transition, signal ticker, reduced-motion variants, and mobile alternatives.
-- Use native Framer where sufficient.
-- Use Code Components only where interaction quality or performance requires them.
-- Test cleanup, offscreen pause, reduced motion, and mobile fallbacks.
+- Build hidden `/design-lab` route.
+- Demonstrate color, typography, grids, spacing, rules, buttons, links, navigation, ownership labels, metadata, media frames, focus states, hover states, reduced-motion variants, and motion timing.
+- Avoid generic AI patterns and repeated section scaffolding.
+- Verify contrast and mobile wrapping.
 
 Dependencies:
 
-- Milestone 2 complete.
-- Code component APIs verified with Framer docs.
+- Next.js foundation.
+- Reference synthesis and content audit.
 
 Deliverables:
 
-- Motion prototype components/pages.
-- Performance notes in `STATUS.md`.
+- `/design-lab` route.
+- Reusable CSS tokens and early component primitives.
+- Notes in `STATUS.md`.
 
 Acceptance Criteria:
 
-- Animations remain smooth.
-- Reduced-motion experience remains complete.
-- Mobile alternatives avoid hover dependency.
+- Design system feels specific to Signal / Systems.
+- Ownership and evidence patterns are treated as core UI.
+- No generic SaaS cards, gradient blobs, skill bars, or template grids.
+- The route is excluded from public navigation.
 
 Validation:
 
-- Browser preview and screenshot/video inspection.
-- Performance monitor checks.
-- Reduced-motion manual test.
+- Browser screenshots at 390, 768, 1024, 1440, and 1920px.
+- Keyboard/focus and reduced-motion checks.
 
-Known Risks:
+Risks:
 
-- Canvas/WebGL may exceed performance budget.
-- Framer native effects may be enough for some planned components.
+- Typography and dark editorial styling can drift into saturated AI editorial patterns unless project media/evidence and signal logic drive the system.
 
-### Milestone 4: Page And CMS Construction
+### Milestone 4: Hero Experiments
 
-Objective: Build the actual site structure and CMS around verified content.
+Objective: Compare three isolated hero directions before selecting the production homepage system.
 
 Tasks:
 
-- Create homepage, reusable project template, Projects CMS, Lab CMS, Lab page, About page, Contact section, and 404 page.
-- Populate fields with verified draft content from the claims ledger.
-- Display role and ownership classification before team-project case studies.
-- Include visible Team and Credits blocks.
+- Build Experiment 1: Signal Network.
+- Build Experiment 2: Editorial Project Reel.
+- Build Experiment 3: Dotted Grid Bloom inspired only in principle by the Figma Make reference.
+- Evaluate originality, relevance, visual impact, performance, mobile behavior, accessibility, support for the rest of the site, and resemblance risk.
+- Select or combine the strongest direction and record the decision.
 
 Dependencies:
 
-- Milestones 1-3 complete.
-- Verified content and CMS schema.
+- `/design-lab`.
+- Figma Make link if available; otherwise use the brief's written description and mark the missing link.
 
 Deliverables:
 
-- Framer page structure and CMS collections.
-- Draft case-study entries.
+- Three `/design-lab` hero experiments.
+- Decision entry selecting the production direction.
 
 Acceptance Criteria:
 
-- Page hierarchy matches `SPEC.md`.
-- Team attribution is visible.
-- Unsupported claims are absent or marked for confirmation.
+- Each experiment has desktop, mobile, and reduced-motion states.
+- Interactions are purposeful and do not block content.
+- The selected direction is original and evidence-aligned.
 
 Validation:
 
-- Framer preview checks.
-- CMS field audit.
-- Claims ledger cross-check.
+- Visual inspection and screenshots across required breakpoints.
+- Performance sanity check for canvas/animation loops.
 
-Known Risks:
+Risks:
 
-- Some content may remain placeholder until Affan supplies media or personal context.
+- Figma reference may remain unavailable.
+- Canvas effects can exceed mobile/performance budgets.
 
-### Milestone 5: Content And Media
+### Milestone 5: Production Website Implementation
 
-Objective: Replace generic placeholders with verified media or clearly labeled asset requests.
+Objective: Build the actual portfolio experience with accurate content, original art direction, and purposeful motion.
 
 Tasks:
 
-- Capture or request Vantage, gRNAlytics, Financial Tracker, English portfolio, and algorithm visual media.
-- Create labeled placeholders only where real media is unavailable.
-- Draft case studies using the spec structure and verified evidence.
-- Keep unsupported outcomes and metrics out.
+- Build homepage sections: opening transition, hero, signal field, signal strip, Selected Work, The Lab, About, and Contact.
+- Build flagship project routes for Vantage and gRNAlytics.
+- Build Lab/archive route or section for smaller work.
+- Build reusable components: navigation, media frame, ownership label, project metadata, signal ticker, project trailer, case-study section, reduced-motion utilities, and 404 page.
+- Use verified claims only; keep unresolved facts out of public copy or clearly marked in non-public planning docs.
+- Add meaningful placeholders for missing media and track them in `MEDIA_NEEDED.md`.
 
 Dependencies:
 
-- Project audit complete.
-- Project repos or live interfaces accessible.
+- Milestones 1-4 complete enough to support copy and direction.
+- Project media where available.
 
 Deliverables:
 
-- Populated media slots or labeled placeholders.
-- Updated `MEDIA_NEEDED.md`.
+- Complete Next.js site routes.
+- Accurate local content.
+- Responsive layouts.
+- Purposeful advanced motion with fallbacks.
 
 Acceptance Criteria:
 
-- No stock media is represented as project media.
-- Every placeholder states the exact missing asset.
-- Case-study copy is specific, attributed, and evidence-backed.
+- Team-project ownership is visible before case-study entry.
+- Public pages contain no unsupported metrics, awards, or biological validity claims.
+- Mobile layouts are intentionally composed.
+- Reduced-motion mode remains complete.
 
 Validation:
 
-- Manual media review.
-- Claims ledger cross-check.
+- Local browser review.
+- Lint/typecheck/build.
+- Initial accessibility and responsive checks.
 
-Known Risks:
+Risks:
 
-- Some project interfaces may not run locally.
-- Personal portrait, resume, and final biography likely require Affan.
+- Missing media and personal confirmations may require placeholders.
 
-### Milestone 6: Responsive And Interaction Refinement
+### Milestone 6: Testing, Accessibility, And Performance
 
-Objective: Make the site robust across target devices and input modes.
+Objective: Make the site robust enough for preview review.
 
 Tasks:
 
-- Test 390px, 768px, 1024px, 1440px, and 1920px.
-- Check text wrapping, overflow, navigation, touch behavior, hover dependence, video loading, canvas performance, transitions, keyboard navigation, focus order, reduced motion, and screen-reader semantics.
-- Resolve failures before moving on.
+- Test homepage, project routes, Lab, About, Contact links, navigation, mobile menu, keyboard operation, reduced motion, external links, 404 page, console errors, hydration errors, and animation cleanup.
+- Run TypeScript, ESLint, production build, Playwright where useful, axe/accessibility checks, Lighthouse, and link checking where available.
+- Optimize fonts, images, media, animation loops, JavaScript bundles, and route loading.
+- Record results in `STATUS.md`.
 
 Dependencies:
 
-- Core pages and media in place.
+- Production implementation.
 
 Deliverables:
 
-- Responsive QA notes in `STATUS.md`.
-- Fixed layout and interaction issues.
+- Passing local build.
+- Test and QA results.
+- Performance and accessibility notes.
+- Fixed blocker/high issues.
 
 Acceptance Criteria:
 
-- No horizontal overflow.
-- No hover-only content.
-- Focus order is coherent.
-- Reduced motion is usable.
+- No horizontal overflow at 390, 768, 1024, 1440, or 1920px.
+- Keyboard navigation and visible focus pass manual review.
+- Reduced motion disables nonessential motion.
+- Lighthouse and Core Web Vitals targets are met or documented with attempted fixes.
 
 Validation:
 
-- Browser screenshots and manual keyboard/touch tests.
+- Automated command outputs.
+- Browser screenshots and manual QA notes.
 
-Known Risks:
+Risks:
 
-- Mobile Safari and Android Chrome may require manual device testing outside this environment.
+- Safari/iOS/Android validation may require external device testing.
 
 ### Milestone 7: Adversarial Review
 
-Objective: Find and resolve credibility, design, accessibility, and performance failures before final validation.
+Objective: Stress-test the final candidate for design, credibility, accessibility, performance, and originality failures.
 
 Tasks:
 
-- Review for AI-generated visual patterns, unsupported claims, misleading ownership, excessive animation, weak hierarchy, inconsistent spacing, unnecessary dependencies, mobile compromises, a11y failures, unclear explanations, repetitive copy, broken links, placeholders, performance regressions, and reference-site similarity.
-- Document every finding and resolution.
+- Review for AI-generated design patterns, similarity to references, misleading ownership language, unsupported claims, hierarchy weaknesses, repetitive copy, mobile compromises, broken links, placeholders, excessive animation, dependency creep, and performance regressions.
+- Resolve all blocker and high-priority findings.
+- Document remaining limitations.
 
 Dependencies:
 
-- Milestone 6 complete.
+- Milestone 6 candidate build.
 
 Deliverables:
 
-- Adversarial review notes in `STATUS.md` or a dedicated QA section.
+- Final review notes in `STATUS.md` or QA artifact.
 - Resolved findings.
 
 Acceptance Criteria:
 
-- No unresolved critical or high-severity issues.
-- Any remaining limitations are documented.
+- No blocker/high credibility, accessibility, mobile, or performance issue remains unresolved.
+- Any remaining placeholders or unknowns are explicit.
 
 Validation:
 
-- Re-run targeted checks after fixes.
+- Re-test exact failing routes, breakpoints, and interactions after fixes.
 
-Known Risks:
+Risks:
 
-- Some findings may require Affan media or confirmation to fully resolve.
+- Some items may require Affan-provided media or confirmation.
 
-### Milestone 8: Final Validation
+### Milestone 8: Vercel Preview Preparation
 
-Objective: Validate the preview against performance, accessibility, SEO, and manual launch-readiness standards without publishing.
+Objective: Prepare and deploy a preview when authentication permits, without publishing production or connecting the custom domain.
 
 Tasks:
 
-- Run available Lighthouse, accessibility, SEO, and interaction tests.
-- Document desktop/mobile performance, accessibility, SEO, LCP, CLS, and INP.
-- Document current result, cause, attempted remediation, and remaining recommendation for any missed target.
-- Prepare Affan's pre-publish checklist.
+- Add Vercel-ready build configuration and deployment documentation.
+- Configure SEO metadata, Open Graph image strategy, sitemap/robots, and redirects where needed.
+- Attempt `npx vercel` preview deployment if authentication is available.
+- Document production deployment and custom-domain connection instructions without performing them.
 
 Dependencies:
 
-- All previous milestones complete.
+- Passing local production build.
+- Vercel authentication.
 
 Deliverables:
 
-- Working Framer preview.
-- Completed audit/planning/status files.
-- Verified projects/contributions list.
-- Remaining Affan inputs.
-- Known limitations.
-- Performance and accessibility results.
-- Manual final-review checklist.
-- Exact pre-publishing steps.
+- Vercel preview URL when permitted.
+- Deployment documentation.
+- Exact custom-domain connection steps.
+- Final completion report.
 
 Acceptance Criteria:
 
-- Desktop Lighthouse Performance 95+ target attempted.
-- Mobile Lighthouse Performance 90+ target attempted.
-- Accessibility 95+ target attempted.
-- SEO 95+ target attempted.
-- LCP under 2.5s, CLS under 0.1, INP under 200ms targets measured where possible.
+- Preview deploys successfully or authentication blocker is documented.
+- Production deployment is not promoted.
+- Custom domain is not connected.
 
 Validation:
 
-- Run all available validations and record actual outputs.
+- Inspect preview URL if available.
+- Re-run smoke checks against preview.
 
-Known Risks:
+Risks:
 
-- Framer preview constraints may limit full Lighthouse parity with published hosting.
-- Some browser/device validation may require Affan's manual confirmation.
-
+- Vercel login may require human action.
+- Preview deployment may expose placeholders if not gated; block or document before sharing.

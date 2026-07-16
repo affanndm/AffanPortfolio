@@ -155,20 +155,20 @@ Do not copy:
 - Slogans, closing metaphors, soundtrack-like flourishes, or personal voice.
 - Any page sequence or visual phrasing closely tied to his identity.
 
-## Practical Rules For Framer Milestones
+## Practical Rules For Next.js Milestones
 
-### Milestone 2 Design System
+### `/design-lab` Design System
 
-The hidden design-system page should prove:
+The internal `/design-lab` route should prove:
 
 - This portfolio can feel authored without final project media.
 - Ownership labels are not badges pasted on later; they are core components.
 - Metadata and evidence states are as designed as the hero.
 - Reduced-motion states exist from the start.
 
-Use `framer-planning/DESIGN_SYSTEM_BRIEF.md` as the implementation brief.
+Use `implementation-planning/DESIGN_SYSTEM_BRIEF.md` as the implementation brief.
 
-### Milestone 3 Motion Prototypes
+### Hero And Motion Prototypes
 
 Prototype only the signature interactions before building the complete site:
 
@@ -180,9 +180,9 @@ Prototype only the signature interactions before building the complete site:
 - Signal ticker.
 - Reduced-motion and mobile variants.
 
-Use `framer-planning/MOTION_PROTOTYPE_BRIEF.md` as the implementation brief.
+Use `implementation-planning/MOTION_PROTOTYPE_BRIEF.md` as the implementation brief.
 
-### Milestone 4 Content And CMS
+### Typed Content And Case Studies
 
 Use the content audit as a hard boundary:
 
@@ -213,4 +213,3 @@ Affan's portfolio should feel like a precise, cinematic system for finding signa
 - Abhijit's depth and archive structure, without copying his voice.
 
 The result should be a credible creative-developer portfolio where every major visual decision supports a factual claim, a project contribution, or a motion metaphor already present in Affan's work.
-

@@ -4,6 +4,8 @@ Audit date: 2026-07-15
 GitHub user: `affanndm`  
 Scope: public repositories owned by `affanndm`. Contribution-only repositories are out of scope for this file.
 
+Refresh note, 2026-07-15 during Next.js architecture reset: public GitHub API repo discovery was rerun and again returned the same 7 owned, public, non-fork repositories: `Recipe-Tracker`, `English-Metacognition-Portfolio`, `Financial_Tracker`, `AffanPortfolio`, `Solutions`, `affanndm.github.io`, and `affanndm`. No new owned public repositories were found.
+
 ## Method And Limits
 
 - Read local `SPEC.md`, `AGENTS.md`, `PLAN.md`, `STATUS.md`, and `DECISIONS.md` before auditing.
@@ -411,4 +413,3 @@ Safe portfolio use:
 Missing or risky claims:
 
 - Do not claim this repo contains the portfolio implementation until public commits exist.
-
