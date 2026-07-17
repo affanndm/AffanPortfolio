@@ -60,9 +60,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body>
-        <a className="skip-link" href="#main">
-          Skip to content
-        </a>
+        <nav className="skip-nav" aria-label="Skip navigation">
+          <a className="skip-link" href="#main">
+            Skip to content
+          </a>
+        </nav>
         <Navigation />
         {children}
       </body>

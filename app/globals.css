@@ -110,6 +110,11 @@ select {
   text-transform: uppercase;
 }
 
+.skip-nav {
+  position: relative;
+  z-index: 100;
+}
+
 .skip-link:focus {
   transform: translateY(0);
 }

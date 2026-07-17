@@ -11,6 +11,7 @@ Build Affan Nadeem's portfolio as a complete, personal, editorial digital portra
 - Milestone 9: identity-first creative correction implemented and fully validated locally after Affan rejected the first production art direction.
 - Milestone 14: complete. Affan selected Identity B — Lanes; eight isolated compositions and desktop/mobile QA captures remain under `/design-lab/filippo-study/`.
 - Milestone 15: selected B lane/scanner opening translated to production and deployed after explicit approval; the remaining chapters still need the same art-led treatment.
+- Milestone 16: equal-stage six-project carousel implemented locally with distinct project artwork, direct selection, desktop Lenis/GSAP choreography, and native mobile scrolling. It is not deployed.
 - Future production promotions and domain changes continue to require explicit approval.
 
 ## Scope
@@ -19,6 +20,20 @@ Build Affan Nadeem's portfolio as a complete, personal, editorial digital portra
 - Out: Framer platform work, Figma Sites, unapproved future production/domain changes, paid hosting dependencies, fabricated claims or metrics, destructive git history changes.
 
 ## Milestones
+
+### Milestone 16: Equal-Stage Project Carousel
+
+Objective: Remove Vantage's homepage dominance and turn all six intentionally public projects into one art-led selectable sequence without changing the approved B — Lanes identity.
+
+- [x] Replace the Vantage lead, secondary work chooser, and separate gRNAlytics chapter with one six-project carousel.
+- [x] Give each project a distinct code-native composition rather than repeating a single card template.
+- [x] Preserve visible year, role, mode, field, case-study, live, and source paths where verified.
+- [x] Add previous/next controls, direct project selection, arrow/Home/End keyboard support, live status, and non-hover access.
+- [x] Use pinned ScrollTrigger choreography and Lenis navigation on qualifying desktop viewports.
+- [x] Use native horizontal scrolling and CSS scroll snap on mobile; bypass animation under reduced motion.
+- [x] Start motion and carousel enhancement only after hydration to prevent DOM mutation races.
+- [x] Complete final full-suite regression and production build validation.
+- [ ] Obtain explicit approval before any production promotion.
 
 ### Milestone 15: Production Translation Of B — Lanes
 

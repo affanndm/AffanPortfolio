@@ -33,11 +33,17 @@ const projectDrawerRuntime = String.raw`
     };
     const cancel = (event) => { event.preventDefault(); close(); };
     const backdrop = (event) => { if (event.target === dialog) close(); };
+    const escape = (event) => {
+      if (event.key !== "Escape" || !dialog.open) return;
+      event.preventDefault();
+      close();
+    };
 
     trigger?.addEventListener("click", open);
     closeButton?.addEventListener("click", close);
     dialog.addEventListener("cancel", cancel);
     dialog.addEventListener("click", backdrop);
+    document.addEventListener("keydown", escape);
   });
 })();`;
 

@@ -75,7 +75,7 @@ export function LaneHero() {
 
       <div className="fn-hero-bottom">
         <span>STUDENT / DEVELOPER / COMPETITOR / BUILDER</span>
-        <a href="#vantage">ENTER THE WORK <ArrowDown size={14} aria-hidden="true" /></a>
+        <a href="#all-work">ENTER THE WORK <ArrowDown size={14} aria-hidden="true" /></a>
       </div>
     </section>
   );

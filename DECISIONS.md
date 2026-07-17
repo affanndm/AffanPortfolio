@@ -1,5 +1,21 @@
 # Decisions
 
+## 2026-07-16: Replace The Vantage Lead With An Equal-Stage Project Carousel
+
+Decision: Replace the Vantage-led homepage chapter, secondary work rail, and dedicated gRNAlytics chapter with one selectable six-project stage. Keep Vantage and gRNAlytics deeper because they have case-study evidence, but do not give either more homepage stage time than the other public projects.
+
+Reason: Affan explicitly said Vantage should not read as the main subject of the portfolio. A single stable editorial frame with six different project artworks makes the work feel curated without making the homepage a hierarchy of one flagship plus leftovers.
+
+Implementation boundaries:
+
+- Use the existing Lenis and GSAP stack rather than adding another carousel dependency.
+- Pin, scrub, and directionally snap only on qualifying desktop viewports.
+- Use native horizontal scrolling and CSS scroll snap on mobile, and immediate state changes under reduced motion.
+- Preserve previous/next controls, direct selection, keyboard operation, live status, real links, and non-hover access.
+- Give each project a materially different visual transition while keeping one consistent grid and theme.
+- Start DOM-mutating motion only after React hydration; no GSAP pin spacer may be inserted during hydration.
+- This decision does not authorize production deployment.
+
 ## 2026-07-16: Deploy B / Lanes And Remove Private-Roster Projects
 
 Decision: Promote the selected B lane/scanner identity to the production homepage, remove the two tracker projects from every portfolio and audit surface, and deploy the current workspace to Vercel production after Affan's explicit approval.

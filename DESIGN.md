@@ -206,20 +206,15 @@ The system is flat by default. It uses scene changes, real media, border contras
 - **gRNAlytics:** Uses a source-backed sequence and pipeline visualization labeled as code flow, not biological output.
 - **Motion:** At most a 1.025 media scale or a bounded sequence scanner; reduced motion shows the final static state.
 
-### Homepage Project Reel
+### Equal-Stage Project Carousel
 
-- **Structure:** Moving proof first, title and contribution context second, source actions last.
-- **Pacing:** Two large project chapters with deliberate vertical separation, not a grid of equal cards.
-- **Pinned argument:** On large screens, the selected-work statement remains fixed while the project evidence moves past it.
-- **Mobile:** The statement returns to normal document flow and every project remains fully readable without hover.
-
-### Horizontal Work Chooser
-
-- **Structure:** One ordered horizontal index follows the Vantage lead and exposes six intentionally public work entries without pretending they have equal depth or evidence.
-- **Hierarchy:** Vantage and gRNAlytics point to dedicated homepage chapters and case studies; smaller and archival builds point into the Lab or their public source.
-- **Interaction:** Large visible previous/next controls enhance native horizontal scrolling. Trackpad, touch, keyboard focus, and direct anchor navigation remain available without JavaScript.
-- **Visual rhythm:** Each entry receives a committed flat color field, oversized index/title, concise role/status, and an explicit source action instead of a generic card thumbnail.
-- **Mobile:** The rail keeps one strong partial-next-card cue and native momentum scrolling; no project is hover-only.
+- **Structure:** One six-project stage replaces the Vantage lead, secondary rail, and separate gRNAlytics homepage chapter. Every project receives the same viewport, metadata hierarchy, and direct-selection weight.
+- **Art direction:** The shared grid stays stable while each project changes the artwork itself: sliced local-discovery media, sequence/pipeline typography, responsive identity lanes, algorithm topology, stacked editorial pages, or an archival browser object.
+- **Interaction:** Visible previous/next controls, six direct project buttons, and arrow/Home/End keyboard commands select a project. The live status announces the active title without auto-rotation.
+- **Desktop motion:** ScrollTrigger pins the stage, maps vertical progress across six compositions, scrubs between them, and settles with directional snapping. Direct controls reposition the pinned scroll state immediately while the selected project's artwork and copy ease into place, avoiding competing scroll tweens.
+- **Mobile:** Native horizontal momentum scrolling and CSS scroll snap replace the pinned sequence. A partial-next-project cue remains visible, all controls remain tappable, and no information depends on hover.
+- **Reduced motion:** The same selection controls switch slides without smooth travel or animated entrances.
+- **Evidence hierarchy:** Vantage and gRNAlytics retain case studies and native side-stages; the remaining public projects expose verified source paths without fabricated case-study depth.
 
 ### Project Side-Stage
 
@@ -234,12 +229,6 @@ The system is flat by default. It uses scene changes, real media, border contras
 - **Desktop:** Dense comparison layout.
 - **Mobile:** Compact two-stage row that moves description and actions below the title without hiding status.
 - **Rule:** Verification and archive state must be readable, not encoded by color alone.
-
-### gRNAlytics Chapter
-
-- **Canvas:** Project cyan creates a full-field change after the chooser, followed by a black source-backed sequence stage.
-- **Evidence:** The visual explains repository-observable input, candidate, scoring, and output flow. It is labeled as code flow and never represented as validated biological performance.
-- **Entry:** The same native side-stage pattern as Vantage provides role, stack, media, case study, and repository access without duplicating interaction behavior.
 
 ### About, Profiles, And Contact
 
@@ -262,11 +251,12 @@ The system is flat by default. It uses scene changes, real media, border contras
 ### Scroll Motion
 
 - Lenis owns wheel-scroll interpolation on qualifying desktop viewports and is synchronized to GSAP's ticker and ScrollTrigger. Native scrolling remains intact on mobile, coarse layouts, and reduced-motion profiles.
-- GSAP, `@gsap/react`, ScrollTrigger, and SplitText orchestrate the character-led identity entrance, pointer-responsive artifact, hero exit, project portal expansion, and closing statement reveal.
-- A tiny server-rendered bootstrap imports the generated motion module only after a qualifying desktop viewport has loaded; mobile and reduced-motion users never download GSAP, SplitText, or Lenis and do not hydrate a React motion boundary.
-- React Bits patterns are adapted selectively: Magnet adds bounded attraction to the project opener, while ScrollFloat gives the Vantage closing statement a character reveal without allowing mid-word line breaks.
+- GSAP and ScrollTrigger orchestrate the lane entrance, project carousel progress, per-project reveals, Lab continuity, About motion, and contact exit.
+- A null-rendering client controller injects the generated motion module only after React hydration on a qualifying desktop viewport. This prevents GSAP's pin spacers and inline transforms from racing hydration; mobile and reduced-motion users never request the module.
+- A second small hydrated controller owns carousel selection, keyboard behavior, mobile scroll synchronization, inert state, and live status without turning the full carousel into a client-rendered component.
+- The adapted React Bits Magnet remains limited to the two flagship project openers.
 - Opening a project side-stage stops Lenis and marks the dialog as a protected native-scroll region; closing it restores page interpolation.
-- Initial word contrast remains WCAG-compliant; the reveal moves from muted-readable to fully clear rather than hidden to visible.
+- Essential small text moves and deblurs without opacity fading so every animation frame remains contrast-compliant.
 - All remaining hover, press, media, and navigation feedback stays in CSS for responsiveness and lower runtime cost.
 
 ## Do's and Don'ts
