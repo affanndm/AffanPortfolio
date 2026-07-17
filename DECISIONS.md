@@ -1,5 +1,18 @@
 # Decisions
 
+## 2026-07-16: Publish And Deploy The Equal-Stage Carousel
+
+Decision: Publish the equal-stage carousel release to the GitHub feature branch and default `portfolio-rebuild` branch, then promote the same source tree through the linked Vercel project to the canonical production domain.
+
+Reason: Affan explicitly approved committing, publishing, and deploying the completed carousel after the clean production build, 84-test browser suite, accessibility scan, responsive checks, and private-project scan passed.
+
+Verification:
+
+- Vercel reports the production target Ready with aliases for `https://www.affannadeem.me` and the apex domain.
+- The canonical homepage, Vantage, gRNAlytics, Lab, robots, and sitemap routes return 200.
+- The apex domain redirects to canonical `www` with 308.
+- The production homepage contains neither removed private tracker name.
+
 ## 2026-07-16: Replace The Vantage Lead With An Equal-Stage Project Carousel
 
 Decision: Replace the Vantage-led homepage chapter, secondary work rail, and dedicated gRNAlytics chapter with one selectable six-project stage. Keep Vantage and gRNAlytics deeper because they have case-study evidence, but do not give either more homepage stage time than the other public projects.
@@ -14,7 +27,7 @@ Implementation boundaries:
 - Preserve previous/next controls, direct selection, keyboard operation, live status, real links, and non-hover access.
 - Give each project a materially different visual transition while keeping one consistent grid and theme.
 - Start DOM-mutating motion only after React hydration; no GSAP pin spacer may be inserted during hydration.
-- This decision does not authorize production deployment.
+- Production deployment required separate explicit approval, which Affan provided after local validation.
 
 ## 2026-07-16: Deploy B / Lanes And Remove Private-Roster Projects
 

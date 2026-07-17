@@ -2,9 +2,9 @@
 
 ## Current Milestone
 
-Milestone 16: equal-stage project carousel implemented locally; production is unchanged.
+Milestone 16: equal-stage project carousel published and deployed to production.
 
-Affan selected Identity B — Lanes and established the governing principle: `It is not information with art. It is art that shows information.` The approved opening remains intact, while the former Vantage-led sequence has been replaced locally by one six-project carousel in which every public project receives a full visual composition, direct selection, and equivalent stage time. The previously approved deployment remains live; this new candidate has not been promoted to production.
+Affan selected Identity B — Lanes and established the governing principle: `It is not information with art. It is art that shows information.` The approved opening remains intact, while the former Vantage-led sequence is now one six-project production carousel in which every public project receives a full visual composition, direct selection, and equivalent stage time. GitHub's default `portfolio-rebuild` branch contains the release, Vercel reports the production deployment Ready, and the canonical domain and core routes are verified.
 
 ## Completed Work
 
