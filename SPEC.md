@@ -255,7 +255,7 @@ Do not start with "Hello, I'm Affan."
 
 Narrative opening:
 
-> I am interested in what happens when a difficult problem contains too much information, too many constraints, or no obvious starting point. I use software to find the structure inside it.
+> I am interested in what happens when a difficult problem contains information, too many constraints, or no obvious starting point. I use software to find the structure inside it.
 
 Connect product engineering, computational biology, algorithms, entrepreneurship, and student leadership.
 Use one strong portrait or candid image, not a gallery of similar photos.

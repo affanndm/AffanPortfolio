@@ -761,6 +761,35 @@ body:has(.prototype-page) .site-header { display: none; }
 .fn-trajectory strong { font-size: 1.35rem; font-weight: 540; line-height: 1.05; }
 .fn-trajectory p { margin: 0; color: rgba(244, 241, 235, 0.6); font-size: 0.85rem; line-height: 1.5; }
 
+.fn-experience {
+  --experience-ink: #f4f1eb;
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  background: #3157ff;
+  color: var(--experience-ink);
+  padding: clamp(6rem, 11vw, 10rem) clamp(1rem, 2.25vw, 2.25rem) clamp(7rem, 12vw, 11rem);
+}
+.fn-experience-heading { position: relative; z-index: 3; display: grid; grid-template-columns: minmax(10rem, 0.3fr) minmax(0, 1fr); gap: clamp(2rem, 7vw, 8rem); align-items: end; }
+.fn-experience-heading > p { align-self: start; margin: 0; border-top: 1px solid rgba(244, 241, 235, 0.48); padding-top: 0.8rem; font-size: 0.72rem; text-transform: uppercase; }
+.fn-experience-heading h2 { max-width: 13ch; margin: 0; font-size: clamp(3.4rem, 7vw, 6rem); font-weight: 620; line-height: 0.88; letter-spacing: -0.04em; text-wrap: balance; }
+.fn-experience-heading > a { grid-column: 2; display: inline-flex; width: fit-content; min-height: 44px; align-items: center; gap: 0.4rem; border-bottom: 1px solid rgba(244, 241, 235, 0.55); color: inherit; font-size: 0.78rem; text-decoration: none; text-transform: uppercase; transition: color 260ms var(--ease-signal); }
+.fn-experience-tabs { position: relative; z-index: 3; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(5rem, 9vw, 8rem); border-block: 1px solid rgba(244, 241, 235, 0.55); }
+.fn-experience-tabs button { display: grid; min-height: 6.5rem; grid-template-columns: auto 1fr auto; gap: 0.85rem; align-items: center; border: 0; border-right: 1px solid rgba(244, 241, 235, 0.55); background: transparent; color: var(--experience-ink); padding: 1rem; font: inherit; font-size: clamp(1.1rem, 2vw, 1.7rem); text-align: left; cursor: pointer; transition: background 360ms var(--ease-signal), color 360ms var(--ease-signal); }
+.fn-experience-tabs button:last-child { border-right: 0; }
+.fn-experience-tabs button span,
+.fn-experience-tabs button small { font-size: 0.62rem; }
+.fn-experience-tabs button[aria-selected="true"] { background: #d8ff52; color: #101216; }
+.fn-experience-panels { position: relative; z-index: 3; min-height: clamp(29rem, 45vw, 42rem); }
+.fn-experience[data-enhanced="true"] [data-experience-panel]:not([data-active="true"]) { display: none; }
+.fn-experience-list { margin: 0; padding: 0; list-style: none; }
+.fn-experience-list li { display: grid; min-height: 10rem; grid-template-columns: 3rem minmax(15rem, 0.8fr) minmax(0, 1.2fr); gap: clamp(1rem, 3vw, 3rem); align-items: center; border-bottom: 1px solid rgba(244, 241, 235, 0.35); padding: 1.5rem 1rem; }
+.fn-experience-list li > span { align-self: start; color: #d8ff52; font-size: 0.68rem; }
+.fn-experience-list h3 { max-width: 13ch; margin: 0; font-family: var(--font-instrument-serif), Georgia, serif; font-size: clamp(1.8rem, 3.7vw, 3.7rem); font-weight: 400; line-height: 0.92; letter-spacing: -0.03em; text-wrap: balance; }
+.fn-experience-list p { max-width: 50ch; margin: 0; color: var(--experience-ink); font-size: clamp(0.86rem, 1.25vw, 1.05rem); line-height: 1.5; }
+.fn-experience-word { position: absolute; z-index: 1; inset: auto -0.035em -0.09em; display: flex; justify-content: space-between; color: #151835; font-size: clamp(3.8rem, 10vw, 6rem); font-weight: 680; line-height: 0.72; letter-spacing: -0.04em; white-space: nowrap; pointer-events: none; }
+
 .fn-contact { position: relative; display: grid; min-height: 100svh; align-content: start; overflow: hidden; background: var(--fn-orange); color: var(--fn-black); padding: clamp(6rem, 11vw, 10rem) clamp(1rem, 2.25vw, 2.25rem) 2rem; }
 .fn-contact > p { margin: 0 0 1.3rem; font-size: 0.78rem; text-transform: uppercase; }
 .fn-contact h2 { max-width: 12ch; margin: 0; font-size: clamp(3.8rem, 7.5vw, 6rem); line-height: 0.88; letter-spacing: -0.04em; }
@@ -777,6 +806,7 @@ body:has(.prototype-page) .site-header { display: none; }
   .fn-end-links a:hover,
   .fn-review-footer a:hover,
   .fn-profile-links a:hover { color: var(--fn-orange); }
+  .fn-experience-heading > a:hover { color: #d8ff52; }
   .fn-project-portal .project-drawer-trigger:hover { background: var(--fn-orange); color: var(--fn-black); }
   .fn-work-choice-main:hover strong { transform: translateX(0.08em); }
   .fn-work-choice-main strong { transition: transform 360ms var(--ease-signal); }
@@ -807,6 +837,9 @@ body:has(.prototype-page) .site-header { display: none; }
   .fn-lab-heading,
   .fn-about-intro,
   .fn-about-body { grid-template-columns: 1fr; }
+  .fn-experience-heading { grid-template-columns: 1fr; }
+  .fn-experience-heading > a { grid-column: 1; }
+  .fn-experience-list li { grid-template-columns: 2.5rem minmax(14rem, 0.8fr) minmax(0, 1.2fr); }
   .fn-grna-stage { min-height: auto; }
   .fn-grna-terminal { min-height: 15rem; }
   .fn-grna-story nav,
@@ -937,6 +970,14 @@ body:has(.prototype-page) .site-header { display: none; }
   .fn-trajectory li,
   .fn-trajectory li:nth-child(2) { min-height: auto; border-right: 0; border-bottom: 1px solid var(--fn-rule); }
   .fn-trajectory li:last-child { border-bottom: 0; }
+  .fn-experience { padding-inline: 0.75rem; content-visibility: auto; contain-intrinsic-block-size: auto 90rem; }
+  .fn-experience-heading h2 { font-size: 3.35rem; }
+  .fn-experience-tabs { grid-template-columns: repeat(3, minmax(10rem, 1fr)); overflow-x: auto; overscroll-behavior-inline: contain; }
+  .fn-experience-tabs button { min-height: 5rem; font-size: 1rem; }
+  .fn-experience-list li { grid-template-columns: 2rem 1fr; gap: 1rem; padding: 1.5rem 0.75rem; }
+  .fn-experience-list li > p { grid-column: 2; }
+  .fn-experience-list h3 { font-size: 2.15rem; }
+  .fn-experience-panels { min-height: 38rem; }
   .fn-contact { padding-inline: 0.75rem; }
   .fn-contact h2 { font-size: 3.8rem; }
   .fn-contact-email { max-width: 100%; overflow-wrap: anywhere; }
@@ -952,5 +993,7 @@ body:has(.prototype-page) .site-header { display: none; }
   .fn-lane-reveal { -webkit-mask-image: none; mask-image: none; }
   .fn-lane-scanner { display: none; }
   .lab-visual,
-  .fn-work-choice-main strong { transition: none !important; }
+  .fn-work-choice-main strong,
+  .fn-experience-tabs button,
+  .fn-experience-heading > a { transition: none !important; }
 }

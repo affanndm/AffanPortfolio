@@ -3,6 +3,7 @@ import { LaneHero } from "@/components/LaneHero";
 import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { PortfolioMotion } from "@/components/interactive/PortfolioMotion";
 import { LabIndex } from "@/components/LabIndex";
+import { ExperienceArchive } from "@/components/ExperienceArchive";
 import { flagshipProjects, labItems, publicEmail, trajectory } from "@/lib/content";
 import { externalLinkProps } from "@/lib/utils";
 
@@ -30,7 +31,7 @@ export default function HomePage() {
       <section id="about" className="fn-about" aria-labelledby="about-title">
         <div className="fn-about-intro">
           <span>AFFAN / BEYOND THE PROJECT FILES</span>
-          <h2 id="about-title">I like problems with too much information and no obvious first move.</h2>
+          <h2 id="about-title">I like problems with information and no obvious first move.</h2>
         </div>
 
         <div className="fn-about-body">
@@ -57,6 +58,8 @@ export default function HomePage() {
           ))}
         </ol>
       </section>
+
+      <ExperienceArchive />
 
       <section id="contact" className="fn-contact" aria-labelledby="contact-title">
         <p>Have a difficult problem?</p>

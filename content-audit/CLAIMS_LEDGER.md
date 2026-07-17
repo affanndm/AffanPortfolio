@@ -1,6 +1,6 @@
 # Claims Ledger
 
-Audit date: 2026-07-15
+Audit date: 2026-07-16
 
 Publication status values:
 
@@ -79,6 +79,10 @@ Publication status values:
 | Proposed Website Wording | Supporting Evidence | Evidence URL | Confidence | Publication Status |
 | --- | --- | --- | --- | --- |
 | Affan is interested in Python, computational biology, simulations, gene-network models, algorithms, AI, data science, and biotechnology entrepreneurship. | GitHub profile README self-description; may be outdated and needs direct confirmation. | https://github.com/affanndm | probable | needs confirmation |
-| Affan has FBLC Coding and Programming National Finalist experience, listed as 2nd place in Canada. | The public LinkedIn profile search surface lists the award and date, but direct confirmation or an external competition record is still needed before publishing it as a portfolio claim. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | probable | needs confirmation |
-| Affan has DECA finalist and qualifier experience. | The public LinkedIn profile search surface lists DECA Ontario and regional results, but direct confirmation or external competition records are still needed before publication. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | probable | needs confirmation |
+| Affan has current experience with Milliken Moments in Markham, Ontario. | The public LinkedIn profile exposes the organization and location; Affan explicitly requested that the portfolio incorporate material from his LinkedIn. The role title is not exposed and is not published. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | verified | permitted |
+| Affan attended Milliken Mills High School from 2024 to 2028 and lists Milliken Business Organization and Target Alpha as activities. | The education and activities entries are directly visible on Affan's public LinkedIn; Affan explicitly requested their use. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | verified | permitted |
+| Affan was an FBLC Coding & Programming National Finalist, placed 2nd in Canada, and qualified for NLC in February 2026. | The honor text and date are directly visible on Affan's public LinkedIn; Affan explicitly requested that the portfolio incorporate material from his LinkedIn. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | verified | permitted |
+| Affan was a DECA Ontario PFN Provincials Finalist, Top 20 overall, in February 2025. | The honor text and date are directly visible on Affan's public LinkedIn; Affan explicitly requested that the portfolio incorporate material from his LinkedIn. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | verified | permitted |
+| Affan was a DECA Regionals PFN Finals Qualifier with a Top 10 roleplay and 2nd place overall in November 2024. | The honor text and date are directly visible on Affan's public LinkedIn; Affan explicitly requested that the portfolio incorporate material from his LinkedIn. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | verified | permitted |
+| Affan received Grade 9 English and French awards in February 2025. | Both honor entries and dates are directly visible on Affan's public LinkedIn; Affan explicitly requested that the portfolio incorporate material from his LinkedIn. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | verified | permitted |
 | Affan's final About chronology. | Requires resume or LinkedIn export per `SPEC.md`. | N/A | unverified | needs confirmation |

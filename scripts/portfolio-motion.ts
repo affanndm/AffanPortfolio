@@ -192,6 +192,27 @@ if (!motionWindow.__affanMotionReady) {
     { xPercent: -8, ease: "none", scrollTrigger: { trigger: ".fn-about-mark", start: "top bottom", end: "bottom top", scrub: 1 } },
   );
   gsap.fromTo(
+    ".fn-experience-heading > *",
+    { y: 30, filter: "blur(6px)" },
+    {
+      y: 0,
+      filter: "blur(0px)",
+      duration: 0.9,
+      stagger: 0.08,
+      ease: "expo.out",
+      scrollTrigger: { trigger: ".fn-experience", start: "top 72%", once: true },
+    },
+  );
+  gsap.fromTo(
+    ".fn-experience-word span",
+    { xPercent: (index) => index % 2 ? 18 : -18 },
+    {
+      xPercent: (index) => index % 2 ? -4 : 4,
+      ease: "none",
+      scrollTrigger: { trigger: ".fn-experience", start: "top bottom", end: "bottom bottom", scrub: 0.9 },
+    },
+  );
+  gsap.fromTo(
     ".fn-contact-signature",
     { xPercent: 7 },
     { xPercent: -3, ease: "none", scrollTrigger: { trigger: ".fn-contact", start: "top bottom", end: "bottom bottom", scrub: 1 } },

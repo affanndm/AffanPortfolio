@@ -236,6 +236,15 @@ The system is flat by default. It uses scene changes, real media, border contras
 - **Profiles:** GitHub and LinkedIn are visible text links in both navigation and body content; they are not hidden behind icons or a footer-only treatment.
 - **Contact:** A full coral closing field contains the verified public email plus GitHub and LinkedIn, with a monumental signature acting as the final visual object.
 
+### Beyond GitHub Archive
+
+- **Purpose:** A full ultramarine chapter near the end expands Affan's story beyond source repositories without changing the existing About or Contact compositions.
+- **Structure:** Three ruled tabs — Experience, Competition, and School — reveal compact editorial records rather than résumé cards.
+- **Interaction:** The first record is server-rendered, all records remain available without JavaScript, and progressive enhancement adds roving tab focus plus arrow/Home/End keyboard commands.
+- **Evidence:** Public copy stays close to Affan's LinkedIn and the explicit 2026-07-16 request to incorporate that profile material. Hidden or third-party-inferred job titles are excluded.
+- **Visual rule:** Ultramarine is confined to this single biographical chapter; acid lime marks the selected category and record indices, while an oversized `MORE THAN CODE` footer becomes the visual object.
+- **Mobile:** Tabs remain horizontally scrollable, records collapse to a readable two-column editorial list, and no content depends on hover.
+
 ### Navigation
 
 - **Desktop:** Sticky, restrained, and subordinate to the page title.

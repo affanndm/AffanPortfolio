@@ -39,6 +39,27 @@ test("project carousel advances with its visible controls", async ({ page }) => 
   await expect(page.locator("[data-carousel-status]")).toContainText("Project 2 of 6: gRNAlytics", { timeout: 5000 });
 });
 
+test("experience archive keeps the revised voice and supports keyboard tab selection", async ({ page }) => {
+  await page.goto("/");
+
+  await expect(page.getByRole("heading", {
+    name: "I like problems with information and no obvious first move.",
+  })).toBeVisible();
+  await expect(page.getByText("too much information", { exact: false })).toHaveCount(0);
+
+  const experience = page.locator("#experience");
+  await experience.scrollIntoViewIfNeeded();
+  await expect(experience).toHaveAttribute("data-enhanced", "true");
+  const firstTab = page.getByRole("tab", { name: /Experience/ });
+  await firstTab.focus();
+  await page.keyboard.press("ArrowRight");
+
+  const competitionTab = page.getByRole("tab", { name: /Competition/ });
+  await expect(competitionTab).toBeFocused();
+  await expect(competitionTab).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByRole("tabpanel", { name: /Competition/ })).toContainText("2nd place in Canada");
+});
+
 test("fine-pointer movement changes the identity scanner position", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/");

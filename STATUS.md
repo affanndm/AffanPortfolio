@@ -2,9 +2,9 @@
 
 ## Current Milestone
 
-Milestone 16: equal-stage project carousel published and deployed to production.
+Milestone 17: LinkedIn-backed Beyond GitHub chapter implemented and fully validated locally.
 
-Affan selected Identity B — Lanes and established the governing principle: `It is not information with art. It is art that shows information.` The approved opening remains intact, while the former Vantage-led sequence is now one six-project production carousel in which every public project receives a full visual composition, direct selection, and equivalent stage time. GitHub's default `portfolio-rebuild` branch contains the release, Vercel reports the production deployment Ready, and the canonical domain and core routes are verified.
+Affan selected Identity B — Lanes and established the governing principle: `It is not information with art. It is art that shows information.` The deployed opening and six-project carousel remain intact. The local candidate removes only `too much` from the approved About sentence and adds one isolated ultramarine tabbed chapter for confirmed experience, competition, and school material from Affan's LinkedIn. Production remains unchanged.
 
 ## Completed Work
 
@@ -26,7 +26,9 @@ Affan selected Identity B — Lanes and established the governing principle: `It
 - Added a pinned, scrubbed, directionally snapping desktop project sequence with direct Lenis navigation, varied GSAP easing, and per-project transitions; mobile uses native swipe and CSS scroll snap, and reduced motion resolves directly.
 - Delayed the desktop motion module and carousel controller until React hydration completes, preventing GSAP pin spacers or state attributes from racing the client boundary.
 - Validated the final candidate against the clean production server: production build passes, 84/84 Playwright tests pass, homepage axe scan passes, five responsive widths have no overflow, and the private tracker-name scan returns no matches.
-- Kept LinkedIn-derived awards and biography details out of public copy because they remain confirmation-gated in the claims ledger.
+- Added a new LinkedIn-backed Experience / Competition / School chapter after About, using only facts visible on Affan's public profile and explicitly requested for publication.
+- Excluded hidden LinkedIn role titles and third-party-inferred biography from public copy.
+- Validated the local candidate with passing typecheck, lint, production build, 85/85 Playwright checks, homepage axe scan, keyboard tab navigation, and overflow coverage at 390, 768, 1024, 1440, and 1920px.
 
 - Integrated Lenis with the existing lazy desktop GSAP island, including ScrollTrigger synchronization, anchor handling, drawer pause/resume, protected drawer scrolling, cleanup, and native mobile/reduced-motion fallbacks.
 - Added GSAP SplitText choreography to the `AFFAN NADEEM` entrance without changing the semantic heading or static no-JavaScript composition.
@@ -79,7 +81,7 @@ Affan selected Identity B — Lanes and established the governing principle: `It
 ## Blockers And Missing Human Inputs
 
 - `gh` is unavailable, so authenticated cross-repository GitHub search has not been rerun.
-- LinkedIn public access is restricted; detailed biography claims remain confirmation-gated.
+- LinkedIn's public surface remains partial; details not directly visible there remain confirmation-gated.
 - `NEEDS_AFFAN_CONFIRMATION`: resume PDF or public resume URL.
 - `NEEDS_AFFAN_CONFIRMATION`: portrait or candid photography.
 - `NEEDS_AFFAN_CONFIRMATION`: current collaboration availability.

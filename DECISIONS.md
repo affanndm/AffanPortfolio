@@ -412,3 +412,13 @@ Decision: Replace the React motion wrapper with a small server-rendered viewport
 Reason: The complete homepage is substantially longer than the first-sequence build. Mobile Lighthouse showed that hydrating a React boundary solely to reject desktop motion added avoidable work. The standalone module keeps the full desktop choreography, drawer/Lenis synchronization, and cleanup while preventing mobile and reduced-motion profiles from requesting the animation code. Native responsive images preserve the visual treatment without requiring a homepage image client boundary.
 
 Tradeoff: The retained Windows mobile Lighthouse sample remains 87 Performance because the shared Next.js App Router runtime is still the largest blocking task. Accessibility, Best Practices, and SEO remain 100, and the measured result is recorded without claiming the 90 stretch target was met.
+
+## 2026-07-16: Add A LinkedIn-Backed Beyond-GitHub Chapter
+
+Decision: Preserve every approved homepage scene and add one isolated tabbed chapter between About and Contact for Experience, Competition, and School. The About statement changes only by removing `too much`.
+
+Reason: Affan explicitly asked for the portfolio to show more than GitHub projects and directed the site to use his LinkedIn material. A separate chapter adds that missing dimension without diluting the art-led project sequence or turning the existing About section into a résumé.
+
+Evidence boundary: Publish only facts directly visible on Affan's public LinkedIn and explicitly authorized by his 2026-07-16 request. Do not publish role titles hidden by the public LinkedIn surface or inferred by third-party profile aggregators.
+
+Interaction boundary: Use semantic tabs with visible selection, roving focus, arrow/Home/End keyboard operation, touch access, and a no-JavaScript reading fallback. Production remains unchanged until Affan separately requests a deployment.
