@@ -1,16 +1,10 @@
-/* eslint-disable @next/next/no-html-link-for-pages, @next/next/no-img-element -- native navigation and pre-optimized local images keep the public homepage free of avoidable client boundaries */
 import { ArrowUpRight } from "lucide-react";
 import { LaneHero } from "@/components/LaneHero";
+import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { PortfolioMotion } from "@/components/interactive/PortfolioMotion";
 import { LabIndex } from "@/components/LabIndex";
-import { ProjectDrawer } from "@/components/interactive/ProjectDrawer";
-import { ScrollFloatText } from "@/components/react-bits/ScrollFloatText";
-import { WorkRail } from "@/components/WorkRail";
 import { flagshipProjects, labItems, publicEmail, trajectory } from "@/lib/content";
 import { externalLinkProps } from "@/lib/utils";
-
-const vantage = flagshipProjects[0];
-const grnalytics = flagshipProjects[1];
 
 export default function HomePage() {
   return (
@@ -19,92 +13,7 @@ export default function HomePage() {
 
       <LaneHero />
 
-      <section id="vantage" className="fn-vantage-transition" aria-labelledby="vantage-title">
-        <div className="fn-vantage-sticky">
-          <div className="fn-vantage-heading">
-            <span>(01) / SELECTED PROJECT</span>
-            <h2 id="vantage-title">Vantage</h2>
-            <p>Trust-first local discovery</p>
-          </div>
-
-          <div className="fn-project-portal" data-project-portal>
-            <img
-              src="/media/vantage/live-home-750.webp"
-              srcSet="/media/vantage/live-home-750.webp 750w, /media/vantage/live-home-1600.webp 1440w"
-              alt="Vantage local discovery homepage showing the public product interface."
-              sizes="(max-width: 640px) 100vw, 92vw"
-              width="1440"
-              height="900"
-              loading="lazy"
-            />
-            <div className="fn-project-wash" aria-hidden="true" />
-            <div className="fn-project-frame" aria-hidden="true"><i /><i /><i /><i /></div>
-            <div className="fn-project-caption">
-              <span>LIVE PRODUCT CAPTURE</span>
-              <span>DISCOVERY / TRUST / ACTION</span>
-            </div>
-            <ProjectDrawer project={vantage} />
-          </div>
-
-          <div className="fn-vantage-meta">
-            <span>VANTAGE</span>
-            <span>FULL-STACK CONTRIBUTOR</span>
-            <span>TEAM PROJECT / 2026</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="fn-vantage-end" aria-label="Vantage project entry">
-        <div className="fn-end-index"><span>(01)</span><span>PROJECT ENTRY</span></div>
-        <ScrollFloatText text="Helping local discovery feel less like a noisy list and more like a trusted path to relevant businesses." />
-        <div className="fn-end-links">
-          <a href="/projects/vantage">Read the case study <ArrowUpRight size={18} aria-hidden="true" /></a>
-          <a href={vantage.liveUrl} {...externalLinkProps("Open the Vantage live site")}>Live site <ArrowUpRight size={18} aria-hidden="true" /></a>
-          <a href={vantage.repoUrl} {...externalLinkProps("Open the Vantage source repository")}>Source <ArrowUpRight size={18} aria-hidden="true" /></a>
-        </div>
-      </section>
-
-      <WorkRail projects={flagshipProjects} labItems={labItems} />
-
-      <section id="grnalytics" className="fn-grna" aria-labelledby="grna-title">
-        <header className="fn-grna-heading">
-          <span>02 / SCIENTIFIC COMPUTING</span>
-          <h2 id="grna-title" aria-label="gRNAlytics"><i aria-hidden="true">gRNA</i><b aria-hidden="true">lytics</b></h2>
-          <p>CRISPR guide-RNA comparison</p>
-        </header>
-
-        <div className="fn-grna-stage" data-grna-stage>
-          <div className="fn-sequence-field" aria-hidden="true">
-            {"ATCGGCTAACGTTAGCGTAC".split("").map((base, index) => (
-              <span key={`${base}-${index}`}>{base}</span>
-            ))}
-          </div>
-          <div className="fn-grna-terminal" aria-hidden="true">
-            <span>$ python main.py</span>
-            <strong>SEARCH / ANNOTATE / SCORE / COMPARE</strong>
-            <small>Decision support, not biological validation.</small>
-          </div>
-          <ol className="fn-grna-flow" aria-label="gRNAlytics software flow">
-            <li><span>01</span><strong>Validate</strong><small>A / T / C / G</small></li>
-            <li><span>02</span><strong>BLAST</strong><small>Human records</small></li>
-            <li><span>03</span><strong>Annotate</strong><small>Genes / matches</small></li>
-            <li><span>04</span><strong>Compare</strong><small>Heuristic score</small></li>
-          </ol>
-          <ProjectDrawer project={grnalytics} />
-        </div>
-
-        <div className="fn-grna-story">
-          <p>{grnalytics.signal}</p>
-          <div>
-            <span>{grnalytics.role}</span>
-            <span>{grnalytics.team} / {grnalytics.year}</span>
-          </div>
-          <nav aria-label="gRNAlytics links">
-            <a href="/projects/grnalytics">Read the case study <ArrowUpRight size={18} aria-hidden="true" /></a>
-            <a href={grnalytics.repoUrl} {...externalLinkProps("Open the gRNAlytics source repository")}>Source <ArrowUpRight size={18} aria-hidden="true" /></a>
-          </nav>
-        </div>
-      </section>
+      <ProjectCarousel projects={flagshipProjects} labItems={labItems} />
 
       <section id="lab" className="fn-lab" aria-labelledby="lab-title">
         <div className="fn-lab-marquee" aria-hidden="true">

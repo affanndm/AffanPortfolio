@@ -51,9 +51,9 @@ test("homepage exposes a public email link", async ({ page }) => {
 
 test("homepage exposes every verified work entry and both public profiles", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator(".fn-work-choice")).toHaveCount(6);
+  await expect(page.locator(".fn-carousel-slide")).toHaveCount(6);
   await expect(page.locator(".lab-row")).toHaveCount(3);
-  await expect(page.getByRole("heading", { name: "gRNAlytics", exact: true })).toBeVisible();
+  await expect(page.locator("#work-grnalytics h3", { hasText: "gRNAlytics" })).toHaveCount(1);
   await expect(page.locator('.fn-profile-links a[href="https://github.com/affanndm"]')).toHaveCount(1);
   await expect(page.locator('.fn-profile-links a[href="https://www.linkedin.com/in/affan-nadeem-9b4aa0250/"]')).toHaveAttribute(
     "href",

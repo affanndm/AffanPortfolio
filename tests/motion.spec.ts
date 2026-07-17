@@ -16,7 +16,7 @@ test("reduced motion keeps the lane identity and project media resolved", async 
 
   await expect(page.locator(".fn-lane-name")).toBeVisible();
   await expect(page.locator(".fn-lane-scanner")).toBeHidden();
-  await expect(page.locator(".fn-project-portal")).toHaveCSS("transform", "none");
+  await expect(page.locator(".fn-carousel-slide-vantage")).toBeVisible();
   await expect(page.locator("html")).not.toHaveClass(/\blenis\b/);
 });
 
@@ -27,14 +27,16 @@ test("mobile keeps native scrolling without loading the desktop motion runtime",
   await expect(page.locator(".fn-name-char")).toHaveCount(0);
 });
 
-test("work chooser advances horizontally with its visible controls", async ({ page }) => {
+test("project carousel advances with its visible controls", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/");
-  const track = page.locator("[data-work-track]");
-  await track.scrollIntoViewIfNeeded();
-  const before = await track.evaluate((element) => element.scrollLeft);
-  await page.getByRole("button", { name: "Show next work" }).click();
-  await expect.poll(() => track.evaluate((element) => element.scrollLeft)).toBeGreaterThan(before);
+  const carousel = page.locator("[data-project-carousel]");
+  await expect(carousel).toHaveAttribute("data-enhanced", "true");
+  await carousel.evaluate((element) => window.scrollTo(0, element.getBoundingClientRect().top + window.scrollY));
+  await page.waitForTimeout(900);
+  await expect(page.locator("[data-carousel-status]")).toContainText("Project 1 of 6: Vantage");
+  await page.getByRole("button", { name: "Show next project" }).click();
+  await expect(page.locator("[data-carousel-status]")).toContainText("Project 2 of 6: gRNAlytics", { timeout: 5000 });
 });
 
 test("fine-pointer movement changes the identity scanner position", async ({ page }) => {
@@ -69,8 +71,11 @@ test("gRNAlytics preview uses the same side-stage interaction", async ({ page })
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/");
 
-  const trigger = page.getByRole("button", { name: "Open project" }).nth(1);
-  await trigger.scrollIntoViewIfNeeded();
+  await expect(page.locator("[data-project-carousel]")).toHaveAttribute("data-enhanced", "true");
+  await page.locator("[data-carousel-tab]").filter({ hasText: "gRNAlytics" }).click();
+  const trigger = page.locator("#work-grnalytics").getByRole("button", { name: "Open project" });
+  await expect(page.locator("[data-carousel-status]")).toContainText("gRNAlytics", { timeout: 10000 });
+  await expect(trigger).toBeVisible({ timeout: 10000 });
   await trigger.click();
   const dialog = page.locator("#grnalytics-drawer");
   await expect(dialog).toBeVisible();

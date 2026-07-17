@@ -2,9 +2,9 @@
 
 ## Current Milestone
 
-Milestone 15: B — Lanes production opening deployed.
+Milestone 16: equal-stage project carousel implemented locally; production is unchanged.
 
-Affan selected Identity B — Lanes and established the governing principle: `It is not information with art. It is art that shows information.` The production homepage now opens with a live cursor scanner that replaces `AFFAN NADEEM` with Affan's identities inside the typographic field. A and C remain archived comparisons. Affan explicitly approved production deployment; Vercel deployment `dpl_GKU63ZGMjhq2Az7bNewjSHi98um7` is Ready at the canonical custom domain.
+Affan selected Identity B — Lanes and established the governing principle: `It is not information with art. It is art that shows information.` The approved opening remains intact, while the former Vantage-led sequence has been replaced locally by one six-project carousel in which every public project receives a full visual composition, direct selection, and equivalent stage time. The previously approved deployment remains live; this new candidate has not been promoted to production.
 
 ## Completed Work
 
@@ -18,12 +18,14 @@ Affan selected Identity B — Lanes and established the governing principle: `It
 - Added review rationale for every composition, including reference principle, Affan transformation, no-copy boundary, material needs, mobile behavior, and reduced-motion behavior.
 - Added `PERSONAL_CONTENT_NEEDED.md` and sixteen desktop/mobile screenshots for the eight experiments.
 
-- Added a six-entry horizontal work chooser for Vantage, gRNAlytics, this portfolio, Solutions, English Metacognition Portfolio, and Affan's first GitHub Pages portfolio/domain setup.
-- Added a dedicated cyan gRNAlytics stage with a source-backed sequence-to-output flow and the same accessible native side-stage interaction used by Vantage.
+- Replaced the Vantage-led project chapter, secondary work rail, and separate gRNAlytics chapter with one six-entry equal-stage carousel for Vantage, gRNAlytics, this portfolio, Solutions, English Metacognition Portfolio, and Affan's first GitHub Pages portfolio/domain setup.
+- Gave every carousel entry its own code-native visual language and entrance choreography while retaining case-study/source routes and native side-stages for the two evidence-rich flagship projects.
 - Restored the broader experimental archive as a three-entry coral Lab chapter with persistent ownership, status, description, and repository access.
 - Removed the two tracker projects from the content model, work rail, Lab, timeline copy, tests, specifications, and public audit documents after Affan removed them from the intended public portfolio roster.
 - Added a first-person About chapter, visible GitHub and LinkedIn profile paths in navigation and content, and a monumental direct-contact ending.
-- Extended the desktop GSAP/Lenis choreography across the chooser continuation, gRNAlytics, Lab, About, and contact scenes while preserving native mobile and reduced-motion behavior.
+- Added a pinned, scrubbed, directionally snapping desktop project sequence with direct Lenis navigation, varied GSAP easing, and per-project transitions; mobile uses native swipe and CSS scroll snap, and reduced motion resolves directly.
+- Delayed the desktop motion module and carousel controller until React hydration completes, preventing GSAP pin spacers or state attributes from racing the client boundary.
+- Validated the final candidate against the clean production server: production build passes, 84/84 Playwright tests pass, homepage axe scan passes, five responsive widths have no overflow, and the private tracker-name scan returns no matches.
 - Kept LinkedIn-derived awards and biography details out of public copy because they remain confirmation-gated in the claims ledger.
 
 - Integrated Lenis with the existing lazy desktop GSAP island, including ScrollTrigger synchronization, anchor handling, drawer pause/resume, protected drawer scrolling, cleanup, and native mobile/reduced-motion fallbacks.
