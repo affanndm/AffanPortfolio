@@ -2,9 +2,9 @@
 
 ## Current Milestone
 
-Milestone 17: LinkedIn-backed Beyond GitHub chapter implemented and fully validated locally.
+Milestone 17: LinkedIn-backed Beyond GitHub chapter published and deployed to production.
 
-Affan selected Identity B — Lanes and established the governing principle: `It is not information with art. It is art that shows information.` The deployed opening and six-project carousel remain intact. The local candidate removes only `too much` from the approved About sentence and adds one isolated ultramarine tabbed chapter for confirmed experience, competition, and school material from Affan's LinkedIn. Production remains unchanged.
+Affan selected Identity B — Lanes and established the governing principle: `It is not information with art. It is art that shows information.` The deployed opening and six-project carousel remain intact. Production now removes only `too much` from the approved About sentence and adds one isolated ultramarine tabbed chapter for confirmed experience, competition, and school material from Affan's LinkedIn.
 
 ## Completed Work
 
@@ -198,13 +198,13 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 
 ## Deployment Status
 
-- Deployed source commit: `55d8025` (`Deploy Affan-first lanes portfolio`) on `filippo-visual-redesign`; this commit checkpoints the exact workspace snapshot sent to production.
-- Current production deployment: `dpl_GKU63ZGMjhq2Az7bNewjSHi98um7`, target `production`, status `Ready`.
-- Production deployment URL: `https://affan-portfolio-96t263rtg-affan-s-projects-45c33b7e.vercel.app`.
+- Deployed source commit: `5f6ee96` (`feat: add beyond-github experience chapter`) on `portfolio-rebuild`; this commit checkpoints the exact workspace snapshot sent to production.
+- Current production deployment: `dpl_2DbnjPBH22va3vVg2M232xojone7`, target `production`, status `Ready`.
+- Production deployment URL: `https://affan-portfolio-go6hna30f-affan-s-projects-45c33b7e.vercel.app`.
 - Canonical production URL: `https://www.affannadeem.me`.
 - `https://affannadeem.me` returns `308 Permanent Redirect` to the canonical `www` host.
 - Verified `200` responses after deployment: `/`, `/projects/vantage`, `/projects/grnalytics`, `/lab`, `/robots.txt`, and `/sitemap.xml`.
-- Live homepage HTML contains the selected lane/scanner identity, the Affan-first title and role vocabulary, and no references to the removed tracker projects.
+- Live homepage HTML contains the selected lane/scanner identity, the revised About sentence, the Beyond GitHub chapter, Milliken Moments, and FBLC content, with no references to the removed tracker projects.
 - Local production validation: typecheck, lint, privacy scan, and Next.js production build pass; Playwright completed 83/84 before the intentionally reduced work-count assertion was updated, and the corrected 13-test link suite then passed 13/13.
 - Live verification: canonical homepage, apex redirect destination, both project routes, Lab, robots, and sitemap return 200; desktop and mobile production captures are saved under `qa/visual-review/production-hero-*.png`.
 

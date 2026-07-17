@@ -12,7 +12,7 @@ Build Affan Nadeem's portfolio as a complete, personal, editorial digital portra
 - Milestone 14: complete. Affan selected Identity B — Lanes; eight isolated compositions and desktop/mobile QA captures remain under `/design-lab/filippo-study/`.
 - Milestone 15: selected B lane/scanner opening translated to production and deployed after explicit approval; the remaining chapters still need the same art-led treatment.
 - Milestone 16: equal-stage six-project carousel implemented, validated, published to GitHub, and deployed to the canonical production domain after explicit approval.
-- Milestone 17: LinkedIn-backed experience archive implemented and fully validated locally as an art-led tabbed chapter; production remains unchanged.
+- Milestone 17: LinkedIn-backed experience archive implemented, validated, committed, pushed, and deployed to the canonical production domain after explicit approval.
 - Future production promotions and domain changes continue to require explicit approval.
 
 ## Scope
@@ -32,7 +32,7 @@ Objective: Expand the portrait of Affan with confirmed experience, competition, 
 - [x] Keep the existing hero, project carousel, Lab, About body, and Contact scene unchanged.
 - [x] Publish only details directly exposed by Affan's LinkedIn and explicitly requested by Affan.
 - [x] Complete typecheck, lint, production build, accessibility, responsive, and interaction validation.
-- [ ] Commit or deploy only after a separate explicit request.
+- [x] Commit and deploy after Affan's explicit 2026-07-17 production request.
 
 ### Milestone 16: Equal-Stage Project Carousel
 

@@ -1,5 +1,19 @@
 # Decisions
 
+## 2026-07-17: Publish And Deploy The Beyond-GitHub Chapter
+
+Decision: Commit the validated Beyond GitHub release to `portfolio-rebuild`, push commit `5f6ee96` to GitHub, and promote that exact clean source tree through the linked Vercel project to the canonical production domain.
+
+Reason: Affan explicitly requested a commit, push, and production deployment after approving the minimally revised About sentence and the new LinkedIn-backed Experience / Competition / School chapter.
+
+Verification:
+
+- Vercel deployment `dpl_2DbnjPBH22va3vVg2M232xojone7` reports target `production` and status `Ready`.
+- `https://www.affannadeem.me` and the primary project, Lab, robots, and sitemap routes return 200.
+- The apex domain redirects to canonical `www` with 308.
+- Live homepage HTML contains the revised About sentence, Beyond GitHub heading, Milliken Moments, and FBLC content.
+- Live homepage HTML contains neither removed tracker name nor the former `too much information` phrase.
+
 ## 2026-07-16: Publish And Deploy The Equal-Stage Carousel
 
 Decision: Publish the equal-stage carousel release to the GitHub feature branch and default `portfolio-rebuild` branch, then promote the same source tree through the linked Vercel project to the canonical production domain.
