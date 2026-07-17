@@ -1,6 +1,6 @@
 # Plan
 
-Build Affan Nadeem's portfolio as an evidence-backed Next.js, React, and TypeScript site around the `Signal / Systems` concept. The work proceeds audit-first, then architecture reset, design-system exploration, motion prototypes, production implementation, responsive/accessibility/performance refinement, adversarial review, and Vercel preview preparation. Production publishing and custom-domain changes are out of scope until Affan explicitly approves them.
+Build Affan Nadeem's portfolio as a complete, personal, editorial digital portrait in Next.js, React, and TypeScript. Affan—not `Signal / Systems`, Vantage, or the evidence system—is the subject. Projects, experiments, competitions, computational biology, personal media, chronology, and life outside GitHub support that portrait. Production publishing and custom-domain changes remain out of scope until Affan explicitly approves them.
 
 ## Progress Snapshot
 
@@ -9,14 +9,75 @@ Build Affan Nadeem's portfolio as an evidence-backed Next.js, React, and TypeScr
 - Milestone 7: complete; blocker/high review findings were resolved and remaining media/confirmation gaps are documented.
 - Milestone 8: production deployment complete after explicit approval to fix `affannadeem.me`; the corrected Next.js deployment is Ready and public routes are verified.
 - Milestone 9: identity-first creative correction implemented and fully validated locally after Affan rejected the first production art direction.
-- Future production promotions and domain changes continue to require explicit approval. The creative correction has not been deployed.
+- Milestone 14: complete. Affan selected Identity B — Lanes; eight isolated compositions and desktop/mobile QA captures remain under `/design-lab/filippo-study/`.
+- Milestone 15: selected B lane/scanner opening translated to production and deployed after explicit approval; the remaining chapters still need the same art-led treatment.
+- Future production promotions and domain changes continue to require explicit approval.
 
 ## Scope
 
 - In: repository reset, stale Framer removal, reference audits, GitHub contribution audit, LinkedIn/background analysis, Next.js app setup, `/design-lab`, hero experiments, homepage, project routes, Lab, About, Contact, local content model, media placeholders, accessibility/performance validation, preview deployment preparation.
-- Out: Framer platform work, Figma Sites, production publishing, final-domain connection, paid hosting dependencies, fabricated claims or metrics, destructive git history changes.
+- Out: Framer platform work, Figma Sites, unapproved future production/domain changes, paid hosting dependencies, fabricated claims or metrics, destructive git history changes.
 
 ## Milestones
+
+### Milestone 15: Production Translation Of B — Lanes
+
+Objective: Evolve the selected lane/scanner identity into a complete production portfolio where typography, personal media, project imagery, and interaction reveal information as artwork.
+
+Non-negotiable direction:
+
+- Keep B dark, typographic, spatial, and cursor/touch responsive.
+- Use lane replacement, masking, media texture, crop, and full-scene transition as the information system.
+- Bring personal photographs and objects into the artwork itself.
+- Preserve About, Work, Playground, Life, and Contact as the narrative structure without rendering them as conventional report sections.
+- Do not average in A's plate system or C's blue-field composition unless a specific production scene needs one bounded technique.
+- Maintain keyboard, touch, reduced-motion, contrast, and performance fallbacks.
+
+Acceptance Criteria:
+
+- A visitor can understand Affan's identity, interests, and work through the composition before reading explanatory prose.
+- The homepage does not resemble a résumé, evidence report, project dashboard, or art layered behind ordinary content.
+- Affan's personal imagery and voice are materially present once supplied.
+- Team ownership remains truthful without dominating the homepage aesthetic.
+
+Phase-one status:
+
+- [x] Promote the selected B lane/scanner identity to the production homepage.
+- [x] Remove projects Affan no longer wants public from content, navigation, audits, and tests.
+- [x] Validate typecheck, lint, privacy scan, production build, accessibility, responsive behavior, links, motion, and SEO.
+- [x] Deploy to Vercel production after Affan's explicit approval and verify the canonical custom domain.
+- [ ] Translate About, Playground, Life, and Contact into equally art-led scenes once approved personal media is available.
+
+### Milestone 14: Affan-first Filippo Study And Review Gate
+
+Objective: Reset the creative direction so the portfolio presents Affan as a whole person, while using Filippo Ruffini as the primary craftsmanship reference without cloning his source, assets, layout, or signature interactions.
+
+Deliverables:
+
+- Three original opening-identity directions.
+- One full-screen menu direction with About, Work, Playground, Life, and Contact.
+- One interactive design-system calibration reveal.
+- One personal editorial About composition.
+- One Affan-owned personal-image sequence with exact content requests.
+- One Selected Work index that follows the personal story.
+- Desktop and mobile screenshots of all eight experiments.
+- `PERSONAL_CONTENT_NEEDED.md` with exact media, story, fact, permission, and caption requirements.
+- Updated `SPEC.md`, `PRODUCT.md`, `DESIGN.md`, `PLAN.md`, `STATUS.md`, and `DECISIONS.md`.
+
+Acceptance Criteria:
+
+- The study opens with `AFFAN NADEEM`, not a project, method, stack, or signal explanation.
+- `Signal` is a supporting visual metaphor only.
+- The study contains no copied source code, exact reference measurements, fonts, palette, wording, images, or frame-for-frame animations.
+- Every direction documents its reference principle, Affan-specific transformation, originality boundary, content needs, mobile behavior, and reduced-motion behavior.
+- Personal gaps are labeled as requests or `NEEDS_AFFAN_CONFIRMATION`; no stock photography substitutes for Affan's life.
+- Typecheck, lint, build, local interaction checks, and responsive screenshots pass.
+- No production route, deployment, or custom domain is changed.
+
+Review Result:
+
+- Affan selected Identity B — Lanes.
+- Production translation may now proceed using B; A and C remain archived comparisons.
 
 ### Milestone 9: Identity-First Creative Correction
 
@@ -423,3 +484,28 @@ Objective: Prove one exceptional sequence before rebuilding the remaining homepa
 - [x] Capture desktop, mobile, and transition review images.
 - [x] Complete full regression, accessibility, and performance comparison.
 - [x] Commit and push the review branch; do not deploy production.
+
+### Milestone 12: Purposeful Motion-Library Integration
+
+Objective: Use Lenis, GSAP, and React Bits together where they materially improve the approved first sequence without degrading accessibility, responsive behavior, or mobile performance.
+
+- [x] Synchronize Lenis with GSAP ScrollTrigger on qualifying desktop viewports.
+- [x] Add SplitText character choreography to the identity entrance.
+- [x] Adapt React Bits Magnet for project entry and ScrollFloat for the closing statement.
+- [x] Keep native scrolling and static compositions on mobile and under reduced motion.
+- [x] Pause Lenis while the native project dialog is open and protect nested dialog scrolling.
+- [x] Complete visual, accessibility, regression, production-build, and Lighthouse validation.
+- [x] Obtain Affan's visual approval before the production deployment recorded in `STATUS.md`.
+
+### Milestone 13: Complete Selectable Portfolio System
+
+Objective: Preserve Vantage as the cinematic lead while making every verified project and Affan's public professional profiles discoverable from the homepage.
+
+- [x] Re-audit Affan's public GitHub repository roster and public LinkedIn surface without publishing confirmation-gated claims.
+- [x] Add a six-entry horizontal work chooser with visible previous/next controls and native touch scrolling.
+- [x] Give gRNAlytics its own saturated chapter and accessible project side-stage.
+- [x] Restore the experimental archive as a three-entry Lab rather than forcing every project into an equal flagship template.
+- [x] Add first-class GitHub and LinkedIn paths to navigation, About, and contact.
+- [x] Extend purposeful desktop motion while retaining native mobile and reduced-motion fallbacks.
+- [x] Validate semantics, accessibility, responsiveness, interactions, TypeScript, lint, build output, and dependencies.
+- [x] Obtain explicit approval and deploy this milestone to production.

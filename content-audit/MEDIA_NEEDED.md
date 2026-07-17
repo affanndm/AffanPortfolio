@@ -56,21 +56,6 @@ Rule: do not use generic stock media as if it represents a project. Use real pro
 | External accepted-submission screenshots or profile links | Claim support | `NEEDS_AFFAN_CONFIRMATION` | Needed before claiming accepted DMOJ/Codeforces/LeetCode status. |
 | Short terminal/code walkthrough | Lab preview | Optional | Keep concise. |
 
-## Financial Tracker
-
-| Asset | Needed For | Status | Notes |
-| --- | --- | --- | --- |
-| Terminal recording of transaction entry and budget check | Lab preview | Needed if included | First verify the CLI runs. |
-| Diagram: transaction -> CSV -> budget remaining | Lab explanation | Needed if included | Can be generated as explanatory visual. |
-| Confirmation of author alias and run status | Publication | `NEEDS_AFFAN_CONFIRMATION` | Needed before public authorship/run claims. |
-
-## Recipe Tracker
-
-| Asset | Needed For | Status | Notes |
-| --- | --- | --- | --- |
-| None until source is fixed | Archive/lab | Blocked | Current public files include merge-conflict markers. |
-| Screenshot/recording after fix | Archive/lab | Future | Only if Affan wants to include it. |
-
 ## Previous Portfolio / Domain
 
 | Asset | Needed For | Status | Notes |

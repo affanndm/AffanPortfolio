@@ -2,8 +2,8 @@ import { expect, test } from "@playwright/test";
 
 test("homepage exposes core SEO and social metadata", async ({ page }) => {
   await page.goto("/");
-  await expect(page).toHaveTitle(/Affan Nadeem - Signal \/ Systems/);
-  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /complex systems/i);
+  await expect(page).toHaveTitle(/Affan Nadeem - Student, Developer, Builder/);
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /student, developer, competitor, and builder/i);
   await expect(page.locator('meta[property="og:title"]')).toHaveAttribute("content", /Affan Nadeem/);
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /opengraph-image/);
   await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");

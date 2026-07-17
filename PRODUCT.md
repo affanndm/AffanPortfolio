@@ -8,17 +8,19 @@ brand
 
 Portfolio visitors include technical recruiters, admissions or scholarship reviewers, collaborators, hackathon or research peers, and founders or students evaluating Affan's ability to turn complex problems into software systems.
 
-They arrive with limited time and need to understand what Affan has actually built, what he personally contributed to team projects, and why his work connects product engineering, scientific computing, and algorithms.
+They arrive with limited time and should first understand who Affan is: a student, developer, competitor, builder, computational-biology enthusiast, and curious person. Selected projects then provide evidence of how he thinks and works, with clear team attribution where required.
 
 ## Product Purpose
 
-This portfolio exists to present Affan Nadeem as a student developer who finds signal inside complex systems. Success means the site feels authored, technically polished, evidence-backed, and credible: two flagship case studies carry the main story, smaller projects live in a lab/archive system, and every factual claim has traceable evidence or explicit confirmation status.
+This portfolio exists to create a complete, personal, editorial digital portrait of Affan Nadeem. Success means the site feels authored, technically polished, image-led, playful, and credible: Affan's identity and life carry the main story; selected work, experiments, competitions, biology interests, and chronology support that portrait. Every factual claim still needs traceable evidence or explicit confirmation status, but verification must not become the visible aesthetic of the homepage.
 
 ## Brand Personality
 
-Precise, experimental, and cinematic.
+Personal, competitive, curious, precise, and cinematic.
 
-The site should feel like a hybrid of a creative studio, experimental laboratory, and engineering portfolio. It should avoid normal student portfolio patterns and instead show complex systems becoming understandable through typography, motion, data-like visuals, and verified project evidence.
+The site should feel like Affan's authored visual world: part personal archive, part experimental laboratory, part competition notebook, and part engineering portfolio. It should avoid normal student-portfolio patterns and let typography, personal media, playful motion, strong project imagery, and direct writing reveal a whole person. “Signal” may appear as a quiet visual metaphor, never as the subject of every sentence.
+
+Selected art direction: **B — Lanes**. Governing rule: **it is not information with art; it is art that shows information.** Typography, imagery, motion, and interaction must carry the information rather than decorate conventional content blocks.
 
 ## Anti-references
 
@@ -27,16 +29,18 @@ The site should feel like a hybrid of a creative studio, experimental laboratory
 - Misleading ownership language that implies sole authorship on team projects.
 - Cloned layouts, wording, colors, source code, or visual assets from Filippo Ruffini, Tigran, or Abhijit Rout.
 - Unsupported claims about metrics, impact, awards, adoption, biological accuracy, revenue, or personal achievements.
+- Project-first homepages that reduce Affan to Vantage, gRNAlytics, stack lists, evidence counts, or contribution disclaimers.
+- Corporate biography copy that erases humour, personal interests, competition, and life outside code.
 
 ## Design Principles
 
-1. Show the signal before the explanation: flagship projects should first feel like concise product trailers, then resolve into evidence-backed case studies.
-2. Make ownership visible: every team or contribution-only project must show Affan's role and contribution before the visitor enters deeper content.
-3. Use motion as structure: animation should clarify transformation, sequence, and focus rather than decorate every paragraph.
-4. Build with editorial discipline: strict grids, strong type, thin rules, and restrained color should create confidence without becoming a generic editorial template.
-5. Preserve credibility: claims, media, and case-study copy must stay within verified evidence or be clearly marked for Affan confirmation.
+1. Lead with Affan: the opening viewport is an identity composition, not a project pitch, method statement, or generic developer hero.
+2. Let personal media do real narrative work: candid photographs, objects, notebooks, competitions, biology references, and life outside code should appear before Selected Work.
+3. Make projects supporting evidence: Selected Work arrives after About and the personal sequence, with role and team status visible but compliance detail reserved for case studies.
+4. Use motion as structure and personality: animation should clarify continuity, focus, and play without delaying navigation or animating every paragraph.
+5. Build with editorial discipline: strict responsive grids, confident type, image-led sequences, and one signature color should create authorship without cloning a reference site.
+6. Preserve credibility: claims and captions must stay within verified evidence or be clearly marked for Affan confirmation.
 
 ## Accessibility & Inclusion
 
 Target WCAG 2.2 AA or better. Implement visible focus states, keyboard navigation, semantic headings, descriptive media text, reduced-motion alternatives, no hover-only information, no autoplay audio, and simplified mobile/low-power motion. Performance and accessibility targets are defined in `SPEC.md`.
-

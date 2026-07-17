@@ -1,5 +1,63 @@
 # Decisions
 
+## 2026-07-16: Deploy B / Lanes And Remove Private-Roster Projects
+
+Decision: Promote the selected B lane/scanner identity to the production homepage, remove the two tracker projects from every portfolio and audit surface, and deploy the current workspace to Vercel production after Affan's explicit approval.
+
+Reason: Deploying the review route without translating B would have left the public homepage on the rejected identity direction. Affan also explicitly removed both tracker projects from the intended public roster, so stale links, copy, evidence notes, and test expectations had to be deleted before launch.
+
+Consequences:
+
+- The opening artwork itself reveals student, developer, builder, competitor, algorithms, biology, and life-off-screen information.
+- The public work rail now contains six entries and the Lab contains three.
+- Production deployment `dpl_GKU63ZGMjhq2Az7bNewjSHi98um7` is Ready and aliased to `https://www.affannadeem.me`.
+- Commit `55d8025` checkpoints the deployed workspace on `filippo-visual-redesign`, restoring GitHub as the recoverable production source after push.
+- Future production or domain changes still require explicit approval.
+
+## 2026-07-16: Select Identity B — Lanes
+
+Decision: Select Direction B — Lanes as the production identity foundation.
+
+Reason: B is closest to the primary reference's underlying strength without becoming a clone. The typography is the artwork, the cursor interaction reveals Affan's roles inside that artwork, and the strict dark field has enough theatrical confidence to carry the opening sequence.
+
+Governing Principle: `It is not information with art. It is art that shows information.`
+
+Consequences:
+
+- Do not average B with A or C into a safer hybrid.
+- Typography, imagery, motion, and interaction must carry meaning directly.
+- Personal media and projects should enter as masks, textures, transitions, and full scenes rather than cards or adjacent illustrations.
+- Report-like evidence layouts and art-as-background compositions fail this direction even when they are visually polished.
+- A and C remain archived studies, not co-equal production directions.
+
+## 2026-07-16: Make Affan The Subject And Demote Signal To A Metaphor
+
+Decision: Reset the portfolio's public narrative around Affan Nadeem as a complete person: student, developer, competitor, builder, computational-biology enthusiast, hackathon participant, leader where confirmed, and person with a life outside GitHub. `Signal / Systems` is no longer the site subject or repeated copy framework; “signal” may remain only as a subtle visual or interaction metaphor.
+
+Reason: Affan explicitly rejected a project-first strategy that made Vantage, evidence, and methodology feel more important than the person. Projects should support the portrait, not replace it.
+
+Consequences:
+
+- About and personal visual material move before Selected Work.
+- The homepage no longer opens with a methodology, evidence count, stack list, contribution disclaimer, or Vantage sequence.
+- Detailed verification remains mandatory but moves into case studies and internal audits instead of becoming the homepage aesthetic.
+
+## 2026-07-16: Use Filippo As Primary Craft Reference Without Cloning
+
+Decision: Treat Filippo Ruffini as the primary quality, structure, personal-storytelling, and motion-craft reference for the Affan-first reset. Preserve the same categories of ambition—strict grid, typographic theatre, image-led autobiography, authored menu, interaction detail, media-rich work, and mobile reinterpretation—while creating original Affan-specific composition, palette, copy, media, and motion.
+
+Reason: Filippo's site demonstrates the personal authorship and sustained interaction quality Affan wants. The attached brief also explicitly prohibits copying source code, exact measurements, fonts, colors, wording, images, and frame-for-frame animation.
+
+Rejected Alternative: A literal clone. It would contradict the supplied brief, erase Affan's identity, and import another designer's branded objects and autobiography.
+
+## 2026-07-16: Stop Production Work At An Eight-Composition Review Gate
+
+Decision: Build only three identity directions, one full-screen menu, one design-system reveal, one About layout, one personal-image sequence, and one Selected Work index under `/design-lab/filippo-study/`, with desktop/mobile captures and rationale. Do not choose the winner automatically and do not change the production homepage.
+
+Reason: The reset prompt explicitly requires a composition review before another broad implementation. Isolating the study keeps the existing production source recoverable and prevents another unreviewed redesign.
+
+Implementation Boundary: The study uses an original ultramarine candidate palette, CSS/React interactions, verified project metadata, and clearly labeled personal-content requests. No deployment or domain action is authorized.
+
 ## 2026-07-15: Reconstruct Working SPEC.md
 
 Decision: The workspace did not contain `SPEC.md`, even though the brief named it as the source of truth. I reconstructed `SPEC.md` from Affan's pasted prompt and marked it as the working source of truth until a separate canonical file is provided.
@@ -292,3 +350,36 @@ Decision: Use Prototype C for the identity behavior and Prototype B for the cent
 Reason: C best matches the reference's type-led confidence; B keeps the spectacle anchored to Affan's real Vantage work. Prototype A is coherent but reads more like a technical visualization and therefore risks returning to the rejected report aesthetic.
 
 Boundary: The implementation borrows proportion, pacing, layered hierarchy, edge metadata, limited palette mechanics, and scroll expansion. It does not reuse Filippo's model, shaders, images, text, project list, source code, or exact branded object.
+
+## 2026-07-16: Integrate Lenis And Selected React Bits Patterns Into The Desktop Motion Island
+
+Decision: Use Lenis for qualifying desktop scroll interpolation, GSAP SplitText and ScrollTrigger for coordinated type/scroll choreography, and adapted React Bits Magnet and ScrollFloat patterns at the project-entry and closing-statement moments.
+
+Reason: Affan explicitly requested all three sources. The selected integrations strengthen the approved Filippo-led sequence without turning the interface into an effects catalog: Lenis improves continuity, SplitText makes the name entrance genuinely typographic, Magnet makes the project opener tactile, and ScrollFloat gives the final project argument a controlled reveal.
+
+Boundaries:
+
+- Do not import React Bits wholesale or add effects without a narrative or interaction purpose.
+- Keep the GSAP/Lenis runtime inside the existing lazy desktop-only island so mobile and reduced-motion users retain native scrolling and avoid the bundle.
+- Stop Lenis while the modal project stage is open, preserve native nested scrolling, and clean up ticker, observer, SplitText, and Lenis state on unmount.
+- Preserve semantic text independently from split-character presentation and keep all information available without JavaScript.
+
+## 2026-07-16: Keep Vantage As The Lead And Index Every Verified Build
+
+Decision: Preserve Vantage as the homepage's cinematic opening project, then introduce a horizontal chooser containing eight verified work entries. Give gRNAlytics a dedicated chapter and collect smaller, early, or archival repositories in the Lab rather than presenting every repository as an equally deep case study.
+
+Reason: Affan asked for every project to be incorporated without losing the Vantage treatment he approved. The reference sites establish a clear lead project while also providing a selectable work index or experiments layer. This hierarchy provides breadth without inventing case-study depth that the available evidence and media cannot support.
+
+## 2026-07-16: Use GitHub For The Work Roster And Keep LinkedIn Claims Gated
+
+Decision: Use Affan's public GitHub repositories and known contribution evidence to define the visible work roster. Make GitHub and LinkedIn first-class navigation, About, and contact destinations, but do not publish LinkedIn-derived awards, dates, or biography claims until Affan confirms them.
+
+Reason: Public repository ownership and source links are directly verifiable. The public LinkedIn surface is useful as a professional destination but does not provide enough accessible evidence to safely expand biography or awards copy under the repository's evidence rules.
+
+## 2026-07-16: Deliver Homepage Motion As A Desktop-Only Standalone Module
+
+Decision: Replace the React motion wrapper with a small server-rendered viewport bootstrap and an esbuild-generated GSAP/Lenis module. Pre-optimize the reused Vantage capture as local responsive WebP assets and use native images on the homepage.
+
+Reason: The complete homepage is substantially longer than the first-sequence build. Mobile Lighthouse showed that hydrating a React boundary solely to reject desktop motion added avoidable work. The standalone module keeps the full desktop choreography, drawer/Lenis synchronization, and cleanup while preventing mobile and reduced-motion profiles from requesting the animation code. Native responsive images preserve the visual treatment without requiring a homepage image client boundary.
+
+Tradeoff: The retained Windows mobile Lighthouse sample remains 87 Performance because the shared Next.js App Router runtime is still the largest blocking task. Accessibility, Best Practices, and SEO remain 100, and the measured result is recorded without claiming the 90 stretch target was met.

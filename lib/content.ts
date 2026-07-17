@@ -29,6 +29,7 @@ export type Project = {
 };
 
 export type LabItem = {
+  slug: string;
   title: string;
   year: string;
   ownership: Ownership;
@@ -39,7 +40,7 @@ export type LabItem = {
   status: "show" | "verification" | "archive";
   statusLabel: string;
   statusDetail: string;
-  visual: "editorial" | "algorithms" | "finance" | "archive";
+  visual: "editorial" | "algorithms" | "archive";
 };
 
 export type TrajectoryItem = {
@@ -199,6 +200,7 @@ export const flagshipProjects: Project[] = [
 
 export const labItems: LabItem[] = [
   {
+    slug: "english-metacognition",
     title: "English Metacognition Portfolio",
     year: "2026",
     ownership: "SOLE BUILD",
@@ -211,6 +213,7 @@ export const labItems: LabItem[] = [
     visual: "editorial",
   },
   {
+    slug: "solutions",
     title: "Solutions",
     year: "2026",
     ownership: "SOLE BUILD",
@@ -223,27 +226,16 @@ export const labItems: LabItem[] = [
     visual: "algorithms",
   },
   {
-    title: "Financial Tracker",
-    year: "2025",
-    ownership: "EXPERIMENT",
-    category: "Python CLI",
-    summary: "Early Python CLI using classes, CSV persistence, and input validation to turn transactions into budget information.",
-    repoUrl: "https://github.com/affanndm/Financial_Tracker",
-    status: "verification",
-    statusLabel: "Authorship / run review",
-    statusDetail: "Repository ownership is public; commit-alias attribution and current runtime still need confirmation.",
-    visual: "finance",
-  },
-  {
-    title: "Recipe Tracker",
-    year: "2025",
+    slug: "first-domain",
+    title: "First Portfolio Domain",
+    year: "2026",
     ownership: "ARCHIVE",
-    category: "OOP learning artifact",
-    summary: "Early recipe-tracking exercise. Current public source includes unresolved merge-conflict markers, so it stays archive-only unless fixed.",
-    repoUrl: "https://github.com/affanndm/Recipe-Tracker",
+    category: "GitHub Pages setup",
+    summary: "The earliest public portfolio footprint: a GitHub Pages repository and custom-domain handoff that preceded this full Next.js build.",
+    repoUrl: "https://github.com/affanndm/affanndm.github.io",
     status: "archive",
-    statusLabel: "Archive",
-    statusDetail: "Public source includes unresolved merge-conflict markers and is not presented as a working product.",
+    statusLabel: "Origin point",
+    statusDetail: "The repository contains the public Pages and domain setup, not a complete previous portfolio application.",
     visual: "archive",
   },
 ];
@@ -252,7 +244,7 @@ export const trajectory: TrajectoryItem[] = [
   {
     year: "2025",
     title: "Early systems",
-    detail: "Python CLI experiments used classes, CSV files, and validation to structure transactions and recipes.",
+    detail: "Small Python experiments turned object-oriented concepts, validation, and persistence into practical building blocks.",
   },
   {
     year: "2026",

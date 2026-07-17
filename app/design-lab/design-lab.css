@@ -35,7 +35,7 @@
   gap: 0.75rem;
 }
 
-.hero-prototype-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--color-rule); }
+.hero-prototype-links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--color-rule); }
 .hero-prototype-links a { display: flex; min-height: 7rem; align-items: end; gap: 1rem; border-right: 1px solid var(--color-rule); padding: 1rem; color: var(--color-text); text-decoration: none; }
 .hero-prototype-links a:last-child { border-right: 0; }
 .hero-prototype-links span { color: var(--color-coral); }
@@ -97,6 +97,8 @@
 }
 
 @media (max-width: 1024px) {
+  .hero-prototype-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
   .experiment-card {
     grid-column: 1 / -1;
   }

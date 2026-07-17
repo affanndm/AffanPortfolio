@@ -2,8 +2,10 @@
 import { externalLinkProps } from "@/lib/utils";
 
 const navItems = [
-  { href: "/#work", label: "Work" },
-  { href: "/projects/vantage", label: "Vantage" },
+  { href: "/#all-work", label: "Work" },
+  { href: "/#about", label: "About" },
+  { href: "https://github.com/affanndm", label: "GitHub", external: true },
+  { href: "https://www.linkedin.com/in/affan-nadeem-9b4aa0250/", label: "LinkedIn", external: true },
   { href: "mailto:nadeemaffan23@gmail.com", label: "Contact" },
 ];
 
@@ -43,7 +45,7 @@ export function Navigation() {
           </a>
           <div className="desktop-nav">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href}>
+              <a key={item.href} href={item.href} {...(item.external ? externalLinkProps(`Affan Nadeem ${item.label}`) : {})}>
                 {item.label}
               </a>
             ))}
@@ -56,13 +58,10 @@ export function Navigation() {
             </summary>
             <div id="mobile-menu" className="mobile-panel">
               {navItems.map((item) => (
-                <a key={item.href} href={item.href}>
+                <a key={item.href} href={item.href} {...(item.external ? externalLinkProps(`Affan Nadeem ${item.label}`) : {})}>
                   {item.label}
                 </a>
               ))}
-              <a href="https://github.com/affanndm" {...externalLinkProps("Affan Nadeem GitHub")}>
-                GitHub <span className="external-glyph" aria-hidden="true" />
-              </a>
             </div>
           </details>
         </nav>
