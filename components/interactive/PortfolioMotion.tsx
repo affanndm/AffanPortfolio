@@ -1,35 +1,13 @@
-"use client";
-
-import { lazy, Suspense, useEffect, useState } from "react";
-
-const PortfolioMotionDesktop = lazy(() =>
-  import("@/components/interactive/PortfolioMotionDesktop").then((module) => ({
-    default: module.PortfolioMotionDesktop,
-  })),
-);
+const motionBootstrap = `
+(() => {
+  const desktop = matchMedia('(min-width: 1000px)');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  if (!desktop.matches || reduced.matches) return;
+  const load = () => import('/generated/portfolio-motion.js');
+  if (document.readyState === 'complete') load();
+  else addEventListener('load', load, { once: true });
+})();`;
 
 export function PortfolioMotion() {
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    const wideViewport = window.matchMedia("(min-width: 1000px)");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setEnabled(wideViewport.matches && !reducedMotion.matches);
-
-    update();
-    wideViewport.addEventListener("change", update);
-    reducedMotion.addEventListener("change", update);
-    return () => {
-      wideViewport.removeEventListener("change", update);
-      reducedMotion.removeEventListener("change", update);
-    };
-  }, []);
-
-  if (!enabled) return null;
-
-  return (
-    <Suspense fallback={null}>
-      <PortfolioMotionDesktop />
-    </Suspense>
-  );
+  return <script dangerouslySetInnerHTML={{ __html: motionBootstrap }} />;
 }

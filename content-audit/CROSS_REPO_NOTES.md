@@ -4,7 +4,7 @@ Date: 2026-07-15
 
 Scope: Public repositories owned by other accounts where `affanndm` appears as a contributor. Seed repositories audited first: `crackle2k/vantage` and `MisplacedOrange/gRNAlytics`.
 
-Refresh note, 2026-07-15 during Next.js architecture reset: public GitHub issue/PR search for `is:pr author:affanndm` again returned 14 PRs total, all in `crackle2k/vantage` or `affanndm/English-Metacognition-Portfolio`. Public GitHub commit search for `author:affanndm` returned 153 commits across `affanndm/affanndm.github.io`, `affanndm/English-Metacognition-Portfolio`, `affanndm/Financial_Tracker`, `affanndm/Recipe-Tracker`, `affanndm/Solutions`, `crackle2k/vantage`, and `MisplacedOrange/gRNAlytics`. No additional contribution-only public repositories were found through these unauthenticated searches.
+Refresh note, 2026-07-16: public GitHub evidence must exclude repositories Affan has made private. Current portfolio claims and links are limited to repositories that remain intentionally public.
 
 ## Method And Limits
 

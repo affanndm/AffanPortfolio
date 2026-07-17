@@ -1,6 +1,6 @@
 ---
-name: Affan Nadeem - Signal / Systems
-description: An evidence-led portfolio for software that resolves complex systems.
+name: Affan Nadeem Portfolio
+description: A personal editorial portrait with selected software work embedded inside it.
 colors:
   canvas: "#0b0b0b"
   band: "#0e100d"
@@ -19,6 +19,9 @@ colors:
   vantage: "#f3b15c"
   grnalytics: "#65e6ff"
   violet: "#9b82ff"
+  studySignature: "#3157ff"
+  studyAccent: "#d5ff49"
+  studyLight: "#e9e8e2"
 typography:
   display:
     fontFamily: "Geist, Arial, sans-serif"
@@ -70,23 +73,59 @@ components:
     padding: "7px 10px"
 ---
 
-# Design System: Affan Nadeem - Signal / Systems
+# Design System: Affan Nadeem Portfolio
 
 ## Overview
 
-**Creative North Star: "Affan Nadeem / The Resolved Signal"**
+**Creative North Star: "Affan Nadeem / A Whole Person In Motion"**
 
-The interface should feel like Affan's authored world first and a technical field becoming legible under examination second. It is bold, kinetic, object-led, and evidence-rich: monumental identity and motion lead, then the theatre resolves into a working product state, source-backed diagram, ownership label, or commit trail.
+The interface should feel like Affan's authored world first: student, developer, competitor, builder, computational-biology enthusiast, and person with a life outside GitHub. It is bold, kinetic, image-led, personal, and credible. Monumental identity and motion lead; personal photographs, objects, stories, experiments, and selected work gradually reveal the person.
 
-The visual system is flat, ruled, and deliberately asymmetric. Large sans-serif declarations establish confidence; serif statements slow the reader at moments of interpretation; monospaced text is reserved for provenance and system state. Mobile is recomposed as a compact evidence index, not a stacked imitation of desktop.
+The visual system remains flat, ruled, and deliberately asymmetric. Large sans-serif declarations establish confidence; serif statements slow the reader at personal and interpretive moments; monospaced text is reserved for provenance and system state. Mobile must be recomposed as its own editorial sequence, not a stacked desktop imitation.
 
 **Key Characteristics:**
 
-- Five distinct scenes: black/coral identity hero, black stacked-work stage, acid Lab, black personal chapter, and coral close.
+- The name `AFFAN NADEEM` is the opening composition; no project or methodology competes with it.
+- About and personal imagery appear before Selected Work.
+- A full-screen personal index expands navigation to About, Work, Playground, Life, and Contact.
 - Strong scale contrast and thin structural rules.
-- Real project media before long explanation.
-- Ownership, publication status, and evidence visible before entry.
+- Real personal and project media before long explanation.
+- Ownership remains visible on team work, while evidence detail moves to deeper case studies.
 - Motion that communicates resolution, sequence, or state.
+
+## Selected Art Direction — B / Lanes
+
+**Rule:** It is not information with art. It is art that shows information.
+
+Direction B is selected. Its production grammar is:
+
+- Repeated `AFFAN NADEEM` lanes form the visual field.
+- A cursor/touch scanner replaces the name with `STUDENT / TORONTO`, `DEVELOPER / BUILDER`, `COMPETITOR / ALGORITHMS`, and `BIOLOGY / LIFE OFF-SCREEN`.
+- The reveal is the information architecture: roles are discovered inside the artwork rather than listed beside it.
+- The dark field, strict typographic rhythm, responsive reticle, and peripheral metadata supply the Filippo-level confidence without copying his split serif name, coral palette, WebGL object, or source.
+- Mobile uses an authored split/reveal composition and an explicit tap control; it never depends on hover.
+- Reduced motion holds a static split between name and roles with no pointer travel.
+- Personal photographs and project recordings must later enter as lane material, masks, textures, or full-scene transitions—not cards placed beside the typography.
+
+## Affan-first Study System — Completed Review
+
+The archived route `/design-lab/filippo-study/` preserves the comparison study; Identity B now supplies the production homepage opening:
+
+- **Canvas:** `#0D0F12` neutral black and `#E9E8E2` neutral light.
+- **Signature:** `#3157FF` ultramarine, chosen to separate Affan's study from Filippo's coral identity.
+- **Interaction accent:** `#D5FF49`, used rarely for focus, active calibration, and the `A` easter egg.
+- **Typography:** production-safe Geist and Georgia for the study; final display licensing remains open.
+- **Identity A / Assembly:** measured typographic plates assemble the name.
+- **Identity B / Lanes:** a cursor-responsive lane system connects competition, algorithms, and biology.
+- **Identity C / Annotated Field:** a drenched blue identity field surrounds the name with Affan's roles and interests.
+- **Menu:** a full-screen five-part index to the person.
+- **System reveal:** an interactive calibration sequence for canvas, signature, type, grid, and interaction.
+- **About and personal sequence:** exact Affan-owned media requests replace stock imagery.
+- **Selected Work:** a visual index appears only after the personal story.
+
+Every study includes mobile and reduced-motion behavior plus a rationale explaining what reference principle it interprets and why the result is original. Identity B is selected; A and C remain archived comparison studies.
+
+The remaining sections document the production/local implementation. Where an older hero rule conflicts with B / Lanes, the selected art direction above is authoritative.
 
 ## Colors
 
@@ -174,6 +213,14 @@ The system is flat by default. It uses scene changes, real media, border contras
 - **Pinned argument:** On large screens, the selected-work statement remains fixed while the project evidence moves past it.
 - **Mobile:** The statement returns to normal document flow and every project remains fully readable without hover.
 
+### Horizontal Work Chooser
+
+- **Structure:** One ordered horizontal index follows the Vantage lead and exposes six intentionally public work entries without pretending they have equal depth or evidence.
+- **Hierarchy:** Vantage and gRNAlytics point to dedicated homepage chapters and case studies; smaller and archival builds point into the Lab or their public source.
+- **Interaction:** Large visible previous/next controls enhance native horizontal scrolling. Trackpad, touch, keyboard focus, and direct anchor navigation remain available without JavaScript.
+- **Visual rhythm:** Each entry receives a committed flat color field, oversized index/title, concise role/status, and an explicit source action instead of a generic card thumbnail.
+- **Mobile:** The rail keeps one strong partial-next-card cue and native momentum scrolling; no project is hover-only.
+
 ### Project Side-Stage
 
 - **Entry:** A visible `Open project` control sits over each media poster; no essential entry depends on hover.
@@ -187,6 +234,18 @@ The system is flat by default. It uses scene changes, real media, border contras
 - **Desktop:** Dense comparison layout.
 - **Mobile:** Compact two-stage row that moves description and actions below the title without hiding status.
 - **Rule:** Verification and archive state must be readable, not encoded by color alone.
+
+### gRNAlytics Chapter
+
+- **Canvas:** Project cyan creates a full-field change after the chooser, followed by a black source-backed sequence stage.
+- **Evidence:** The visual explains repository-observable input, candidate, scoring, and output flow. It is labeled as code flow and never represented as validated biological performance.
+- **Entry:** The same native side-stage pattern as Vantage provides role, stack, media, case study, and repository access without duplicating interaction behavior.
+
+### About, Profiles, And Contact
+
+- **About:** First-person copy and an oversized geometric `A/N` mark replace resume-like biography blocks.
+- **Profiles:** GitHub and LinkedIn are visible text links in both navigation and body content; they are not hidden behind icons or a footer-only treatment.
+- **Contact:** A full coral closing field contains the verified public email plus GitHub and LinkedIn, with a monumental signature acting as the final visual object.
 
 ### Navigation
 
@@ -204,7 +263,7 @@ The system is flat by default. It uses scene changes, real media, border contras
 
 - Lenis owns wheel-scroll interpolation on qualifying desktop viewports and is synchronized to GSAP's ticker and ScrollTrigger. Native scrolling remains intact on mobile, coarse layouts, and reduced-motion profiles.
 - GSAP, `@gsap/react`, ScrollTrigger, and SplitText orchestrate the character-led identity entrance, pointer-responsive artifact, hero exit, project portal expansion, and closing statement reveal.
-- The desktop motion chunk is loaded lazily after the viewport qualifies; mobile and reduced-motion users never download GSAP, SplitText, or Lenis.
+- A tiny server-rendered bootstrap imports the generated motion module only after a qualifying desktop viewport has loaded; mobile and reduced-motion users never download GSAP, SplitText, or Lenis and do not hydrate a React motion boundary.
 - React Bits patterns are adapted selectively: Magnet adds bounded attraction to the project opener, while ScrollFloat gives the Vantage closing statement a character reveal without allowing mid-word line breaks.
 - Opening a project side-stage stops Lenis and marks the dialog as a protected native-scroll region; closing it restores page interpolation.
 - Initial word contrast remains WCAG-compliant; the reveal moves from muted-readable to fully clear rather than hidden to visible.

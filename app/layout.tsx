@@ -15,26 +15,26 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affannadeem.me"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Affan Nadeem - Signal / Systems",
+    default: "Affan Nadeem - Student, Developer, Builder",
     template: "%s - Affan Nadeem",
   },
   description:
-    "Affan Nadeem builds software for complex systems, from trusted local discovery to computational biology.",
+    "Affan Nadeem is a Toronto student, developer, competitor, and builder working across product engineering, algorithms, and computational biology.",
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Affan Nadeem - Signal / Systems",
+    title: "Affan Nadeem - Student, Developer, Builder",
     description:
-      "An evidence-backed software portfolio spanning local discovery, computational biology, algorithms, and product engineering.",
+      "A personal portfolio spanning software, algorithms, competition, computational biology, and life beyond GitHub.",
     url: siteUrl,
     siteName: "Affan Nadeem Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Affan Nadeem - Signal / Systems",
-    description: "Software for complex systems, from local discovery to computational biology.",
+    title: "Affan Nadeem - Student, Developer, Builder",
+    description: "Software, algorithms, competition, computational biology, and life beyond GitHub.",
   },
 };
 

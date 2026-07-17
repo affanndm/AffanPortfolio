@@ -8,7 +8,7 @@ export function LabIndex({ items, headingLevel = "h3" }: { items: LabItem[]; hea
   return (
     <div className="lab-index">
       {items.map((item) => (
-        <article key={item.title} className={`lab-row lab-row-${item.status} lab-row-${item.visual}`}>
+        <article id={`lab-${item.slug}`} key={item.title} className={`lab-row lab-row-${item.status} lab-row-${item.visual}`}>
           <LabVisual kind={item.visual} />
           <div className="lab-row-title">
             <p>

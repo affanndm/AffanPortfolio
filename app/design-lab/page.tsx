@@ -91,6 +91,7 @@ export default function DesignLabPage() {
             </p>
           </div>
           <nav className="span-12 hero-prototype-links" aria-label="Hero prototype routes">
+            <Link href="/design-lab/filippo-study"><span>NEW</span> Affan-first direction study</Link>
             <Link href="/design-lab/hero-a"><span>A</span> Topological Signal</Link>
             <Link href="/design-lab/hero-b"><span>B</span> Interface Artifact</Link>
             <Link href="/design-lab/hero-c"><span>C</span> Typographic Distortion</Link>

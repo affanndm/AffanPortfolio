@@ -42,5 +42,5 @@ test("mobile menu closes after selecting a section", async ({ page }) => {
   await page.locator("#mobile-menu").getByRole("link", { name: "Work", exact: true }).click();
 
   await expect(mobileMenu).not.toHaveAttribute("open", "");
-  await expect(page).toHaveURL(/#work$/);
+  await expect(page).toHaveURL(/#all-work$/);
 });

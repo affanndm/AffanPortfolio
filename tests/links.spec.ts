@@ -19,7 +19,7 @@ test("homepage primary links have hrefs", async ({ page }) => {
 
 test("homepage in-page links resolve to existing targets", async ({ page }) => {
   await page.goto("/");
-  const hashes = await page.locator('a[href^="/#"]').evaluateAll((links) =>
+  const hashes = await page.locator('a[href^="#"], a[href^="/#"]').evaluateAll((links) =>
     links.map((link) => new URL((link as HTMLAnchorElement).href).hash),
   );
 
@@ -46,5 +46,17 @@ test("homepage exposes a public email link", async ({ page }) => {
   await expect(page.getByRole("link", { name: "Email", exact: true })).toHaveAttribute(
     "href",
     "mailto:nadeemaffan23@gmail.com",
+  );
+});
+
+test("homepage exposes every verified work entry and both public profiles", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator(".fn-work-choice")).toHaveCount(6);
+  await expect(page.locator(".lab-row")).toHaveCount(3);
+  await expect(page.getByRole("heading", { name: "gRNAlytics", exact: true })).toBeVisible();
+  await expect(page.locator('.fn-profile-links a[href="https://github.com/affanndm"]')).toHaveCount(1);
+  await expect(page.locator('.fn-profile-links a[href="https://www.linkedin.com/in/affan-nadeem-9b4aa0250/"]')).toHaveAttribute(
+    "href",
+    "https://www.linkedin.com/in/affan-nadeem-9b4aa0250/",
   );
 });

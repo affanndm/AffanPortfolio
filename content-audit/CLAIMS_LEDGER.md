@@ -60,21 +60,6 @@ Publication status values:
 | The archive includes accepted DMOJ and Codeforces submissions. | README mentions platforms, but current tree evidence was not enough. | https://github.com/affanndm/Solutions | probable | needs confirmation |
 | Affan has a specific contest ranking. | No evidence found. | N/A | unverified | do not publish |
 
-## Financial Tracker
-
-| Proposed Website Wording | Supporting Evidence | Evidence URL | Confidence | Publication Status |
-| --- | --- | --- | --- | --- |
-| Financial Tracker is an early Python CLI project using classes, CSV persistence, and input validation to track transactions and budgets. | Source files include transaction/budget classes, CSV records, main menu, validation helper. Alias confirmation still needed for public authorship wording. | https://github.com/affanndm/Financial_Tracker | probable | needs confirmation |
-| Financial Tracker is a production-ready finance app. | Audit notes found no README/live demo and likely runtime issues. | https://github.com/affanndm/Financial_Tracker | verified false | do not publish |
-| Financial Tracker integrates with banks or real financial accounts. | No evidence found. | N/A | unverified | do not publish |
-
-## Recipe Tracker
-
-| Proposed Website Wording | Supporting Evidence | Evidence URL | Confidence | Publication Status |
-| --- | --- | --- | --- | --- |
-| Recipe Tracker is an early Python OOP learning project. | Repo description says it was built to develop OOP skills; source has recipe/search/validation modules. | https://github.com/affanndm/Recipe-Tracker | verified | permitted only if labeled archive |
-| Recipe Tracker currently runs as a finished app. | Public source contains unresolved merge-conflict markers. | https://github.com/affanndm/Recipe-Tracker | verified false | do not publish |
-
 ## Previous Portfolio / Domain
 
 | Proposed Website Wording | Supporting Evidence | Evidence URL | Confidence | Publication Status |
@@ -82,11 +67,18 @@ Publication status values:
 | Affan configured a GitHub Pages/custom-domain placeholder at `affannadeem.me`. | `affanndm.github.io` contains CNAME and public Pages deployment record. | https://github.com/affanndm/affanndm.github.io | verified | permitted as archive only |
 | This was a complete previous portfolio website. | Repo has only README and CNAME. | https://github.com/affanndm/affanndm.github.io | verified false | do not publish |
 
+## This Portfolio
+
+| Proposed Website Wording | Supporting Evidence | Evidence URL | Confidence | Publication Status |
+| --- | --- | --- | --- | --- |
+| This portfolio is a public Next.js, TypeScript, GSAP, and Lenis build deployed on Vercel. | Current repository dependencies, application source, Vercel configuration, and canonical production deployment. | https://github.com/affanndm/AffanPortfolio and https://www.affannadeem.me | verified | permitted |
+| The portfolio itself is part of Affan's current work index. | The public repository and production domain are both active and owned by Affan. | https://github.com/affanndm/AffanPortfolio | verified | permitted |
+
 ## Personal Biography
 
 | Proposed Website Wording | Supporting Evidence | Evidence URL | Confidence | Publication Status |
 | --- | --- | --- | --- | --- |
 | Affan is interested in Python, computational biology, simulations, gene-network models, algorithms, AI, data science, and biotechnology entrepreneurship. | GitHub profile README self-description; may be outdated and needs direct confirmation. | https://github.com/affanndm | probable | needs confirmation |
-| Affan has FBLA National Finalist experience. | Public search result for the exact LinkedIn profile title says "Student at Milliken Mills \| FBLA National Finalist"; full LinkedIn page fetch was blocked by robots, so direct confirmation or export is still needed. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | probable | needs confirmation |
-| Affan has DECA experience or leadership. | User prompt references DECA / FBLA, but public search evidence in this pass only surfaced FBLA in the LinkedIn title snippet. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | unverified | needs confirmation |
+| Affan has FBLC Coding and Programming National Finalist experience, listed as 2nd place in Canada. | The public LinkedIn profile search surface lists the award and date, but direct confirmation or an external competition record is still needed before publishing it as a portfolio claim. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | probable | needs confirmation |
+| Affan has DECA finalist and qualifier experience. | The public LinkedIn profile search surface lists DECA Ontario and regional results, but direct confirmation or external competition records are still needed before publication. | https://ca.linkedin.com/in/affan-nadeem-9b4aa0250 | probable | needs confirmation |
 | Affan's final About chronology. | Requires resume or LinkedIn export per `SPEC.md`. | N/A | unverified | needs confirmation |

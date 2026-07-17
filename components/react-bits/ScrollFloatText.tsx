@@ -7,13 +7,8 @@ export function ScrollFloatText({ text, className = "" }: { text: string; classN
       <span className="scroll-float-accessible">{text}</span>
       <span aria-hidden="true">
         {words.map((word, wordIndex) => (
-          <span className="scroll-float-word" key={`${word}-${wordIndex}`}>
-            {word.split("").map((character, characterIndex) => (
-              <span data-float-char key={`${character}-${characterIndex}`}>
-                {character}
-              </span>
-            ))}
-            {wordIndex < words.length - 1 ? "\u00A0" : null}
+          <span className="scroll-float-word" data-float-char key={`${word}-${wordIndex}`}>
+            {word}{wordIndex < words.length - 1 ? "\u00A0" : null}
           </span>
         ))}
       </span>

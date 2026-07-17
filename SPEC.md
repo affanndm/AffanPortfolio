@@ -5,18 +5,22 @@ Treat this file as the working source of truth until Affan provides a separate c
 
 ## Core Concept
 
-AFFAN NADEEM - SIGNAL / SYSTEMS
+**AFFAN NADEEM**
 
-Core narrative: Affan takes complicated, noisy problems and turns them into understandable, useful systems.
+The subject of the website is Affan as a complete person:
 
-Positioning:
+- Student
+- Developer
+- Competitor
+- Builder
+- Computational-biology enthusiast
+- Hackathon participant
+- Leader, where specific claims are confirmed
+- Curious and visually opinionated person with a life outside GitHub
 
-> I build software for complex systems.
-> From trusted local discovery to computational biology.
+Projects are evidence inside that identity. They are not the identity itself. “Signal” may remain as a subtle visual and interaction metaphor for focus, connection, or discovery, but `Signal / Systems` is no longer the public-facing concept or repeated copy framework.
 
-Supporting sentence:
-
-> Affan Nadeem is a student developer working across product engineering, scientific computing, and algorithms.
+The objective is a complete, personal, editorial digital portrait of Affan Nadeem with selected work embedded inside it.
 
 Avoid resume tropes: no "passionate coder", no skills cloud, no six rounded cards, no GitHub contribution graph, no generic student portfolio.
 
@@ -35,6 +39,34 @@ Avoid resume tropes: no "passionate coder", no skills cloud, no six rounded card
 
 Do not publish the website.
 Do not connect the custom domain without explicit approval.
+
+## Selected Direction
+
+Affan selected **Identity B — Lanes** on 2026-07-16. It is the production art-direction foundation because its typography, motion, and cursor scanner carry the identity information themselves.
+
+Governing rule:
+
+> It is not information with art. It is art that shows information.
+
+Apply this literally:
+
+- Typography must perform identity, hierarchy, role, and transition rather than decorate ordinary copy blocks.
+- Images and project media must become compositional material, not thumbnails beside explanations.
+- Interaction should reveal meaning, state, or personality through the artwork itself.
+- Avoid report-like panels, evidence dashboards, metadata grids as visual identity, and art used as a background around conventional information.
+- Keep verification and attribution mandatory, but move their detail into case studies and internal audits.
+
+The completed review study under `/design-lab/filippo-study/` contains:
+
+1. Three opening identity directions.
+2. One full-screen menu direction.
+3. One interactive visual-system reveal.
+4. One About editorial layout.
+5. One personal-image sequence.
+6. One Selected Work index.
+7. Desktop and mobile screenshots of every experiment.
+
+Each study states the reference principle it interprets, its Affan-specific transformation, why it is not a copy, required personal material, mobile behavior, and reduced-motion behavior. The review gate is now cleared for Direction B; production work must evolve B rather than average it together with A or C.
 
 ## Reference Sites
 
@@ -55,13 +87,13 @@ Create:
 - `reference-audit/ABHIJIT.md`
 - `reference-audit/SYNTHESIS.md`
 
-Reference influence:
+Reference influence, in priority order:
 
-- Filippo Ruffini: editorial grid, dramatic typography, one memorable interactive hero, strict visual discipline, authored microcopy, cinematic transitions.
+- Filippo Ruffini, primary: editorial confidence, dramatic typography, personal storytelling, strict grid control, image-led autobiography, authored microcopy, memorable interaction detail, and sustained motion craft.
 - Tigran: project presentation as short trailers, media evidence before long explanation, modular project pages, motion clips as proof.
 - Abhijit Rout: personal depth, selected work plus experiments/lab, chronology, distinctive narrative sections.
 
-Do not copy their exact colors, typography pairings, page structures, slogans, ticker formats, or project presentation mechanics.
+Do not copy their source code, exact layout measurements, typography pairings, colors, wording, imagery, branded objects, or animations frame-for-frame. The result should be an original sibling in quality and ambition, not a clone.
 
 ## GitHub Evidence Audit
 
@@ -73,8 +105,6 @@ Start with:
 
 - https://github.com/affanndm
 - https://github.com/affanndm/Solutions
-- https://github.com/affanndm/Financial_Tracker
-- https://github.com/affanndm/Recipe-Tracker
 - https://github.com/affanndm/English-Metacognition-Portfolio
 - https://github.com/affanndm/affanndm.github.io
 - https://github.com/crackle2k/vantage
@@ -99,7 +129,25 @@ Create:
 
 Use `NEEDS_AFFAN_CONFIRMATION` for unverifiable factual claims or missing personal context.
 
-## Homepage Structure
+## Revised Homepage Structure
+
+The future homepage should follow this narrative order after Affan selects a design-lab direction:
+
+1. **Opening identity** — `AFFAN NADEEM` dominates the first viewport through an original typographic composition. Supporting metadata stays peripheral: `PORTFOLIO (2026)`, `TORONTO, CANADA`, `STUDENT / DEVELOPER`, and a confirmed `CURRENTLY BUILDING` line.
+2. **Interactive visual-system reveal** — the site playfully reveals its canvas, signature color, type, grid, interaction language, section count, or symbols as part of the experience rather than as design documentation.
+3. **Full-screen navigation** — About, Work, Playground, Life, Contact.
+4. **About Affan** — a rich first-person personal section combining confirmed autobiographical writing, personal photographs, biology and competition interests, building habits, current learning, humour, and life outside code.
+5. **Personal visual sequence** — an image-led sequence of Affan-owned photographs, objects, screenshots, places, and captions. Do not substitute generic stock photography.
+6. **Selected Work** — only now do projects take the foreground. Homepage metadata is limited to project, year, role, discipline, and team/solo status. Technical evidence belongs in project pages.
+7. **Playground / Archive** — algorithms, small programs, school work, visual coding, hackathon prototypes, unfinished ideas, previous portfolio work, and interesting failures. Avoid identical cards.
+8. **Life chronology** — an editorial sequence mixing personal, academic, competition, leadership, technical, and current-interest moments. It must not resemble a standard résumé timeline.
+9. **Contact** — large, memorable, direct, and slightly informal.
+
+Do not open with a methodology explanation, `A repeated method`, detailed project copy, evidence counts, stack lists, contribution disclaimers, a generic developer headline/subheading/CTA, or Vantage as the central identity.
+
+## Homepage Structure (Superseded 2026-07-16)
+
+The following `Signal / Systems` project-first structure is retained only as implementation history. It must not guide the next production homepage.
 
 ### Opening Sequence
 
@@ -187,9 +235,7 @@ For smaller projects, algorithms, unfinished research, school experiments, and t
 Initial items:
 
 - Solutions
-- Financial Tracker
 - English Metacognition Portfolio
-- Recipe Tracker
 - Previous Portfolio, optional archive only
 
 Ownership labels:
@@ -231,7 +277,21 @@ Include email, GitHub, LinkedIn, resume, optional current local time.
 No contact form unless there is a real reason.
 Playful interaction: contact text briefly reorganizes into a network when hovered.
 
-## Visual System
+## Revised Visual-System Principles
+
+- Strict editorial grid with deliberate displacement, cropping, and layering.
+- Monumental identity typography supported by small peripheral metadata.
+- Controlled black or neutral surfaces with one original signature color; do not reproduce Filippo's coral.
+- Personal photography and real objects are required narrative material, not decoration.
+- Custom cursor behavior is permitted only on precise pointers and must communicate a real interaction state.
+- One or two signature Canvas/WebGL interactions may be explored when technically justified, with touch, reduced-motion, and static fallbacks.
+- Glitch, pixel, clip, or mask transitions must be original, bounded, and subordinate to comprehension.
+- Mobile is a composition in its own right, with persistent labels and no hover-only information.
+- Current `/design-lab/filippo-study/` candidate: neutral black `#0D0F12`, neutral light `#E9E8E2`, ultramarine `#3157FF`, and a rare lime interaction accent `#D5FF49`. This is a review candidate, not a finalized production palette.
+
+## Visual System (Superseded Production Candidate)
+
+The following `Signal / Systems` system documents the currently deployed/local historical candidate. It is not approved as the next homepage direction.
 
 Fonts:
 
@@ -465,6 +525,9 @@ Requirements:
 ## Prohibited Patterns
 
 - Cloning reference sites.
+- Making `Signal / Systems`, Vantage, evidence counts, stack lists, or contribution disclaimers the visible subject of the homepage.
+- Treating Affan as only a developer or reducing the site to a GitHub résumé.
+- Using generic stock photography in place of requested personal media.
 - Generic AI gradient blobs.
 - Skill percentage bars.
 - GitHub contribution calendar.

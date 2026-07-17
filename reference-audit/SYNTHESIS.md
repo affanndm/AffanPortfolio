@@ -75,7 +75,7 @@ Abhijit Rout's strongest lesson is content architecture: selected work can coexi
 Original translation:
 
 - `Selected Work`: Vantage and gRNAlytics only at first.
-- `The Lab`: Solutions, Financial Tracker, English Metacognition Portfolio, Recipe Tracker if fixed or clearly archived.
+- `The Lab`: Solutions, English Metacognition Portfolio, and the previous portfolio/domain archive.
 - `Archive`: previous portfolio/custom-domain placeholder and broken or early experiments.
 
 ## Original Design System For Affan

@@ -2,11 +2,29 @@
 
 ## Current Milestone
 
-Milestone 12: purposeful Lenis, GSAP, and React Bits motion integration.
+Milestone 15: B — Lanes production opening deployed.
 
-The approved first-sequence branch combines desktop Lenis interpolation, GSAP SplitText/ScrollTrigger choreography, and two adapted React Bits interactions. After Affan's explicit production authorization, validated commit `03d53cc` was deployed to Vercel production and assigned to the canonical domain.
+Affan selected Identity B — Lanes and established the governing principle: `It is not information with art. It is art that shows information.` The production homepage now opens with a live cursor scanner that replaces `AFFAN NADEEM` with Affan's identities inside the typographic field. A and C remain archived comparisons. Affan explicitly approved production deployment; Vercel deployment `dpl_GKU63ZGMjhq2Az7bNewjSHi98um7` is Ready at the canonical custom domain.
 
 ## Completed Work
+
+- Reframed the source-of-truth strategy around Affan as a student, developer, competitor, builder, computational-biology enthusiast, and person with a life outside GitHub; `Signal` is now a supporting metaphor only.
+- Reinspected Filippo Ruffini's live public page and public runtime evidence, retaining the craftsmanship lessons while honoring the explicit no-clone boundary in the creative-reset brief.
+- Built three distinct identity studies: Assembly, Lanes, and Annotated Field.
+- Built a full-screen About / Work / Playground / Life / Contact index with keyboard-accessible open/close behavior.
+- Built an interactive design-system calibration reveal with original ultramarine signature color and responsive 12/6/4 grid logic.
+- Built image-led About and personal-field-note compositions with exact, clearly labeled Affan-owned media requests instead of stock placeholders.
+- Built a Selected Work index that keeps year, role, discipline, and team/solo status visible while leaving detailed evidence to project pages.
+- Added review rationale for every composition, including reference principle, Affan transformation, no-copy boundary, material needs, mobile behavior, and reduced-motion behavior.
+- Added `PERSONAL_CONTENT_NEEDED.md` and sixteen desktop/mobile screenshots for the eight experiments.
+
+- Added a six-entry horizontal work chooser for Vantage, gRNAlytics, this portfolio, Solutions, English Metacognition Portfolio, and Affan's first GitHub Pages portfolio/domain setup.
+- Added a dedicated cyan gRNAlytics stage with a source-backed sequence-to-output flow and the same accessible native side-stage interaction used by Vantage.
+- Restored the broader experimental archive as a three-entry coral Lab chapter with persistent ownership, status, description, and repository access.
+- Removed the two tracker projects from the content model, work rail, Lab, timeline copy, tests, specifications, and public audit documents after Affan removed them from the intended public portfolio roster.
+- Added a first-person About chapter, visible GitHub and LinkedIn profile paths in navigation and content, and a monumental direct-contact ending.
+- Extended the desktop GSAP/Lenis choreography across the chooser continuation, gRNAlytics, Lab, About, and contact scenes while preserving native mobile and reduced-motion behavior.
+- Kept LinkedIn-derived awards and biography details out of public copy because they remain confirmation-gated in the claims ledger.
 
 - Integrated Lenis with the existing lazy desktop GSAP island, including ScrollTrigger synchronization, anchor handling, drawer pause/resume, protected drawer scrolling, cleanup, and native mobile/reduced-motion fallbacks.
 - Added GSAP SplitText choreography to the `AFFAN NADEEM` entrance without changing the semantic heading or static no-JavaScript composition.
@@ -36,7 +54,7 @@ The approved first-sequence branch combines desktop Lenis interpolation, GSAP Sp
 - Added a verified Vantage deployment capture and a source-backed gRNAlytics pipeline visual. Public contributor handles are credited without inventing private roles.
 - Added visible Lab ownership and status labels, project chronology, verified public email, GitHub, and LinkedIn contact links.
 - The previous candidate's static signal network and progressive Canvas 2D enhancement are retained only in history/design-lab; the public hero now uses the reference-led signal sculpture.
-- Kept the public shell server rendered. GSAP remains a lazy desktop-only island, while navigation, ticker, and project drawers use small native progressive-enhancement scripts; design-lab React canvas experiments remain isolated from public routes.
+- Kept the public shell server rendered. GSAP and Lenis now ship as a generated standalone desktop-only module, while navigation, work chooser, ticker, and project drawers use small native progressive-enhancement scripts; design-lab React canvas experiments remain isolated from public routes.
 - Chose Webpack for deterministic Next.js 16 production builds after measured mobile performance showed substantially lower runtime cost than the default Turbopack build.
 - Completed adversarial design, credibility, accessibility, motion, and performance reviews and resolved all blocker/high code findings.
 - Fixed the production `NOT_FOUND` incident by correcting the Vercel framework preset from `Other` to `Next.js`, using the Next.js default output instead of `public/`, and deploying the corrected build.
@@ -44,11 +62,15 @@ The approved first-sequence branch combines desktop Lenis interpolation, GSAP Sp
 
 ## Work In Progress
 
-- Monitor the newly deployed production build for concrete visual or runtime feedback.
+- Extend B's lane/scanner grammar beyond the deployed opening into the remaining production narrative without averaging it into a safer hybrid.
+- Replace personal-media requests only after Affan supplies approved photographs, stories, captions, and permissions.
+- Gather the personal media needed to replace placeholders with Affan-owned imagery embedded into the artwork.
 
 ## Next Action
 
-- Review the live homepage composition and iterate on concrete visual feedback.
+- Continue using B — Lanes as the single production foundation.
+- Translate About, Work, Playground, Life, and Contact into art-led scenes where the composition reveals the information.
+- Embed approved personal imagery and project recordings as masks, textures, transitions, and full scenes rather than adjacent cards.
 - Provide the remaining personal media and confirmation inputs when available; a real portrait and richer project recordings would further improve the authored depth.
 - Continue requiring explicit approval for future production deployments or domain changes.
 
@@ -67,6 +89,33 @@ The approved first-sequence branch combines desktop Lenis interpolation, GSAP Sp
 - Any rollback/removal of the unintended Vercel production aliases requires explicit approval.
 
 ## Test Results
+
+Affan-first direction study on 2026-07-16:
+
+- `npm run typecheck`: pass.
+- `npm run lint`: pass.
+- `npm run build`: pass using Next.js 16.2.10 with Webpack; `/design-lab/filippo-study` is statically generated.
+- Study interaction tests: 3/3 pass for all eight compositions, menu open/close, system calibration, keyboard easter egg, and reduced-motion availability.
+- Axe scan for `/design-lab/filippo-study`: pass after contrast correction and keyboard focus support for the horizontal personal sequence.
+- Responsive overflow checks for the study: pass at 390, 768, 1024, 1440, and 1920px.
+- Desktop screenshots: 8/8 captured at 1440×1000.
+- Mobile screenshots: 8/8 captured at 390×844.
+- Personal-content gaps are labeled and no new unsupported biographical, competition, award, or impact claims were introduced.
+- Production deployment/domain state: unchanged.
+- A broader 57-check design-lab/a11y/responsive run finished 56/57: the new study passed every check, while the existing production homepage intermittently exposed its pre-existing animated `.fn-hero-bottom` text at 4.22:1 during Axe timing. The production route was not changed in this milestone.
+
+Complete selectable-work continuation on 2026-07-16:
+
+- `npm run typecheck`: pass.
+- `npm run lint`: pass.
+- `npm run build`: pass using Next.js 16.2.10 with Webpack; all 13 static/SSG outputs generated.
+- `npm test`: 75/75 pass in Chromium.
+- `npm audit --audit-level=high`: pass, 0 vulnerabilities.
+- Axe scans pass on the homepage, both case studies, Lab, and all design-lab routes.
+- Responsive checks pass at 390, 768, 1024, 1440, and 1920px with no horizontal overflow.
+- Interaction coverage includes the work-rail controls, Vantage and gRNAlytics side-stage dialogs, keyboard dismissal, native mobile scrolling, reduced-motion output, pointer depth, navigation, profiles, and all eight work entries.
+- Retained local mobile Lighthouse sample: Performance 87, Accessibility 100, Best Practices 100, SEO 100, LCP 2.7s, TBT 340ms, CLS 0, Speed Index 2.9s. This misses the 90 Performance stretch target; GSAP/Lenis are absent from mobile, and the remaining longest blocking task is in the shared Next.js App Router runtime.
+- Lighthouse wrote valid reports before the known Windows Chrome cleanup `EPERM`; transient JSON reports were not committed.
 
 Lenis / GSAP / React Bits integration on 2026-07-16:
 
@@ -145,14 +194,15 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 
 ## Deployment Status
 
-- Deployed source commit: `03d53cc` (`Integrate Lenis and reference motion components`).
-- Current production deployment: `dpl_EDJy5HFp5HCnuRd79sZDBSzdi4iL`, target `production`, status `Ready`.
-- Production deployment URL: `https://affan-portfolio-3itj6u6hz-affan-s-projects-45c33b7e.vercel.app`.
+- Deployed source state: current `filippo-visual-redesign` workspace snapshot; the production deployment includes uncommitted local work and must still be checkpointed/pushed to restore GitHub as the exact production source of truth.
+- Current production deployment: `dpl_GKU63ZGMjhq2Az7bNewjSHi98um7`, target `production`, status `Ready`.
+- Production deployment URL: `https://affan-portfolio-96t263rtg-affan-s-projects-45c33b7e.vercel.app`.
 - Canonical production URL: `https://www.affannadeem.me`.
 - `https://affannadeem.me` returns `308 Permanent Redirect` to the canonical `www` host.
 - Verified `200` responses after deployment: `/`, `/projects/vantage`, `/projects/grnalytics`, `/lab`, `/robots.txt`, and `/sitemap.xml`.
-- Live homepage HTML contains the new Affan identity, Vantage sequence, and first-sequence review marker.
-- Production motion smoke suite: 5/5 pass against the canonical domain, covering desktop Lenis/SplitText, native mobile and reduced-motion fallbacks, pointer depth, navigation, and project drawer Escape close.
+- Live homepage HTML contains the selected lane/scanner identity, the Affan-first title and role vocabulary, and no references to the removed tracker projects.
+- Local production validation: typecheck, lint, privacy scan, and Next.js production build pass; Playwright completed 83/84 before the intentionally reduced work-count assertion was updated, and the corrected 13-test link suite then passed 13/13.
+- Live verification: canonical homepage, apex redirect destination, both project routes, Lab, robots, and sitemap return 200; desktop and mobile production captures are saved under `qa/visual-review/production-hero-*.png`.
 
 Historical deployment context:
 
