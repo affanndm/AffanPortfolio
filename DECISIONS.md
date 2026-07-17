@@ -11,7 +11,7 @@ Consequences:
 - The opening artwork itself reveals student, developer, builder, competitor, algorithms, biology, and life-off-screen information.
 - The public work rail now contains six entries and the Lab contains three.
 - Production deployment `dpl_GKU63ZGMjhq2Az7bNewjSHi98um7` is Ready and aliased to `https://www.affannadeem.me`.
-- The deployed snapshot contains current uncommitted workspace changes; a follow-up checkpoint commit and push are required for GitHub to exactly match production.
+- Commit `55d8025` checkpoints the deployed workspace on `filippo-visual-redesign`, restoring GitHub as the recoverable production source after push.
 - Future production or domain changes still require explicit approval.
 
 ## 2026-07-16: Select Identity B — Lanes

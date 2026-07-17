@@ -194,7 +194,7 @@ Lighthouse against the local Webpack production server on 2026-07-15:
 
 ## Deployment Status
 
-- Deployed source state: current `filippo-visual-redesign` workspace snapshot; the production deployment includes uncommitted local work and must still be checkpointed/pushed to restore GitHub as the exact production source of truth.
+- Deployed source commit: `55d8025` (`Deploy Affan-first lanes portfolio`) on `filippo-visual-redesign`; this commit checkpoints the exact workspace snapshot sent to production.
 - Current production deployment: `dpl_GKU63ZGMjhq2Az7bNewjSHi98um7`, target `production`, status `Ready`.
 - Production deployment URL: `https://affan-portfolio-96t263rtg-affan-s-projects-45c33b7e.vercel.app`.
 - Canonical production URL: `https://www.affannadeem.me`.
